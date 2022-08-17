@@ -42,10 +42,22 @@ h1, h2, h3, h4, h5, h6 {
   animation-name: fadein;
 }
 
+.animation1 {
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-name: fadein;
+}
+
+.animation2 {
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-name: fadein;
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
-    width: 1000%;
+    width: 100%;
   }
 
   to {
