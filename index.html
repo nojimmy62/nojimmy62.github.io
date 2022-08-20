@@ -13,17 +13,25 @@
     <link href='https://fonts.googleapis.com/css?family=Crafty Girls' rel='stylesheet'>
   </head>
   <body>
-    <div class="container" style="display: none">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="#" class="btn btn-light active" aria-current="page">English</a></li>
-        <li class="nav-item"><a href="#" class="btn btn-light">中文</a></li>
-      </ul>
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/>
+          </svg>
+        </a>
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="btn btn-light active" aria-current="page">English</a></li>
+          <li class="nav-item"><a href="#" class="btn btn-light">中文</a></li>
+        </ul>
+      </header>
     </div>
-    <div id="ImgContainer" >
-      <img id="JabuMarryImg" class="animation_fadein"  src="assets/img/main.png" alt="main">
-      <h2 id="TextMarry">Ting-Wei and Hsiang-Chih are getting married!</h2>
+    <div id="ScrollHeader">
+      <div id="ImgContainer" >
+        <img id="JabuMarryImg" class="animation_fadein"  src="assets/img/main.png" alt="main">
+        <h2 id="TextMarry">Ting-Wei and Hsiang-Chih are getting married!</h2>
+      </div>
+      <div id="ScrollBlock" class="invisible-block" style="opacity: 0;"></div>
     </div>
-    <div id="ScrollBlock" class="invisible-block" style="opacity: 0;"></div>
     <div class="container eventsContainer">
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
