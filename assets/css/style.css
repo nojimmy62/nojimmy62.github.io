@@ -29,6 +29,7 @@ body {
   width: 100%;
   text-align: center;
   position: absolute;
+  bottom: 100%;
 }
 
 #ScrollBlock {
@@ -50,7 +51,7 @@ body {
   border: 5px solid #555;
 }
 
-.eventsContainer > .row > div > div.eventHeader {
+.eventsContainer > .row div.eventHeader {
   text-align: center;
   font-weight: bold;
   font-size: 1.5em;
