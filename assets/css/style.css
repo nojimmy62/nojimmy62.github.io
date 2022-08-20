@@ -65,6 +65,10 @@ body {
   opacity: 0;
 }
 
+.detailHeader {
+  font-weight: bold;
+}
+
 .animation_fadein {
   opacity: 0;
   animation-fill-mode: forwards;

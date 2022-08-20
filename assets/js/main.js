@@ -26,7 +26,7 @@ var initialize = function() {
     window.addEventListener("resize", () => window.requestAnimationFrame(scrollShrink));
     document.addEventListener('scroll', () => window.requestAnimationFrame(scrollShrink))
     // Don't let browser to resume scroll location on reload.
-    //  Resets scroll position on every reload
+    // Resets scroll position on every reload
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual'
     }
