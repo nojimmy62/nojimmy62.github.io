@@ -21,6 +21,7 @@ var scrollShrink = function() {
         $('#ImgContainer').css('position', 'absolute')
     }
 }
+
 var initialize = function() {    
     scrollShrink()
     window.addEventListener("resize", () => window.requestAnimationFrame(scrollShrink));
