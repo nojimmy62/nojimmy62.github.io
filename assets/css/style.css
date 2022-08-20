@@ -67,6 +67,9 @@ body {
 
 .detailHeader {
   font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .animation_fadein {
