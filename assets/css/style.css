@@ -22,46 +22,45 @@ a:hover {
   color: #37b3ed;
   text-decoration: none;
 }
-/*
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
-}
-*/
 
-/*
+.animation0, .animation1, .animation2 {
+  opacity: 0;
+  position: fixed;
+} 
 
-.nav-pills .nav-link.active {
-    color: #000000;
-    background-color: #EEEEEE;
-}
-*/
-
-
-.animation0 {
+.animation_fadein {
+  opacity: 0;
+  animation-fill-mode: forwards; 
   animation-duration: 3s;
   animation-name: fadein;
 }
 
-.animation1 {
-  animation-duration: 3s;
-  animation-delay: 1s;
-  animation-name: fadein;
-}
-
-.animation2 {
-  animation-duration: 3s;
-  animation-delay: 2s;
-  animation-name: fadein;
+body{
+  height: 500vh;
 }
 
 @keyframes fadein {
   from {
     opacity: 0;
-    width: 100%;
   }
 
   to {
     opacity: 1;
-    width: 100%;
   }
 }
+ img{
+   border: 5px solid #555;
+   transform: scale(1);
+   animation-fill-mode: forwards; 
+   width: 100%;
+ }
+
+ #text-marry{
+  /*margin-left:50%;*/
+  width: 100%;
+  
+  text-align: center;
+  position: absolute;
+  /*top: -50px ;*/
+  z-index: 1;
+ }
