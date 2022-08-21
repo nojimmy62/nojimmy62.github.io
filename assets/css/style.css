@@ -17,7 +17,6 @@ body {
 }
 
 #JabuMarryImg {
-  border: 5px solid #555;
   transform: scale(1);
   animation-fill-mode: forwards;
   width: 100%;
@@ -36,8 +35,12 @@ body {
   text-align: left;
 }
 
-.eventsContainer > .row > div {
-  border: 5px solid #555;
+ .shrinkElement {
+    border: solid black;
+  border-color: black;
+  border-width: 3px 4px 3px 5px;
+  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+  /*transform: rotate(2deg);*/
 }
 
 .eventsContainer > .row div.eventHeader {
