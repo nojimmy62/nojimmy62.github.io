@@ -218,12 +218,16 @@ var initialize = function() {
         $(this).children('a').addClass("active");
         $(this).siblings().children('a').removeClass("active");
     })
-
-
     $(window).on('resize', () => window.requestAnimationFrame(animateUpdate))
     $(document).on('scroll', () => window.requestAnimationFrame(animateUpdate))
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual'
     }
+
 }
 $(document).ready(initialize);
+$(window).on("load", function() {
+    $("body").css('overflow', 'inherit')
+    // $("#Loading").css('display', 'none')
+    $("#Loading").addClass("animation_fadeout")
+})

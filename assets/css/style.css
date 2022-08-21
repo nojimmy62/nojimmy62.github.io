@@ -3,8 +3,30 @@
 --------------------------------------------------------------*/
 body {
   font-family: 'Mansalva', 'Noto Sans', '微軟正黑體', 'Noto Sans TC', '標楷體', '新細明體', 'consolas';
+  overflow: hidden;
+}
+img {
+  display: block;
+  object-fit: contain;
+  max-height: 50vh;
+  width:  auto;
+  max-width: 50vh;
+  height: auto;
+  margin: auto;
 }
 
+#Loading {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 2000;
+    position: absolute;
+    /*display: none;*/
+    margin: auto;
+    left: auto;
+    right: auto;
+}
 #ImgContainer {
   width: 100%;
 }
@@ -67,6 +89,13 @@ body {
   animation-name: fadein;
 }
 
+.animation_fadeout {
+  opacity: 1;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+  animation-name: fadeout;
+}
+
 /*--------------------------------------------------------------
 # Animation
 --------------------------------------------------------------*/
@@ -77,6 +106,17 @@ body {
 
   to {
     opacity: 1;
+  }
+
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 
 }
