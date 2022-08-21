@@ -1,3 +1,11 @@
+
+langText = {
+    "TextMarry":{
+        "en": "Ting-Wei & Hsiang-Chih are getting married!",
+        "tw": "亭維 & 翔致要結婚了！"
+    }
+}
+
 function makeStruct(names) {
     var names = names.split(' ');
     var count = names.length;
@@ -66,6 +74,17 @@ var ScrollShrink = function(config) {
     animateUpdate()
 }
 
+function langChange(lang) {
+    // $.getJSON("./assets/text.json", function(json) {
+    //     console.log(json); // this will show the info it in firebug console
+    // });
+
+    for (id in langText) {
+        $('#'+id).text(langText[id][lang])
+    }
+
+}
+
 var initialize = function() {
     ScrollShrink(new ScrollConfig("#Cover", 0.9, 0.6))
     ScrollShrink(new ScrollConfig("#WeddingEvent", 1, 0.6))
@@ -73,6 +92,18 @@ var initialize = function() {
     ScrollShrink(new ScrollConfig("#OurStory2", 1, 0.6))
     ScrollShrink(new ScrollConfig("#OurStory3", 1, 0.6))
     ScrollShrink(new ScrollConfig("#OurStory4", 1, 0.6))
+    $("#englishButton").click(function(){
+        langChange("en");
+        $(this).children('a').addClass("active");
+        $(this).siblings().children('a').removeClass("active");
+    }).click()
+    $("#mandarinButton").click(function() {
+        langChange("tw");
+        $(this).children('a').addClass("active");
+        $(this).siblings().children('a').removeClass("active");
+    })
+
+
     $(window).on('resize', () => window.requestAnimationFrame(animateUpdate))
     $(document).on('scroll', () => window.requestAnimationFrame(animateUpdate))
     if ('scrollRestoration' in history) {
