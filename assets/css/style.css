@@ -2,7 +2,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: 'Mansalva', 'Noto Sans', '微軟正黑體', 'Noto Sans TC' , '標楷體', '新細明體', 'consolas';
+  font-family: 'Mansalva', 'Noto Sans', '微軟正黑體', 'Noto Sans TC', '標楷體', '新細明體', 'consolas';
 }
 
 #ImgContainer {
@@ -14,7 +14,7 @@ body {
   width: 90%;
   max-height: 100vh;
   object-fit: cover;
-  margin:  auto;
+  margin: auto;
   display: block;
 }
 
@@ -29,12 +29,11 @@ body {
   text-align: left;
 }
 
- .shrinkElement {
-    border: solid black;
+.shrinkElement {
+  border: solid black;
   border-color: black;
   border-width: 3px 4px 3px 5px;
-  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
-  /*transform: rotate(2deg);*/
+  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;  /*transform: rotate(2deg);*/
 }
 
 .eventsContainer > .row div.eventHeader {
@@ -42,10 +41,6 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
   display: block;
-}
-
-#TextMarry{
-  font-size: 3vw;
 }
 
 .invisible-block {
