@@ -13,9 +13,7 @@ body {
 }
 
 #ImgContainer {
-  position: absolute;
   width: 100%;
-  transform: scale(0.9);
 }
 
 #JabuMarryImg {
@@ -32,17 +30,6 @@ body {
   text-align: center;
   position: absolute;
   bottom: 100%;
-}
-
-#ScrollBlock {
-
-  /* Initial value to prevent eventsContainer to show when loading */
-  height: 100vh;
-}
-
-.eventsContainer:before {
-  display: block;
-  top: 200px;
 }
 
 .eventsContainer > .row {
@@ -70,6 +57,11 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.shrinkElement.container {
+  left: 0;
+  right: 0;
 }
 
 .animation_fadein {
