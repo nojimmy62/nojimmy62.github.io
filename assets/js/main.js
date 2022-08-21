@@ -2,6 +2,7 @@ function makeStruct(names) {
     var names = names.split(' ');
     var count = names.length;
 
+
     function constructor() {
         for (var i = 0; i < count; i++) {
             this[names[i]] = arguments[i];
@@ -14,8 +15,19 @@ var ScrollConfig = makeStruct("selector initialScale finalScale height paddingTo
 var _updateAnimation = []
 var _updateConfig = []
 
+
 var animateUpdate = function() {
     var scroll = window.scrollY
+
+    if (scroll >= $("#WeddingEvent").offset().top && scroll < $("#OurStory1").offset().top) {
+        $('#EventButton').addClass('active')
+        $('#EventStory').removeClass('active')
+    }
+    else if (scroll >= $("#OurStory1").offset().top) {
+        $('#EventButton').removeClass('active')
+        $('#EventStory').addClass('active')
+    }
+    
     _updateConfig.forEach((config) => {
         var containerTop = $(config.selector).offset().top
         var element = $(config.selector).find('.shrinkElement')
@@ -60,6 +72,9 @@ var ScrollShrink = function(config) {
     invisible.css('height', config.height + (config.paddingTop + config.paddingBottom) * $(window).height())
     _updateConfig.push(config)
     animateUpdate()
+
+    
+
 }
 
 var initialize = function() {
