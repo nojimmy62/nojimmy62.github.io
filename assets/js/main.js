@@ -1,11 +1,81 @@
 
 langText = {
-    "TextMarry":{
+    "#EventButton":{
+        "en": "Wedding events",
+        "tw": "婚禮資訊"
+    },
+    "#StoryButton":{
+        "en": "Our story",
+        "tw": "我們的故事"
+    },
+    "#FactButton":{
+        "en": "Fun facts",
+        "tw": "小趣事"
+    },
+    "#TextMarry":{
         "en": "Ting-Wei & Hsiang-Chih are getting married!",
         "tw": "亭維 & 翔致要結婚了！"
-    }
+    },
+    "#TextWedding":{
+        "en": "Wedding events",
+        "tw": "婚禮資訊"
+    },
+    "#TextDateHeader":{
+        "en": "Date",
+        "tw": "日期"
+    },
+    "#TextDate":{
+        "en": "December 18, 2022 (Sunday)",
+        "tw": "2022年12月18日 (星期日)"
+    },
+    "#TextCeremonyHeader":{
+        "en": "Ceremony",
+        "tw": "結婚典禮"
+    },
+    "#TextChurch":{
+        "en": "Chi-Nan Presbyterian Church, 3pm<br/> No. 3, Zhongshan S Rd, Zhongzheng District, Taipei City",
+        "tw": "濟南教會, 3:00 pm入場，3:30 典禮開始 <br/> \
+               台北市中正區中山南路3號 <br/> \
+               近捷運台大醫院站、善導寺站、台北車站，地圖連結"
+    },
+    "#TextBanquetHeader":{
+        "en": "Banquet",
+        "tw": "婚禮晚宴"
+    },
+    "#TextBanquet":{
+        "en": "Mandarin Oriental Taipei, 7pm<br/> \
+            No. 158, DunHua N Rd, Songshan District, Taipei City",
+        "tw": "臺北文華東方酒店，6 pm入場，6:30 pm 開始<br/> \
+               台北市松山區敦化北路158號<br/> \
+               近捷運台北小巨蛋站"
+    },
+    ".storyHeader":{
+        "en": "Our story",
+        "tw": "我們的故事"
+    },
+    "#TextStory1":{
+        "en": "Once upon the time, Ting-Wei and Hsiang-Chih, both Taiwanese. They both grew up in Taipei, but never met each other.",
+        "tw": "很久很久以前，亭維和翔致都是台北人，但他們並沒有在台灣相遇。"
+    },
+    "#TextStory2":{
+        "en": "Hsiang-Chih, a nature lover, loves to travel around the world, and also stargazing. One of his most proudest things is he went to Tibet in 2014, counting stars with Mt. Everest. Maybe that’s how he ended up with his astronomy career later?",
+        "tw": "翔致熱愛自然，喜歡旅遊及觀星。他曾經去過西藏的喜馬拉雅山基地營看星星。這或許是為什麼後來翔致走上天文研究的原因？"
+    },
+    "#TextStory3":{
+        "en": "Ting-Wei is an enthusiastic music lover. She sings with playing piano or guitar. She writes songs on her own. Want to listen to one? Here you go: youtube link",
+        "tw": " 亭維熱愛音樂。她能自彈(鋼琴和吉他)自唱，甚至還會自己寫歌。想聽聽她的作品嗎？這裡是連結！"
+    },
+    "#TextStory4":{
+        "en": "Ting-Wei and Hsiang-Chih met each other in Baltimore, 2016. Well, they didn’t get close to each other right away, until they started to play badminton together! (Oh btw, Hsiang-Chih was a captain of the badminton team in his undergrad department) <br/> Then, they found that they were not only good teammates on the badminton court but also in life! Therefore, they became a couple in summer, 2017! ",
+        "tw": "2016年，亭維和翔致在美國巴爾的摩求學時相遇。但大概是在半年後，他們才因一起打羽球才變熟(翔致表示，還好以前在大學系上羽球隊沒白費)。 <br/>日後，他們發現，他們不僅是羽球場上的好隊友，他們還可以一起玩音樂、划船、數星星。最後，在2017年的夏天，他們成了情侶!"
+    },
 }
-
+/*
+"":{
+        "en": "",
+        "tw": ""
+    },
+*/
 function makeStruct(names) {
     var names = names.split(' ');
     var count = names.length;
@@ -80,7 +150,7 @@ function langChange(lang) {
     // });
 
     for (id in langText) {
-        $('#'+id).text(langText[id][lang])
+        $(id).html(langText[id][lang])
     }
 
 }
