@@ -226,7 +226,7 @@ $(window).on("load", function() {
     // Make the scrollbar appears again.
     $("body").css("overflow", "inherit")
     $("#Loading").fadeOut({
-        "duration": 3000,
+        "duration": 600,
         "easing": "swing",
         "complete": function() {
             $(this).remove()
