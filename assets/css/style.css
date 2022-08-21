@@ -3,6 +3,29 @@
 --------------------------------------------------------------*/
 body {
   font-family: 'Mansalva', 'Noto Sans', '微軟正黑體', 'Noto Sans TC', '標楷體', '新細明體', 'consolas';
+  overflow: hidden;
+}
+
+.shrinkElement img {
+  display: block;
+  object-fit: contain;
+  max-height: 80vh;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+#Loading {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 2000;
+  position: absolute;
+  margin: auto;
+  left: auto;
+  right: auto;
 }
 
 #ImgContainer {
@@ -18,11 +41,22 @@ body {
   display: block;
 }
 
+.spinner-border {
+  width: 10rem;
+  height: 10rem;
+  top: 50%;
+  margin: auto;
+}
+
 #TextMarry {
   width: 100%;
   text-align: center;
   position: absolute;
   bottom: 100%;
+}
+
+.eventsContainer {
+  padding: 40px 40px 40px 40px;
 }
 
 .eventsContainer > .row {
@@ -58,25 +92,4 @@ body {
 .shrinkElement.container {
   left: 0;
   right: 0;
-}
-
-.animation_fadein {
-  opacity: 0;
-  animation-fill-mode: forwards;
-  animation-duration: 3s;
-  animation-name: fadein;
-}
-
-/*--------------------------------------------------------------
-# Animation
---------------------------------------------------------------*/
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-
 }
