@@ -17,11 +17,12 @@ body {
 }
 
 #JabuMarryImg {
-  transform: scale(1);
   animation-fill-mode: forwards;
-  width: 100%;
+  width: 90%;
   max-height: 100vh;
   object-fit: cover;
+  margin:  auto;
+  display: block;
 }
 
 #TextMarry {
@@ -46,8 +47,12 @@ body {
 .eventsContainer > .row div.eventHeader {
   text-align: center;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   display: block;
+}
+
+#TextMarry{
+  font-size: 4rem;
 }
 
 .invisible-block {
