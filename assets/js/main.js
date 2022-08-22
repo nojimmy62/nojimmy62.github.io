@@ -75,6 +75,7 @@ langText = {
     "#TextStory6": {
         "en": "After Hsiang-Chih finished his PhD in astronomy in 2021. Before moving to Princeton for their new jobs, they had a trip to Alaska, where their arms were completely exhausted after 5-hour kayaking. <br>They thought it is time for next chapter of their life.. Hsiang-Chih proposed to Ting-Wei on Feb. 12, 2022, promising that they will face the joy and difficulty together, and will get old together with laughter. <br>Ting-Wei said yes :) ",
         "tw": ""
+        "tw": "2021年，翔致博士班畢業後，亭維跟翔致一起去了一趟阿拉斯加，在冰川邊划船，然後晚上兩人手臂再痠到不行。<br>後來，亭維跟翔致搬去普林斯頓工作，並決定是時候完成人生大事。2022年2月12日，翔致向亭維求婚，承諾兩人要在接下來人生的日子裡，一起面對歡樂與困難，然後一起笑著變老。<br><br>亭維說 yes! :)"
     },
     "#TextStory7": {
         "en": "Ting-Wei and Hsiang-Chih will have their wedding on Dec. 18, 2022. Please come and celebrate the big moment of their lives! Your presence means a lot to us!! ",
@@ -95,10 +96,12 @@ langText = {
     "#TextFact3": {
         "en": "When is the “birthday” of Duki? <br> <br>The concept of Duki was first created in 2017, by Hsiang-Chih. But the drawing of Duki has been significantly improved (?) by Ting-Wei. In fact, Hsiang-Chih is not as good at drawing Duki due to its complexity.  ",
         "tw": "Duki 是什麼時候誕生的？<br><br>第一個Duki是翔致於 2017年時畫的(下方左圖)。但現今的Duki已受到亭維大量的改良。其實，因為Duki較複雜的結構，翔致不太擅長畫Duki。"
+        "tw": "Duki 是什麼時候誕生的？<br><br>第一個Duki是翔致於 2017年時畫的(下方左圖)。但現今的Duki已經過亭維大量的改良。其實，因為Duki較複雜的結構，翔致不太擅長畫Duki。"
     },
     "#TextFact4": {
         "en": "How is this website being made? <br><br>This website is made by Po-Hsien (tremendous technical help), Ting-Wei (all the drawing), and Hsiang-Chih (content)!",
         "tw": "這網站是如何製作的呢？<br>這網站是由柏軒(大量的技術支援)、亭維(所有作圖)、翔致(內容)完成！"
+        "tw": "這網站是如何製作的呢？<br><br>這網站是由柏軒(大量的技術支援)、亭維(所有作圖)、翔致(內容)完成！"
     },
 }
 /*
@@ -216,6 +219,7 @@ $(window).on("load", function() {
     ScrollShrink(new ScrollConfig("#Facts2", 1, 0.6))
     ScrollShrink(new ScrollConfig("#Facts3", 1, 0.6))
     ScrollShrink(new ScrollConfig("#Facts4", 1, 0.6))
+    ScrollShrink(new ScrollConfig("#Photo", 1, 0.6))
         // TODO: We need to adjust invisible block height when resizing.
     $(window).on("resize", () => window.requestAnimationFrame(animateUpdate))
     $(document).on("scroll", () => window.requestAnimationFrame(animateUpdate))
