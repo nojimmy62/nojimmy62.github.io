@@ -16,6 +16,10 @@ body {
   margin: auto;
 }
 
+.carousel-item > img {
+  height: 50vh;
+}
+
 #Loading {
   content: "";
   height: 100%;
