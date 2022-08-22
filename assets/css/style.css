@@ -88,11 +88,20 @@ body {
   box-shadow: 6px 7px 10px 0px rgb(100 0 100);;
 }
 
+.ourStory .eventHeader {
+  color: rgb(100 0 100);
+  border-bottom-color: rgb(100 0 100);
+}
+
 .funFacts .shrinkElement {
   border-color: rgb(183 63 63);
   box-shadow: 6px 7px 10px 0px rgb(183 63 63);
 }
 
+.funFacts .eventHeader {
+  color: rgb(183 63 63);
+  border-bottom-color: rgb(183 63 63);
+}
 
 .eventsContainer > .row div.eventHeader {
   text-align: center;
