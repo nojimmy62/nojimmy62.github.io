@@ -28,8 +28,10 @@ body {
   right: auto;
 }
 
-#ImgContainer {
+#CoverContainer {
   width: 100%;
+  border: none;
+  box-shadow: none;
 }
 
 #JabuMarryImg {
