@@ -109,11 +109,6 @@ body {
   border-bottom-color: rgb(100 0 100);
 }
 
-.ourStory .sectionHeader{
-  color: rgb(100 0 100);
-  border-bottom-color: rgb(100 0 100);
-}
-
 .funFacts .shrinkElement {
   border-color: rgb(183 63 63);
   box-shadow: 6px 7px 10px 0px rgb(183 63 63);
@@ -124,23 +119,10 @@ body {
   border-bottom-color: rgb(183 63 63);
 }
 
-.funFacts .sectionHeader {
-  color: rgb(183 63 63);
-  border-bottom-color: rgb(183 63 63);
-}
-
-
 .eventsContainer > .row div.eventHeader {
   text-align: center;
   font-weight: bold;
   font-size: 1.5rem;
-  display: block;
-}
-
-.eventsContainer > .row div.sectionHeader {
-  text-align: center;
-  font-weight: bold;
-  font-size: 2.5rem;
   display: block;
 }
 
@@ -151,9 +133,6 @@ body {
 
 .detailHeader {
   font-weight: bold;
-  /*text-overflow: ellipsis;*/
-  /*overflow: hidden;*/
-  /*white-space: nowrap;*/
   white-space: wrap;
 }
 
