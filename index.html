@@ -28,20 +28,23 @@
     <div class="container sticky-top">
       <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
         <ul class="nav nav-pills">
-          <li class="nav-item"><a href="#WeddingEvent" class="btn btn-light" id="EventButton" aria-current="page">Wedding events</a></li>
-          <li class="nav-item"><a href="#OurStory1" class="btn btn-light" id="StoryButton" aria-current="page">Our story</a></li>
-          <li class="nav-item"><a href="#Facts1" class="btn btn-light" id="FactButton" aria-current="page">Fun facts</a></li>
+          <li class="nav-item"><a href="#WeddingEvent0" class="btn btn-light" id="EventButton" aria-current="page">Wedding events</a></li>
+          <li class="nav-item"><a href="#OurStory0" class="btn btn-light" id="StoryButton" aria-current="page">Our story</a></li>
+          <li class="nav-item"><a href="#Facts0" class="btn btn-light" id="FactButton" aria-current="page">Fun facts</a></li>
+          <li class="nav-item"><a href="#Photo" class="btn btn-light" id="PhotoButton" aria-current="page">Photo gallery</a></li>
         </ul>
         <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
           <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/>
           </svg>
         </a>
         <ul class="nav nav-pills">
-          <li class="nav-item" id="englishButton"><a class="btn btn-light active" aria-current="page">English</a></li>
-          <li class="nav-item" id="mandarinButton" ><a class="btn btn-light">中文</a></li>
+          
+          <li class="nav-item" id="mandarinButton" ><a class="btn btn-light  active">中文</a></li>
+          <li class="nav-item" id="englishButton"><a class="btn btn-light" aria-current="page">English</a></li>
         </ul>
       </header>
     </div>
+
     <div id="Cover">
       <div id="CoverContainer" class="container eventsContainer shrinkElement" >
         <h2 id="TextMarry">Ting-Wei and Hsiang-Chih are getting married!</h2>
@@ -49,40 +52,100 @@
       </div>
       <div class="invisible-block"></div>
     </div>
-    <div id="WeddingEvent" class="weddingEvent">
+
+    <div id="WeddingEvent0" class="weddingEvent">
       <div class="invisible-block"></div>
       <div class="container eventsContainer shrinkElement" >
         <div class="row ">
-          <div class="eventHeader col-lg-8 offset-lg-2" id="TextWedding">Wedding events</div>
+          <div class="eventHeader col-lg-8 offset-lg-2 weddingHeader">Wedding events</div>
         </div>
         <div class="eventDetails row">
-          <div class="detailHeader col-lg-2 offset-lg-2" id="TextDateHeader">Date</div>
-          <div class="detailContent col-lg-6" id="TextDate">December 18, 2022 (Sunday)</div>
+
+          <div class="detailHeader col-lg-3 offset-lg-2" id="TextDateHeader">Date</div>
+          <div class="detailContent col-lg-5" id="TextDate">December 18, 2022 (Sunday)</div>
         </div>
+
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="border-line"> </div>
+          </div>
+        </div>
+
+
         <div class="eventDetails row">
-          <div class="detailHeader col-lg-2 offset-lg-2" id="TextCeremonyHeader">Ceremony</div>
-          <div class="detailContent col-lg-6" id="TextChurch">
+          <div class="detailHeader col-lg-3 offset-lg-2" id="TextCeremonyHeader">Ceremony</div>
+          <div class="detailContent col-lg-5" id="TextChurch">
             Chi-Nan Presbyterian Church, 3pm<br>
             No. 3, Zhongshan S Rd, Zhongzheng District, Taipei City
           </div>
         </div>
+        
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="border-line"> </div>
+          </div>
+        </div>
+
         <div class="eventDetails row">
-          <div class="detailHeader col-lg-2 offset-lg-2" id="TextBanquetHeader">Banquet</div>
-          <div class="detailContent col-lg-6" id="TextBanquet">
+          <div class="detailHeader col-lg-3 offset-lg-2" id="TextBanquetHeader">Banquet</div>
+          <div class="detailContent col-lg-5" id="TextBanquet">
             Mandarin Oriental Taipei, 7pm<br>
             No. 158, DunHua N Rd, Songshan District, Taipei City
           </div>
         </div>
-        <div class="eventDetails row">
-          <div class="detailHeader col-lg-2 offset-lg-2">Parking</div>
-          <div class="detailContent col-lg-6">...</div>
-        </div>
-        <div class="eventDetails row">
-          <div class="detailHeader col-lg-2 offset-lg-2">Zoom link</div>
-          <div class="detailContent col-lg-6">...</div>
+        
+
+        <div class="col-lg-8 offset-lg-2">
+          <img src="assets/img/invitation0.png" >
         </div>
       </div>
     </div>
+
+    <div id="WeddingEvent1" class="weddingEvent">
+      <div class="invisible-block"></div>
+      <div class="container eventsContainer shrinkElement" >
+        <div class="row ">
+          <div class="eventHeader col-lg-8 offset-lg-2 weddingHeader">Wedding events</div>
+        </div>
+
+        <div class="eventDetails row">
+          <div class="detailHeader col-lg-3 offset-lg-2" id="TextTransHeader">Recommended transportation</div>
+          <div class="detailContent col-lg-5" id="TextTrans">...</div>
+        </div>
+        
+        <div class="eventDetails row">
+          <div class="detailHeader col-lg-3 offset-lg-2" id="TextParkingHeader">Parking</div>
+          <div class="detailContent col-lg-5" id="TextParking">...</div>
+        </div>
+        <div class="eventDetails row">
+          <div class="detailHeader col-lg-3 offset-lg-2" id="TextZoomHeader">Zoom link</div>
+          <div class="detailContent col-lg-5" id="TextZoom">...</div>
+        </div>
+
+        <div class="col-lg-8 offset-lg-2">
+          <img src="assets/img/invitation1.png" >
+        </div>
+      </div>
+
+      
+    </div>
+
+
+
+    <div id="OurStory0" class="ourStory">
+      <div class="invisible-block"></div>
+      <div class="container eventsContainer shrinkElement">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="eventHeader storyHeader">Our story</div>
+          </div>
+          <div class="col-lg-8 offset-lg-2">
+            <img src="assets/img/gif1.gif" >
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="OurStory1" class="ourStory">
       <div class="invisible-block"></div>
       <div class="container eventsContainer shrinkElement">
@@ -176,11 +239,29 @@
             <p id="TextStory7">Ting-Wei and Hsiang-Chih will have their wedding on Dec. 18, 2022. Please come and celebrate the big moment of their lives! Your presence means a lot to us!! </p>
           </div>
           <div class="col-lg-8 offset-lg-2">
+            <img src="assets/img/JabuDuki_wedding.png" >
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="Facts0" class="funFacts">
+      <div class="invisible-block"></div>
+      <div class="container eventsContainer shrinkElement">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            <div class="eventHeader factHeader">Fun facts</div>
+          </div>
+          <div class="col-lg-8 offset-lg-2">
             <img src="assets/img/gif2.gif" >
           </div>
         </div>
       </div>
     </div>
+
+
+
     <div id="Facts1" class="funFacts">
       <div class="invisible-block"></div>
       <div class="container eventsContainer shrinkElement">
@@ -195,6 +276,8 @@
         </div>
       </div>
     </div>
+
+
     <div id="Facts2" class="funFacts">
       <div class="invisible-block"></div>
       <div class="container eventsContainer shrinkElement">
@@ -244,7 +327,7 @@
       <div class="container eventsContainer shrinkElement">
         <div class="row">
           <div class="col-lg-8 offset-lg-2">
-            <div class="eventHeader photoHeader">Our photos</div>
+            <div class="eventHeader photoHeader" id="TextPhotoHeader">Our photos</div>
               <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

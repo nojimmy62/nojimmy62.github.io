@@ -66,6 +66,15 @@ body {
     border-right: 0px;
 }
 
+.border-line {
+    border-bottom: 2px;
+    border-color: black;
+    border-style: dotted;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
 .eventsContainer {
   padding: 10px 40px 40px 40px;
 }
@@ -119,9 +128,10 @@ body {
 
 .detailHeader {
   font-weight: bold;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  /*text-overflow: ellipsis;*/
+  /*overflow: hidden;*/
+  /*white-space: nowrap;*/
+  white-space: wrap;
 }
 
 .shrinkElement.container {

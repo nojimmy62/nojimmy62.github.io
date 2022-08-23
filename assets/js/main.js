@@ -11,11 +11,15 @@ langText = {
         "en": "Fun facts",
         "tw": "小趣事"
     },
+    "#PhotoButton": {
+        "en": "Photo gallery",
+        "tw": "相簿"
+    },
     "#TextMarry": {
         "en": "Ting-Wei & Hsiang-Chih are getting married!",
         "tw": "亭維 & 翔致要結婚了！"
     },
-    "#TextWedding": {
+    ".weddingHeader": {
         "en": "Wedding events",
         "tw": "婚禮資訊"
     },
@@ -28,25 +32,59 @@ langText = {
         "tw": "2022年12月18日 (星期日)"
     },
     "#TextCeremonyHeader": {
-        "en": "Ceremony",
-        "tw": "結婚典禮"
+        "en": "Ceremony:<br>Chi-Nan Presbyterian Church",
+        "tw": "結婚典禮(自由參加):<br>濟南教會 <br> "
     },
     "#TextChurch": {
-        "en": "Chi-Nan Presbyterian Church, 3pm<br> No. 3, Zhongshan S Rd, Zhongzheng District, Taipei City",
-        "tw": "濟南教會, 3:00 pm入場，3:30 典禮開始 <br> \
+        "en": "3:00 pm starts sitting, 3:30 pm event begins.<br> \
+               No. 3, Zhongshan S Rd, Zhongzheng District, Taipei City <br> \
+               Google map: <a target=\"_blank\" href=\"https://goo.gl/maps/NZJXJdLBwn2jZuGj6\">Link</a> <br>\
+               Close to MRT NTU Hospital, Shandao Temple, and Taipei Main station",
+        "tw": "3:00 pm入場，3:30 pm典禮開始 <br> \
                台北市中正區中山南路3號 <br> \
-               近捷運台大醫院站、善導寺站、台北車站，地圖連結"
+               Google 地圖<a target=\"_blank\" href=\"https://goo.gl/maps/NZJXJdLBwn2jZuGj6\">連結</a><br>\
+               近捷運台大醫院站、善導寺站、台北車站"
     },
     "#TextBanquetHeader": {
-        "en": "Banquet",
-        "tw": "婚禮晚宴"
+        "en": "Banquet: <br> Mandarin Oriental Taipei",
+        "tw": "婚禮晚宴:<br>臺北文華東方酒店"
     },
     "#TextBanquet": {
-        "en": "Mandarin Oriental Taipei, 7pm<br> \
-               No. 158, DunHua N Rd, Songshan District, Taipei City",
-        "tw": "臺北文華東方酒店，6 pm入場，6:30 pm 開始<br> \
+        "en": "6:00 pm starts sitting, 6:30 pm event begins.<br> \
+               No. 158, DunHua N Rd, Songshan District, Taipei City <br> \
+               Google map: <a target=\"_blank\" href=\"https://goo.gl/maps/15nu7y7u53WyiVUk7\">Link</a> <br>\
+               Close to MRT Taipei Arena station",
+        "tw": "6:00 pm入場，6:30 pm晚宴開始<br> \
                台北市松山區敦化北路158號<br> \
+               Google 地圖<a target=\"_blank\" href=\"https://goo.gl/maps/15nu7y7u53WyiVUk7\">連結 </a>  <br>\
                近捷運台北小巨蛋站"
+    },
+    "#TextTransHeader": {
+        "en": "Recommended transportation",
+        "tw": "建議交通方式"
+    },
+    "#TextTrans": {
+        "en": "If you attend the ceremony around the church, we recommend public transportation due to the limited partking space at the church, If you want to take MRT from the church to the hotel, we recommend taking the red line to the Da-an station, then the brown line to the Nanjing Fuxing station, then the green line to the Taipei Arena station; the estimated MRT transportation time is 40 minutes. If you only attend the banquet at the hotel, you can use the free parking at the hotel (B5/B6).",
+        "tw": "如參加教會典禮，因車位有限，建議多利用大眾交通工具。如欲從教會搭捷運至文華東方酒店，建議搭乘紅線、由台大醫院站搭至大安站，轉乘文湖線、搭至南京復興，再轉乘綠線搭至台北小巨蛋站；總捷運車程約40分鐘。如僅參加婚宴，可多利用酒店的免費停車場(於酒店B5/B6)。"
+    },
+    "#TextParkingHeader": {
+        "en": "Parking",
+        "tw": "停車資訊"
+    },
+    "#TextParking": {
+        "en": "Parking spaces nearby the Chi-Nan Presbyterian Church: <a target=\"_blank\" href=\"http://www.chi-nanchurch.tw/contact/venue/parking-nearby\">link </a> <br>\
+        The Mandarin Oriental Taipei provides free parking at the hotel B5 and B6\
+        ",
+        "tw": "濟南教會附近計時停車場請參考：<a target=\"_blank\" href=\"http://www.chi-nanchurch.tw/contact/venue/parking-nearby\">連結 </a> <br>\
+        臺北文華東方酒店提供免費室內停車(於酒店B5/B6)"
+    },
+    "#TextZoomHeader": {
+        "en": "Zoom link",
+        "tw": "Zoom 連結"
+    },
+    "#TextZoom": {
+        "en": "Links will be available in near future!",
+        "tw": "線上Zoom連結會於近期更新！"
     },
     ".storyHeader": {
         "en": "Our story",
@@ -100,6 +138,10 @@ langText = {
         "en": "How is this website being made? <br><br>This website is made by Po-Hsien (tremendous technical help), Ting-Wei (all the drawing), and Hsiang-Chih (content)!",
         "tw": "這網站是如何製作的呢？<br><br>這網站是由柏軒(大量的技術支援)、亭維(所有作圖)、翔致(內容)完成！"
     },
+    "#TextPhotoHeader": {
+        "en": "Photo gallery",
+        "tw": "(真人)相簿"
+    },
 }
 /*
 "":{
@@ -128,20 +170,29 @@ var _updateConfig = []
 var animateUpdate = function() {
     var scroll = window.scrollY
 
-    if (scroll >= $("#WeddingEvent").offset().top && scroll < $("#OurStory1").offset().top) {
+    if (scroll >= $("#WeddingEvent0").offset().top && scroll < $("#OurStory0").offset().top) {
         $("#EventButton").addClass("active")
         $("#StoryButton").removeClass("active")
         $("#FactButton").removeClass("active")
+        $("#PhotoButton").removeClass("active")
     }
-    if (scroll >= $("#OurStory1").offset().top - 1 && scroll < $("#Facts1").offset().top) {
+    if (scroll >= $("#OurStory0").offset().top - 1 && scroll < $("#Facts0").offset().top) {
         $("#EventButton").removeClass("active")
         $("#StoryButton").addClass("active")
         $("#FactButton").removeClass("active")
+        $("#PhotoButton").removeClass("active")
     }
-    if (scroll >= $("#Facts1").offset().top - 1) {
+    if (scroll >= $("#Facts0").offset().top - 1 && scroll < $("#Photo").offset().top) {
         $("#EventButton").removeClass("active")
         $("#StoryButton").removeClass("active")
         $("#FactButton").addClass("active")
+        $("#PhotoButton").removeClass("active")
+    }
+    if (scroll >= $("#Photo").offset().top -1) {
+        $("#EventButton").removeClass("active")
+        $("#StoryButton").removeClass("active")
+        $("#FactButton").removeClass("active")
+        $("#PhotoButton").addClass("active")
     }
 
     _updateConfig.forEach((config) => {
@@ -188,23 +239,27 @@ function langChange(lang) {
 }
 
 var initialize = function() {
-    $("#englishButton").click(function() {
-        langChange("en");
-        $(this).children("a").addClass("active");
-        $(this).siblings().children("a").removeClass("active");
-    }).click()
     $("#mandarinButton").click(function() {
         langChange("tw");
         $(this).children("a").addClass("active");
         $(this).siblings().children("a").removeClass("active");
+    }).click()
+
+    $("#englishButton").click(function() {
+        langChange("en");
+        $(this).children("a").addClass("active");
+        $(this).siblings().children("a").removeClass("active");
     })
+    
 }
 
 $(document).ready(initialize);
 $(window).on("load", function() {
     // The following needs to be set based on the html flow.
     ScrollShrink(new ScrollConfig("#Cover", 0.9, 0.6))
-    ScrollShrink(new ScrollConfig("#WeddingEvent", 1, 0.6))
+    ScrollShrink(new ScrollConfig("#WeddingEvent0", 1, 0.6))
+    ScrollShrink(new ScrollConfig("#WeddingEvent1", 1, 0.6))
+    ScrollShrink(new ScrollConfig("#OurStory0", 1, 0.6))
     ScrollShrink(new ScrollConfig("#OurStory1", 1, 0.6))
     ScrollShrink(new ScrollConfig("#OurStory2", 1, 0.6))
     ScrollShrink(new ScrollConfig("#OurStory3", 1, 0.6))
@@ -212,6 +267,7 @@ $(window).on("load", function() {
     ScrollShrink(new ScrollConfig("#OurStory5", 1, 0.6))
     ScrollShrink(new ScrollConfig("#OurStory6", 1, 0.6))
     ScrollShrink(new ScrollConfig("#OurStory7", 1, 0.6))
+    ScrollShrink(new ScrollConfig("#Facts0", 1, 0.6))
     ScrollShrink(new ScrollConfig("#Facts1", 1, 0.6))
     ScrollShrink(new ScrollConfig("#Facts2", 1, 0.6))
     ScrollShrink(new ScrollConfig("#Facts3", 1, 0.6))
