@@ -187,7 +187,7 @@ var animateUpdate = function() {
         $("#FactButton").addClass("active")
         $("#PhotoButton").removeClass("active")
     }
-    if (scroll >= $("#Photo").offset().top -1) {
+    if (scroll >= $("#Photo").offset().top - 1) {
         $("#EventButton").removeClass("active")
         $("#StoryButton").removeClass("active")
         $("#FactButton").removeClass("active")
@@ -251,7 +251,7 @@ var initialize = function() {
         $(this).siblings().children("a").removeClass("active");
         changePhotoCaption("en")
     })
-    
+
 }
 
 $(document).ready(initialize);
@@ -297,54 +297,70 @@ function changePhotoCaption(lang) {
 }
 
 function moveToSelected(element) {
-
-  if (element == "next") {
-    var selected = $(".selected").next();
-  } else if (element == "prev") {
-    var selected = $(".selected").prev();
-  } else {
-    var selected = element;
-  }
-
-  var next = $(selected).next();
-  var prev = $(selected).prev();
-  var prevSecond = $(prev).prev();
-  var nextSecond = $(next).next();
-
-  $(selected).removeClass().addClass("selected");
-
-  $(prev).removeClass().addClass("prev");
-  $(next).removeClass().addClass("next");
-
-  $(nextSecond).removeClass().addClass("nextRightSecond");
-  $(prevSecond).removeClass().addClass("prevLeftSecond");
-
-  $(nextSecond).nextAll().removeClass().addClass('hideRight');
-  $(prevSecond).prevAll().removeClass().addClass('hideLeft');
-
-
-  // $('#PhotoCaption').html(setPhotoCaption($(selected).children("img").attr("src")))
-
-  if ($("#mandarinButton > a").hasClass("active")) {
-    changePhotoCaption("tw")
+    if (element == "next") {
+        var selected = $(".selected").next();
+    } else if (element == "prev") {
+        var selected = $(".selected").prev();
+    } else {
+        var selected = element;
     }
-  else if ($("#englishButton > a").hasClass("active")) {
-    changePhotoCaption("en")
-  }
+
+
+
+    var next = $(selected).next();
+    var prev = $(selected).prev();
+    var prevSecond = $(prev).prev();
+    var nextSecond = $(next).next();
+
+    $(selected).removeClass().addClass("selected");
+
+    $(prev).removeClass().addClass("prev");
+    $(next).removeClass().addClass("next");
+
+    $(nextSecond).removeClass().addClass("nextRightSecond");
+    $(prevSecond).removeClass().addClass("prevLeftSecond");
+
+    $(nextSecond).nextAll().removeClass().addClass('hideRight');
+    $(prevSecond).prevAll().removeClass().addClass('hideLeft');
+
+    // $('#PhotoCaption').html(setPhotoCaption($(selected).children("img").attr("src")))
+
+    if ($("#mandarinButton > a").hasClass("active")) {
+        changePhotoCaption("tw")
+    } else if ($("#englishButton > a").hasClass("active")) {
+        changePhotoCaption("en")
+    }
 
 }
 
 
 $('#carousel div').click(function() {
-  moveToSelected($(this));
+    if ($(this).hasClass("selected")) {
+        modal.style.display = "block";
+        modalImg.src = $(".selected > img").attr("src");
+
+    } else {
+        moveToSelected($(this));
+    }
 });
 
-$('#prev').click(function() {
-  moveToSelected('prev');
-});
-
-$('#next').click(function() {
-  moveToSelected('next');
-});
 
 
+
+// modal
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+var modalImg = document.getElementById("imginmodal");
+
+//var modalImg = $(".selected")
+//var captionText = document.getElementById("caption")
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
