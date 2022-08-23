@@ -184,6 +184,7 @@ div#carousel img {
   z-index: 5;
   left: 30%;
   transform: translateY(0%) translateX(-50%);
+  opacity: 0.85;
 }
 #carousel div.prev img {
   width: 300px;
@@ -206,6 +207,7 @@ div#carousel img {
   z-index: 5;
   left: 70%;
   transform: translateY(0%) translateX(-50%);
+  opacity: 0.85;
 }
 #carousel div.next img {
   width: 300px;
@@ -228,5 +230,8 @@ div#carousel img {
 }
 
 
+#PhotoCaption {
+  text-align: center;
+}
 
 

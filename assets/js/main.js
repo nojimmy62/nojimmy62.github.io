@@ -247,12 +247,14 @@ var initialize = function() {
         langChange("tw");
         $(this).children("a").addClass("active");
         $(this).siblings().children("a").removeClass("active");
+        changePhotoCaption("tw")
     }).click()
 
     $("#englishButton").click(function() {
         langChange("en");
         $(this).children("a").addClass("active");
         $(this).siblings().children("a").removeClass("active");
+        changePhotoCaption("en")
     })
     
 }
@@ -295,6 +297,9 @@ $(window).on("load", function() {
     })
 })
 
+function changePhotoCaption(lang) {
+    $('#PhotoCaption').html($(".selected > img").attr(lang + "-data"))
+}
 
 function moveToSelected(element) {
 
@@ -321,6 +326,16 @@ function moveToSelected(element) {
 
   $(nextSecond).nextAll().removeClass().addClass('hideRight');
   $(prevSecond).prevAll().removeClass().addClass('hideLeft');
+
+
+  // $('#PhotoCaption').html(setPhotoCaption($(selected).children("img").attr("src")))
+
+  if ($("#mandarinButton > a").hasClass("active")) {
+    changePhotoCaption("tw")
+    }
+  else if ($("#englishButton > a").hasClass("active")) {
+    changePhotoCaption("en")
+  }
 
 }
 
