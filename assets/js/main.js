@@ -42,7 +42,7 @@ langText = {
                Close to MRT NTU Hospital, Shandao Temple, and Taipei Main station",
         "tw": "3:00 pm入場，3:30 pm典禮開始 <br> \
                台北市中正區中山南路3號 <br> \
-               Google 地圖<a target=\"_blank\" href=\"https://goo.gl/maps/NZJXJdLBwn2jZuGj6\">連結</a><br>\
+               Google 地圖 <a target=\"_blank\" href=\"https://goo.gl/maps/NZJXJdLBwn2jZuGj6\">連結</a><br>\
                近捷運台大醫院站、善導寺站、台北車站"
     },
     "#TextBanquetHeader": {
@@ -324,21 +324,6 @@ function moveToSelected(element) {
 
 }
 
-// Eventos teclado
-$(document).keydown(function(e) {
-    switch(e.which) {
-        case 37: // left
-        moveToSelected('prev');
-        break;
-
-        case 39: // right
-        moveToSelected('next');
-        break;
-
-        default: return;
-    }
-    e.preventDefault();
-});
 
 $('#carousel div').click(function() {
   moveToSelected($(this));
@@ -351,3 +336,5 @@ $('#prev').click(function() {
 $('#next').click(function() {
   moveToSelected('next');
 });
+
+
