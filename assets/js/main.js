@@ -147,12 +147,7 @@ langText = {
         "tw": "看完Jabu跟Duki，是時候看看真人版的照片了！"
     },
 }
-/*
-"":{
-        "en": "",
-        "tw": ""
-    },
-*/
+
 
 function makeStruct(names) {
     var names = names.split(" ");
