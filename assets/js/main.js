@@ -112,7 +112,7 @@ langText = {
     },
     "#TextStory6": {
         "en": "After Hsiang-Chih finished his PhD in astronomy in 2021. Before moving to Princeton for their new jobs, they had a trip to Alaska, where their arms were completely exhausted after 5-hour kayaking. <br>They thought it is time for next chapter of their life.. Hsiang-Chih proposed to Ting-Wei on Feb. 12, 2022, promising that they will face the joy and difficulty together, and will get old together with laughter. <br>Ting-Wei said yes :) ",
-        "tw": "2021年，翔致博士班畢業後，亭維跟翔致一起去了一趟阿拉斯加，在冰川邊划船，然後晚上兩人手臂再痠到不行。<br>後來，亭維跟翔致搬去普林斯頓工作，並決定是時候完成人生大事。2022年2月12日，翔致向亭維求婚，承諾兩人要在接下來人生的日子裡，一起面對歡樂與困難，然後一起笑著變老。<br><br>亭維說 yes! :)"
+        "tw": "2021年，翔致博士班畢業後，亭維跟翔致一起去了一趟阿拉斯加，在冰川邊划船，然後晚上兩人手臂再痠到不行。<br>後來，翔致搬去普林斯頓工作，並決定是時候完成人生大事。2022年2月12日，翔致向亭維求婚，承諾兩人要在接下來人生的日子裡，一起面對歡樂與困難，然後一起笑著變老。<br><br>亭維說 yes! :)"
     },
     "#TextStory7": {
         "en": "Ting-Wei and Hsiang-Chih will have their wedding on Dec. 18, 2022. Please come and celebrate the big moment of their lives! Your presence means a lot to us!! ",
@@ -204,13 +204,20 @@ var animateUpdate = function() {
         } else if (scroll < containerTop + config.height) {
             scale = config.initialScale + (scroll - containerTop) / config.height * (config.finalScale - config.initialScale)
             element.css("position", "fixed")
-            element.css("top", $(".sticky-top").height())
+
+            magicshift = 0.5 * config.height * (config.initialScale - scale)
+            magicshift_factor = 1.
+            element.css("top", $(".sticky-top").height() - magicshift * magicshift_factor)
         } else {
             scale = config.finalScale
             element.css("position", "absolute")
-            element.css("top", containerTop + config.height + $(".sticky-top").height())
+            magicshift = 0.5 * config.height * (config.initialScale - config.finalScale)
+            magicshift_factor = 1.
+            element.css("top", containerTop + config.height + $(".sticky-top").height() - magicshift * magicshift_factor)
         }
         element.css("transform", `scale(${scale})`)
+        invisible=$(config.selector).find(".invisible-block")
+        invisible.css("height", config.height + element.height())
     })
 }
 
@@ -226,7 +233,7 @@ var ScrollShrink = function(config) {
         alert("No invisible-block found under " + config.selector)
     }
     config.height = element.height()
-    invisible.css("height", config.height + element.height())
+    
     _updateConfig.push(config)
     animateUpdate()
 }
