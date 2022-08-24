@@ -206,13 +206,13 @@ var animateUpdate = function() {
             element.css("position", "fixed")
 
             magicshift = 0.5 * config.height * (config.initialScale - scale)
-            magicshift_factor = 1.
+            magicshift_factor = 0.7
             element.css("top", $(".sticky-top").height() - magicshift * magicshift_factor)
         } else {
             scale = config.finalScale
             element.css("position", "absolute")
             magicshift = 0.5 * config.height * (config.initialScale - config.finalScale)
-            magicshift_factor = 1.
+            magicshift_factor = 0.7
             element.css("top", containerTop + config.height + $(".sticky-top").height() - magicshift * magicshift_factor)
         }
         element.css("transform", `scale(${scale})`)
