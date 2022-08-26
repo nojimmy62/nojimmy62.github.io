@@ -16,19 +16,8 @@ body {
   margin: auto;
 }
 
-.shrinkElement img.modal-content{
-  max-height:100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  position: absolute;
-}
 
-.modal > img.modal-content {
-  background-color: rbga(0,0,0,0);
-}
+
 
 .carousel-item > img {
   height: 50vh;
@@ -244,13 +233,9 @@ div#carousel img {
   bottom: 10px;
 }
 
-
 #PhotoCaption {
   text-align: center;
 }
-
-
-
 
 /* The Modal (background) */
 .modal {
@@ -258,7 +243,9 @@ div#carousel img {
   position: fixed; /* Stay in place */
   z-index: 2000; /* Sit on top */
   left: 0;
+  right: 0;
   top: 0;
+  bottom: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
@@ -271,15 +258,18 @@ div#carousel img {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+  max-width: 100vw;
+  max-height: 100vh;
+  background-color: rgba(0,0,0,0);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  object-fit: contain;
 }
 
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-
-/* The Close Button */
 .close {
   z-index: 2500;
   position: absolute;
@@ -291,8 +281,7 @@ div#carousel img {
   transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;

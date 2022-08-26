@@ -298,6 +298,10 @@ var initialize = function() {
         $("#myModal").hide()
     })
 
+    $("#myModal").click(function() {
+        $("#myModal").hide()
+    })
+
     if ("scrollRestoration" in history) {
         history.scrollRestoration = "manual"
     }
