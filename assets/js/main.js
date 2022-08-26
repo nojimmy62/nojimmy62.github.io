@@ -307,6 +307,7 @@ var initialize = function() {
     }
 
     $("#carousel img").lazyload()
+    $(".sticky-top-blank").height($(".sticky-top").height())
 
     // The following needs to be set based on the html flow.
     ScrollShrink(new ScrollConfig("#Cover", 0.9, 0.6))
