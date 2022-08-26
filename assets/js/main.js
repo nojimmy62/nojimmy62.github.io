@@ -286,7 +286,7 @@ var moveCarousel = function(selected, {
     scale = true, // change scale based on the position
 } = {}) {
     var items = $("#Carousel").children()
-    if (selected < 0 || selected >= items.length) {
+    if (selected < 0 || Math.ceil(selected) >= items.length) {
         console.log(`Not valid select: ${selected}`)
         return
     }
