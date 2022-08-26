@@ -277,15 +277,18 @@ var modalShowImg = function(url) {
     $("#imginmodal").attr("src", url)
 }
 
-var selectedCarouselIndex = 0
-var moveCarousel = function(element, {
-    selected = 0, // index of the selected items in carousel
+var currentCarouselIndex = 0
+var moveCarousel = function(selected, {
     itemsRow = 5, // number of items per row
     zIndex = true, // change z-index based on the position
     grayscale = true, // change grayscale based on the position
     scale = true, // change scale based on the position
 } = {}) {
-    var items = $(element).children()
+    var items = $("#Carousel").children()
+    if (selected < 0 || selected >= items.length) {
+        console.log(`Not valid select: ${selected}`)
+        return
+    }
 
     paddingStep = 100 / (itemsRow - 1)
     halfItem = Math.floor(itemsRow / 2)
@@ -317,7 +320,7 @@ var moveCarousel = function(element, {
             "cursor": cursor,
         })
     })
-    selectedCarouselIndex = selected
+    currentCarouselIndex = selected
 }
 
 var initialize = function() {
@@ -335,15 +338,22 @@ var initialize = function() {
 
     // Setup Carousel
     $("#Carousel div").click(function(e) {
-        if (selectedCarouselIndex == $(this).index()) {
+        if (currentCarouselIndex == $(this).index()) {
             modalShowImg($(this).children("img").attr("src"))
         } else {
-            moveCarousel($(this).parent(), {
-                "selected": $(this).index()
-            })
+            moveCarousel($(this).index())
         }
     })
-    moveCarousel($("#Carousel"))
+    $("#Carousel div").on('mousewheel', function(e) {
+        if (e.originalEvent.wheelDelta / 120 > 0) {
+            moveCarousel(currentCarouselIndex - 1)
+        } else {
+            moveCarousel(currentCarouselIndex + 1)
+        }
+        // Don't scroll the browsing window
+        return false;
+    })
+    moveCarousel(currentCarouselIndex)
     $("#Carousel img").lazyload()
 
 
