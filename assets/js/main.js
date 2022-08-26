@@ -148,13 +148,11 @@ langText = {
     },
 }
 
-
-function makeStruct(names) {
+var makeStruct = function(names) {
     var names = names.split(" ");
     var count = names.length;
 
-
-    function constructor() {
+    var constructor = function() {
         for (var i = 0; i < count; i++) {
             this[names[i]] = arguments[i];
         }
@@ -164,7 +162,6 @@ function makeStruct(names) {
 
 var ScrollConfig = makeStruct("selector initialScale finalScale height");
 var _updateConfig = []
-
 
 var animateUpdate = function() {
     var scroll = window.scrollY
@@ -216,7 +213,7 @@ var animateUpdate = function() {
             element.css("top", containerTop + config.height + $(".sticky-top").height() - magicshift * magicshift_factor)
         }
         element.css("transform", `scale(${scale})`)
-        invisible=$(config.selector).find(".invisible-block")
+        invisible = $(config.selector).find(".invisible-block")
         invisible.css("height", config.height + element.height())
     })
 }
@@ -227,20 +224,51 @@ var ScrollShrink = function(config) {
     if (shrinkElement.length == 0) {
         alert("No shrinkElement found under " + config.selector)
     }
-
-    var invisible = $(element).find(".invisible-block")
-    if (invisible.length == 0) {
-        alert("No invisible-block found under " + config.selector)
-    }
     config.height = element.height()
-    
+
     _updateConfig.push(config)
     animateUpdate()
 }
 
-function langChange(lang) {
+var langChange = function(lang) {
     for (id in langText) {
         $(id).html(langText[id][lang])
+    }
+    changePhotoCaption(lang)
+}
+
+var changePhotoCaption = function(lang) {
+    $('#PhotoCaption').html($(".selected > img").attr(lang + "-data"))
+}
+
+var moveToSelected = function(element) {
+    if (element == "next") {
+        var selected = $(".selected").next();
+    } else if (element == "prev") {
+        var selected = $(".selected").prev();
+    } else {
+        var selected = element;
+    }
+    var next = $(selected).next();
+    var prev = $(selected).prev();
+    var prevSecond = $(prev).prev();
+    var nextSecond = $(next).next();
+
+    $(selected).removeClass().addClass("selected");
+
+    $(prev).removeClass().addClass("prev");
+    $(next).removeClass().addClass("next");
+
+    $(nextSecond).removeClass().addClass("nextRightSecond");
+    $(prevSecond).removeClass().addClass("prevLeftSecond");
+
+    $(nextSecond).nextAll().removeClass().addClass('hideRight');
+    $(prevSecond).prevAll().removeClass().addClass('hideLeft');
+
+    if ($("#mandarinButton > a").hasClass("active")) {
+        changePhotoCaption("tw")
+    } else if ($("#englishButton > a").hasClass("active")) {
+        changePhotoCaption("en")
     }
 }
 
@@ -249,20 +277,31 @@ var initialize = function() {
         langChange("tw");
         $(this).children("a").addClass("active");
         $(this).siblings().children("a").removeClass("active");
-        changePhotoCaption("tw")
     }).click()
 
     $("#englishButton").click(function() {
         langChange("en");
         $(this).children("a").addClass("active");
         $(this).siblings().children("a").removeClass("active");
-        changePhotoCaption("en")
     })
 
-}
+    $('#carousel div').click(function() {
+        if ($(this).hasClass("selected")) {
+            $("#myModal").show()
+            $("#imginmodal").attr("src", $(".selected > img").attr("src"))
+        } else {
+            moveToSelected($(this));
+        }
+    });
 
-$(document).ready(initialize);
-$(window).on("load", function() {
+    $("#myModal > .close").click(function() {
+        $("#myModal").hide()
+    })
+
+    if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual"
+    }
+
     // The following needs to be set based on the html flow.
     ScrollShrink(new ScrollConfig("#Cover", 0.9, 0.6))
     ScrollShrink(new ScrollConfig("#WeddingEvent0", 1, 0.6))
@@ -280,94 +319,19 @@ $(window).on("load", function() {
     ScrollShrink(new ScrollConfig("#Facts2", 1, 0.6))
     ScrollShrink(new ScrollConfig("#Facts3", 1, 0.6))
     ScrollShrink(new ScrollConfig("#Facts4", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#Photo", 1, 0.6))
-        // TODO: We need to adjust invisible block height when resizing.
+
     $(window).on("resize", () => window.requestAnimationFrame(animateUpdate))
     $(document).on("scroll", () => window.requestAnimationFrame(animateUpdate))
-    if ("scrollRestoration" in history) {
-        history.scrollRestoration = "manual"
-    }
+}
 
+$(document).ready(initialize);
+$(window).on("load", function() {
     // Make the scrollbar appears again.
     $("body").css("overflow", "inherit")
     $("#Loading").fadeOut({
         "duration": 600,
-        "easing": "swing",
         "complete": function() {
             $(this).remove()
         }
     })
 })
-
-function changePhotoCaption(lang) {
-    $('#PhotoCaption').html($(".selected > img").attr(lang + "-data"))
-}
-
-function moveToSelected(element) {
-    if (element == "next") {
-        var selected = $(".selected").next();
-    } else if (element == "prev") {
-        var selected = $(".selected").prev();
-    } else {
-        var selected = element;
-    }
-
-
-
-    var next = $(selected).next();
-    var prev = $(selected).prev();
-    var prevSecond = $(prev).prev();
-    var nextSecond = $(next).next();
-
-    $(selected).removeClass().addClass("selected");
-
-    $(prev).removeClass().addClass("prev");
-    $(next).removeClass().addClass("next");
-
-    $(nextSecond).removeClass().addClass("nextRightSecond");
-    $(prevSecond).removeClass().addClass("prevLeftSecond");
-
-    $(nextSecond).nextAll().removeClass().addClass('hideRight');
-    $(prevSecond).prevAll().removeClass().addClass('hideLeft');
-
-    // $('#PhotoCaption').html(setPhotoCaption($(selected).children("img").attr("src")))
-
-    if ($("#mandarinButton > a").hasClass("active")) {
-        changePhotoCaption("tw")
-    } else if ($("#englishButton > a").hasClass("active")) {
-        changePhotoCaption("en")
-    }
-
-}
-
-
-$('#carousel div').click(function() {
-    if ($(this).hasClass("selected")) {
-        modal.style.display = "block";
-        modalImg.src = $(".selected > img").attr("src");
-
-    } else {
-        moveToSelected($(this));
-    }
-});
-
-
-
-
-// modal
-
-// Get the modal
-var modal = document.getElementById("myModal");
-
-var modalImg = document.getElementById("imginmodal");
-
-//var modalImg = $(".selected")
-//var captionText = document.getElementById("caption")
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
