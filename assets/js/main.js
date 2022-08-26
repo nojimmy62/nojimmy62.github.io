@@ -367,6 +367,9 @@ var initialize = function() {
         touchLastLoc = e.originalEvent.touches[0]
     }).on('touchend', function(e) {
         touchLastLoc = undefined
+        window.requestAnimationFrame(function() {
+            moveCarousel(Math.round(currentCarouselIndex))
+        })
     })
     moveCarousel(currentCarouselIndex)
     $("#Carousel img").lazyload()
