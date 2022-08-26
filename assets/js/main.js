@@ -306,6 +306,8 @@ var initialize = function() {
         history.scrollRestoration = "manual"
     }
 
+    $("#carousel img").lazyload()
+
     // The following needs to be set based on the html flow.
     ScrollShrink(new ScrollConfig("#Cover", 0.9, 0.6))
     ScrollShrink(new ScrollConfig("#WeddingEvent0", 1, 0.6))
