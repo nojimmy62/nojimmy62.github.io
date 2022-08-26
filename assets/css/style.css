@@ -113,6 +113,16 @@ img {
   border-bottom-color: rgb(183 63 63);
 }
 
+.photo .eventsContainer {
+  border-color: rgb(62 34 213);
+  box-shadow: 6px 7px 10px 0px rgb(62 34 213);
+}
+
+.photo .eventHeader {
+  color: rgb(62 34 213);
+  border-bottom-color: rgb(62 34 213);
+}
+
 .invisible-block {
   display: block;
   opacity: 0;
