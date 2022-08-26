@@ -278,6 +278,7 @@ var modalShowImg = function(url) {
 }
 
 var currentCarouselIndex = 0
+var touchLastLoc = undefined
 var moveCarousel = function(selected, {
     itemsRow = 5, // number of items per row
     zIndex = true, // change z-index based on the position
@@ -295,7 +296,7 @@ var moveCarousel = function(selected, {
     items.each(function(idx, item) {
         idxDiff = idx - selected
         if (zIndex) {
-            let zIndex = 500 - Math.abs(idxDiff) * 10
+            let zIndex = 500 - Math.floor(Math.abs(idxDiff) * 10)
             $(item).css("z-index", zIndex)
         }
 
@@ -352,6 +353,20 @@ var initialize = function() {
         }
         // Don't scroll the browsing window
         return false;
+    })
+    $("#Carousel div").on('touchstart', function(e) {
+        if (e.originalEvent.touches.length > 1) return
+        touchLastLoc = e.originalEvent.touches[0]
+    }).on('touchmove', function(e) {
+        if (e.originalEvent.touches.length > 1) return
+        touch = e.originalEvent.touches[0]
+        moveIdx = (touch.clientX - touchLastLoc.clientX) / ($("#Carousel div").width() / 2)
+        window.requestAnimationFrame(function() {
+            moveCarousel(currentCarouselIndex - moveIdx)
+        })
+        touchLastLoc = e.originalEvent.touches[0]
+    }).on('touchend', function(e) {
+        touchLastLoc = undefined
     })
     moveCarousel(currentCarouselIndex)
     $("#Carousel img").lazyload()
