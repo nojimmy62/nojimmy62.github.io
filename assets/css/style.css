@@ -133,14 +133,14 @@ img {
   white-space: wrap;
 }
 
-#carousel {
+#Carousel {
   position: relative;
   height: 400px;
   top: 50%;  /*transform: translateY(-50%);*/
   overflow: hidden;
 }
 
-#carousel > div {
+#Carousel > div {
   position: absolute;
   transition: transform 1s, left 1s, opacity 1s, z-index 0s;
   opacity: 1;
@@ -148,7 +148,7 @@ img {
   height: 100%;
 }
 
-#carousel > div > img {
+#Carousel > div > img {
   top: 0;
   bottom: 0;
   left: 0;
@@ -160,57 +160,6 @@ img {
   max-height: 100%;
   box-shadow: 10px 8px 20px black;
   -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
-}
-
-#carousel > div.hideLeft {
-  left: 0%;
-  opacity: 0;
-  transform: translateY(0%) translateX(-50%);
-}
-
-#carousel > div.hideRight {
-  left: 100%;
-  opacity: 0;
-  transform: translateY(0%) translateX(-50%);
-}
-
-#carousel > div.prev {
-  z-index: 5;
-  left: 30%;
-  transform: translateY(0%) translateX(-50%);
-  opacity: 0.85;
-  cursor: pointer;
-}
-
-#carousel > div.prevLeftSecond {
-  z-index: 4;
-  left: 15%;
-  transform: translateY(0%) translateX(-50%);
-  opacity: 0.7;
-  cursor: pointer;
-}
-
-#carousel > div.selected {
-  z-index: 10;
-  left: 50%;
-  transform: translateY(0%) translateX(-50%);
-  cursor: zoom-in;
-}
-
-#carousel > div.next {
-  z-index: 5;
-  left: 70%;
-  transform: translateY(0%) translateX(-50%);
-  opacity: 0.85;
-  cursor: pointer;
-}
-
-#carousel > div.nextRightSecond {
-  z-index: 4;
-  left: 85%;
-  transform: translateY(0%) translateX(-50%);
-  opacity: 0.7;
-  cursor: pointer;
 }
 
 #PhotoCaption {

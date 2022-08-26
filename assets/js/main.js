@@ -277,6 +277,49 @@ var modalShowImg = function(url) {
     $("#imginmodal").attr("src", url)
 }
 
+var selectedCarouselIndex = 0
+var moveCarousel = function(element, {
+    selected = 0, // index of the selected items in carousel
+    itemsRow = 5, // number of items per row
+    zIndex = true, // change z-index based on the position
+    grayscale = true, // change grayscale based on the position
+    scale = true, // change scale based on the position
+} = {}) {
+    var items = $(element).children()
+
+    paddingStep = 100 / (itemsRow - 1)
+    halfItem = Math.floor(itemsRow / 2)
+    items.each(function(idx, item) {
+        idxDiff = idx - selected
+        if (zIndex) {
+            let zIndex = 500 - Math.abs(idxDiff) * 10
+            $(item).css("z-index", zIndex)
+        }
+
+        if (grayscale) {
+            let grayscale = Math.abs(idxDiff) * 1 / (halfItem + 1)
+            $(item).css("filter", `grayscale(${grayscale < 0 ? 0 : grayscale})`)
+        }
+
+        targetScale = 1
+        if (scale) {
+            targetScale = 1 - Math.abs(idxDiff) * 0.1
+        }
+
+        cursor = "pointer"
+        if (idx == selected) {
+            cursor = "zoom-in"
+        }
+
+        $(item).css({
+            "left": `${50 + paddingStep * idxDiff}%`,
+            "transform": `translateY(0%) translateX(-50%) scale(${targetScale})`,
+            "cursor": cursor,
+        })
+    })
+    selectedCarouselIndex = selected
+}
+
 var initialize = function() {
     $("#mandarinButton").click(function() {
         langChange("tw");
@@ -290,23 +333,25 @@ var initialize = function() {
         $(this).siblings().children("a").removeClass("active");
     })
 
-    $('#carousel div').click(function() {
-        if ($(this).hasClass("selected")) {
-            modalShowImg($(".selected > img").attr("src"))
+    // Setup Carousel
+    $("#Carousel div").click(function(e) {
+        if (selectedCarouselIndex == $(this).index()) {
+            modalShowImg($(this).children("img").attr("src"))
         } else {
-            moveToSelected($(this));
+            moveCarousel($(this).parent(), {
+                "selected": $(this).index()
+            })
         }
-    });
+    })
+    moveCarousel($("#Carousel"))
+    $("#Carousel img").lazyload()
+
 
     $("img.modalable").click(function() {
         modalShowImg($(this).attr("src"))
     })
 
-    $("#myModal > .close").click(function() {
-        $("#myModal").hide()
-    })
-
-    $("#myModal").click(function() {
+    $("#myModal > .close, #myModal").click(function() {
         $("#myModal").hide()
     })
 
@@ -314,7 +359,7 @@ var initialize = function() {
         history.scrollRestoration = "manual"
     }
 
-    $("#carousel img").lazyload()
+
     $(".sticky-top-blank").height($(".sticky-top").height())
 
     // The following needs to be set based on the html flow.
