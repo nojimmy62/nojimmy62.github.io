@@ -272,6 +272,11 @@ var moveToSelected = function(element) {
     }
 }
 
+var modalShowImg = function(url) {
+    $("#myModal").show()
+    $("#imginmodal").attr("src", url)
+}
+
 var initialize = function() {
     $("#mandarinButton").click(function() {
         langChange("tw");
@@ -287,12 +292,15 @@ var initialize = function() {
 
     $('#carousel div').click(function() {
         if ($(this).hasClass("selected")) {
-            $("#myModal").show()
-            $("#imginmodal").attr("src", $(".selected > img").attr("src"))
+            modalShowImg($(".selected > img").attr("src"))
         } else {
             moveToSelected($(this));
         }
     });
+
+    $("img.modalable").click(function() {
+        modalShowImg($(this).attr("src"))
+    })
 
     $("#myModal > .close").click(function() {
         $("#myModal").hide()
