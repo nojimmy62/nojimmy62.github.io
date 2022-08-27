@@ -1,4 +1,8 @@
 langText = {
+    "#NavHeader": {
+        "en": "Ting-Wei & Hsiang-Chih",
+        "tw": "亭維 & 翔致",
+    },
     "#EventButton": {
         "en": "Wedding events",
         "tw": "婚禮資訊"
@@ -146,6 +150,10 @@ langText = {
         "en": "Now it is time for some real-person photos!",
         "tw": "看完Jabu跟Duki，是時候看看真人版的照片了！"
     },
+    "#FooterMessage": {
+        "en": "Wishing you both love and happiness © 2022",
+        "tw": "祝才子佳人、郎才女貌、花好月圓、百年好合 © 2022"
+    }
 }
 
 var makeStruct = function(names) {
