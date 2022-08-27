@@ -63,6 +63,10 @@ langText = {
                Google 地圖<a target=\"_blank\" href=\"https://goo.gl/maps/15nu7y7u53WyiVUk7\">連結 </a>  <br>\
                近捷運台北小巨蛋站"
     },
+    "#TextEnlarge": {
+        "en": "(Click to enlarge)",
+        "tw": "(點擊可放大)",
+    },
     "#TextTransHeader": {
         "en": "Recommended transportation",
         "tw": "建議交通方式"
@@ -88,7 +92,7 @@ langText = {
     },
     "#TextZoom": {
         "en": "Links will be available in near future!",
-        "tw": "線上Zoom連結會於近期更新！"
+        "tw": "線上Zoom連結會於日後更新！"
     },
     ".storyHeader": {
         "en": "Our story",
@@ -100,15 +104,15 @@ langText = {
     },
     "#TextStory2": {
         "en": "Hsiang-Chih, a nature lover, loves to travel around the world, and also stargazing. One of his most proudest things is he went to Tibet in 2014, counting stars with Mt. Everest. Maybe that’s how he ended up with his astronomy career later?",
-        "tw": "翔致熱愛自然，喜歡旅遊及觀星。他曾經去過西藏的喜馬拉雅山基地營看星星。這或許是為什麼後來翔致走上天文研究的原因？"
+        "tw": "翔致熱愛自然，喜歡旅遊及觀星。大學時，他曾經去過西藏的喜馬拉雅山基地營看星星。這或許是為什麼後來翔致走上天文研究的原因？"
     },
     "#TextStory3": {
         "en": "Ting-Wei is an enthusiastic music lover. She sings with playing piano or guitar. She writes songs on her own. Want to listen to one? Here you go: youtube link",
         "tw": "亭維熱愛音樂。她能自彈(鋼琴和吉他)自唱，甚至還會自己寫歌。想聽聽她的作品嗎？這裡是連結！"
     },
     "#TextStory4": {
-        "en": "Ting-Wei and Hsiang-Chih met each other in Baltimore, 2016. Well, they didn’t get close to each other right away, until they started to play badminton together! (Oh btw, Hsiang-Chih was a captain of the badminton team in his undergrad department) <br> Then, they found that they were not only good teammates on the badminton court but also in life! Therefore, they became a couple in summer, 2017! ",
-        "tw": "2016年，亭維和翔致在美國巴爾的摩求學時相遇。但大概是在半年後，他們才因一起打羽球才變熟(翔致表示，還好以前在大學系上羽球隊沒白費)。 <br>日後，他們發現，他們不僅是羽球場上的好隊友，他們還可以一起玩音樂、划船、數星星。最後，在2017年的夏天，他們成了情侶!"
+        "en": "Ting-Wei and Hsiang-Chih met each other in Baltimore, 2016, when they were students in Johns Hopkins University. Well, they didn’t get close to each other right away, until they started to play badminton together! (Oh btw, Hsiang-Chih was a captain of the badminton team in his undergrad department) <br> Then, they found that they were not only good teammates on the badminton court but also in life! Therefore, they became a couple in summer, 2017! ",
+        "tw": "2016年，亭維和翔致在美國巴爾的摩、約翰霍普金斯大學求學時相遇。但大概是在半年後，他們才因一起打羽球才變熟(翔致表示，還好以前在大學系上羽球隊沒白費)。 <br>日後，他們發現，他們不僅是羽球場上的好隊友，他們還可以一起玩音樂、划船、數星星。最後，在2017年的夏天，他們成了情侶!"
     },
     "#TextStory5": {
         "en": "It has been six years since Ting-Wei and Hsiang-Chih were together. Their daily life is full of funny moments. During the Covid, they witnessed Hsiang-Chih’s super long beard, as well as the fantastic comet in 2020. Hsiang-Chih often wolfed down the snacks, but not allowing Ting-Wei to do the same thing. Hsiang-Chih would also tell Ting-Wei not to sit with crossed legs, saying that it’s not good for her knees. <br>Anyway, they seem to enjoy a lot their daily life! ",
@@ -127,8 +131,8 @@ langText = {
         "tw": "小趣事"
     },
     "#TextFact1": {
-        "en": "Do these strange animals have names? <br> <br> Yes! Their names are Jabu and Duki! The actual meanings of these names remain unclear. Jabu is often mistaken as an octopus (or its kind), but Jabu is definitely not an octopus. ",
-        "tw": "這兩個生物有名字嗎？<br><br>有！他們的名字是Jabu和Duki。名字的意思不明。順帶一提，Jabu並不是章魚(也不是類似章魚的生物)。"
+        "en": "Do these strange animals have names? <br> <br> Yes! Their names are Jabu (left) and Duki (right)! The actual meanings of these names remain unclear. Jabu is often mistaken as an octopus (or its kind), but Jabu is definitely not an octopus. ",
+        "tw": "這兩個生物有名字嗎？<br><br>有！他們的名字是Jabu(左)和Duki(右)。名字的意思不明。順帶一提，Jabu並不是章魚(也不是類似章魚的生物)。"
     },
     "#TextFact2": {
         "en": "When is the “birthday” of Jabu? <br> <br>It is currently unknown. Based on Archeology, the earliest Jabu-related product was dated back to ~2005, when Hsiang-Chih was in his middle school. Since this Jabu product is already very mature, Jabu likely has been existent a few years before 2005. <br>Btw, Hsiang-Chih also uses Jabu as his signature in his credit card payment. ",
@@ -136,19 +140,19 @@ langText = {
     },
     "#TextFact3": {
         "en": "When is the “birthday” of Duki? <br> <br>The concept of Duki was first created in 2017, by Hsiang-Chih. But the drawing of Duki has been significantly improved (?) by Ting-Wei. In fact, Hsiang-Chih is not as good at drawing Duki due to its complexity.  ",
-        "tw": "Duki 是什麼時候誕生的？<br><br>第一個Duki是翔致於 2017年時畫的(下方左圖)。但現今的Duki已經過亭維大量的改良。其實，因為Duki較複雜的結構，翔致不太擅長畫Duki。"
+        "tw": "Duki 是什麼時候誕生的？<br><br>第一個Duki是翔致於2017年時畫的(下方左圖)。但現今的Duki已經過亭維大量的改良。其實，因為Duki較複雜的結構，翔致不太擅長畫Duki。"
     },
     "#TextFact4": {
-        "en": "How is this website being made? <br><br>This website is made by Po-Hsien (tremendous technical help), Ting-Wei (all the drawing), and Hsiang-Chih (content)!",
-        "tw": "這網站是如何製作的呢？<br><br>這網站是由柏軒(大量的技術支援)、亭維(所有作圖)、翔致(內容)完成！"
+        "en": "How is this website being made? <br><br>This website is made by Po-Hsien (tremendous technical help), Ting-Wei (all the drawings and animations), and Hsiang-Chih (content; his drawings are mostly on papers and thus are difficult to display on the website)!",
+        "tw": "這網站是如何製作的呢？<br><br>這網站是由柏軒(極大量的技術支援)、亭維(所有作圖、動畫)、翔致(內容；翔致平常都畫在紙上，難以電子化)完成！"
     },
     "#TextPhotoHeader": {
         "en": "Photo gallery",
         "tw": "(真人)相簿"
     },
     "#TextPhoto": {
-        "en": "Now it is time for some real-person photos!",
-        "tw": "看完Jabu跟Duki，是時候看看真人版的照片了！"
+        "en": "Now it is time for some real-person photos! Special thanks to our friend and the photographer, Nae-Chyun (Milks).",
+        "tw": "看完Jabu跟Duki，是時候看看真人版的照片了！許多照片感謝友人乃群的拍攝。"
     },
     "#FooterMessage": {
         "en": "Wishing you both love and happiness © 2022",

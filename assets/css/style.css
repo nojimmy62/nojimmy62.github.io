@@ -105,6 +105,10 @@ a {
   text-align: center;
 }
 
+#TextEnlarge {
+  text-align: center;
+}
+
 .ourStory .eventsContainer {
   border-color: rgb(100 0 100);
   -webkit-box-shadow: 6px 7px 10px 0px rgb(100 0 100);
