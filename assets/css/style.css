@@ -11,6 +11,10 @@ img {
   display: block;
 }
 
+a {
+  cursor:pointer;
+}
+
 .eventsContainer  img {
   -o-object-fit: contain;
   object-fit: contain;
@@ -229,6 +233,11 @@ img {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+.modalable { 
+   cursor: pointer;
 }
 
 /* 100% Image Width on Smaller Screens */
