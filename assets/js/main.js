@@ -471,7 +471,7 @@ class Carousel {
             var width = carousel.overlapFactor / carousel.itemsRow;
             $(item).css({
                 "left": left + "%",
-                "transform": "translateY(0%) translateX(-50%) scale(" + targetScale + ")",
+                "transform": "translateY(0%) translateX(-50%) scale("+targetScale+") rotate3d(0,1,0,"+idxDiff*20+"deg)",
                 "cursor": cursor,
                 "width": width + "%",
             });
