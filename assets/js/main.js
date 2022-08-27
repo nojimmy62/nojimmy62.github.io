@@ -246,6 +246,7 @@ var modalShowImg = function(url) {
     $("#imginmodal").attr("src", url)
 }
 
+var lazyloadObject = lazyload()
 var currentCarouselIndex = 0
 var touchLastLoc = undefined
 var moveCarousel = function(selected, {
@@ -346,8 +347,6 @@ var initialize = function() {
         })
     })
     moveCarousel(currentCarouselIndex)
-    lazyload()
-
 
     $("img.modalable").click(function() {
         modalShowImg($(this).attr("src"))
@@ -360,7 +359,6 @@ var initialize = function() {
     if ("scrollRestoration" in history) {
         history.scrollRestoration = "manual"
     }
-
 
     $(".sticky-top-blank").height($(".sticky-top").height())
 
@@ -388,6 +386,9 @@ var initialize = function() {
 
 $(document).ready(initialize);
 $(window).on("load", function() {
+    // windows is ready. Force load everything
+    lazyloadObject.loadImages()
+
     // Make the scrollbar appears again.
     $("body").css("overflow", "inherit")
     $("#Loading").fadeOut({
