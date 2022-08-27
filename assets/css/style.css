@@ -240,3 +240,12 @@ img {
     width: 60%;
   }
 }
+
+.sticky-top {
+  background: rgb(240 250 255 / 78%);
+  backdrop-filter: blur(4px);
+}
+
+.nav-pills .nav-link:hover, .nav-pills .nav-link.active {
+    font-weight: bold;
+}

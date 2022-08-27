@@ -408,6 +408,7 @@ $(window).on("load", function() {
         "duration": 600,
         "complete": function() {
             $(this).remove()
+            animateUpdate()
         }
     })
 })
