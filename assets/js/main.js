@@ -182,37 +182,28 @@ var _updateConfig = [
 
 var animateUpdate = function() {
     var scroll = window.scrollY
+    var stickyHeight = $(".sticky-top").height()
 
-    if (scroll >= $("#WeddingEvent0").offset().top && scroll < $("#OurStory0").offset().top) {
-        $("#EventButton").addClass("active")
-        $("#StoryButton").removeClass("active")
-        $("#FactButton").removeClass("active")
-        $("#PhotoButton").removeClass("active")
+    var smallest = {
+        'href': undefined,
+        'n': $(document).height()
     }
-    if (scroll >= $("#OurStory0").offset().top - 1 && scroll < $("#Facts0").offset().top) {
-        $("#EventButton").removeClass("active")
-        $("#StoryButton").addClass("active")
-        $("#FactButton").removeClass("active")
-        $("#PhotoButton").removeClass("active")
-    }
-    if (scroll >= $("#Facts0").offset().top - 1 && scroll < $("#Photo").offset().top) {
-        $("#EventButton").removeClass("active")
-        $("#StoryButton").removeClass("active")
-        $("#FactButton").addClass("active")
-        $("#PhotoButton").removeClass("active")
-    }
-    if (scroll >= $("#Photo").offset().top - 1) {
-        $("#EventButton").removeClass("active")
-        $("#StoryButton").removeClass("active")
-        $("#FactButton").removeClass("active")
-        $("#PhotoButton").addClass("active")
-    }
+    $("#NavList > li > a").removeClass("active").each(function(idx, button) {
+        href = $(button).attr('href')
+        diff = scroll + stickyHeight + $(window).height() / 2 - $(href).offset().top
+        if (diff < 0) return;
+
+        if (diff < smallest.n) {
+            smallest.n = diff
+            smallest.href = button
+        }
+    })
+    $(smallest.href).addClass("active")
 
     _updateConfig.forEach((config) => {
         config.height = config.height || 200;
         var containerTop = $(config.selector).offset().top
         var element = $(config.selector).find(".shrinkElement")
-        var stickyHeight = $(".sticky-top").height()
         if (scroll + stickyHeight < containerTop) {
             scale = config.initialScale
             element.css("position", "absolute")
