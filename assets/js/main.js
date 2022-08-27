@@ -161,7 +161,24 @@ var makeStruct = function(names) {
 }
 
 var ScrollConfig = makeStruct("selector initialScale finalScale height");
-var _updateConfig = []
+var _updateConfig = [
+    new ScrollConfig("#Cover", 1, 0.6),
+    new ScrollConfig("#WeddingEvent0", 1, 0.6),
+    new ScrollConfig("#WeddingEvent1", 1, 0.6),
+    new ScrollConfig("#OurStory0", 1, 0.6),
+    new ScrollConfig("#OurStory1", 1, 0.6),
+    new ScrollConfig("#OurStory2", 1, 0.6),
+    new ScrollConfig("#OurStory3", 1, 0.6),
+    new ScrollConfig("#OurStory4", 1, 0.6),
+    new ScrollConfig("#OurStory5", 1, 0.6),
+    new ScrollConfig("#OurStory6", 1, 0.6),
+    new ScrollConfig("#OurStory7", 1, 0.6),
+    new ScrollConfig("#Facts0", 1, 0.6),
+    new ScrollConfig("#Facts1", 1, 0.6),
+    new ScrollConfig("#Facts2", 1, 0.6),
+    new ScrollConfig("#Facts3", 1, 0.6),
+    new ScrollConfig("#Facts4", 1, 0.6),
+]
 
 var animateUpdate = function() {
     var scroll = window.scrollY
@@ -192,42 +209,27 @@ var animateUpdate = function() {
     }
 
     _updateConfig.forEach((config) => {
+        config.height = config.height || 200;
         var containerTop = $(config.selector).offset().top
         var element = $(config.selector).find(".shrinkElement")
-        if (scroll < containerTop) {
+        var stickyHeight = $(".sticky-top").height()
+        if (scroll + stickyHeight < containerTop) {
             scale = config.initialScale
             element.css("position", "absolute")
-            element.css("top", containerTop + $(".sticky-top").height())
-        } else if (scroll < containerTop + config.height) {
-            scale = config.initialScale + (scroll - containerTop) / config.height * (config.finalScale - config.initialScale)
+            element.css("top", containerTop)
+        } else if (scroll + stickyHeight < containerTop + config.height) {
+            scale = config.initialScale + (scroll + stickyHeight - containerTop) / config.height * (config.finalScale - config.initialScale)
             element.css("position", "fixed")
-
-            magicshift = 0.5 * config.height * (config.initialScale - scale)
-            magicshift_factor = 0.7
-            element.css("top", $(".sticky-top").height() - magicshift * magicshift_factor)
+            element.css("top", $(".sticky-top").height())
         } else {
             scale = config.finalScale
             element.css("position", "absolute")
-            magicshift = 0.5 * config.height * (config.initialScale - config.finalScale)
-            magicshift_factor = 0.7
-            element.css("top", containerTop + config.height + $(".sticky-top").height() - magicshift * magicshift_factor)
+            element.css("top", containerTop + config.height)
         }
         element.css("transform", `scale(${scale})`)
         invisible = $(config.selector).find(".invisible-block")
-        invisible.css("height", config.height + element.height())
+        invisible.css("height", `${config.height + $(element).height()}px`)
     })
-}
-
-var ScrollShrink = function(config) {
-    var element = $(config.selector)
-    var shrinkElement = $(element).find(".shrinkElement")
-    if (shrinkElement.length == 0) {
-        alert("No shrinkElement found under " + config.selector)
-    }
-    config.height = element.height()
-
-    _updateConfig.push(config)
-    animateUpdate()
 }
 
 var langChange = function(lang) {
@@ -235,6 +237,7 @@ var langChange = function(lang) {
         $(id).html(langText[id][lang])
     }
     changePhotoCaption(lang)
+    animateUpdate()
 }
 
 var changePhotoCaption = function(lang) {
@@ -257,7 +260,6 @@ var moveCarousel = function(selected, {
 } = {}) {
     var items = $("#Carousel").children()
     if (selected < 0 || Math.ceil(selected) >= items.length) {
-        console.log(`Not valid select: ${selected}`)
         return
     }
 
@@ -323,15 +325,7 @@ var initialize = function() {
         }
     })
     $("#Carousel div").on('wheel', function(e) {
-        // console.log(e.originalEvent)
-        console.log("DeltaX: ", e.originalEvent.deltaX)
-        console.log("DeltaY: ", e.originalEvent.deltaY)
-
-
         accumulated_carousel_scroll += e.originalEvent.deltaX + e.originalEvent.deltaY
-
-        console.log("accumulated_carousel_scroll: ", accumulated_carousel_scroll)
-        // if (e.DeltaX / 120 > 0) {
         if (accumulated_carousel_scroll < -carousel_scroll_threshold) {
             moveCarousel(currentCarouselIndex - 1)
             accumulated_carousel_scroll = 0
@@ -374,25 +368,6 @@ var initialize = function() {
     }
 
     $(".sticky-top-blank").height($(".sticky-top").height())
-
-    // The following needs to be set based on the html flow.
-    ScrollShrink(new ScrollConfig("#Cover", 0.9, 0.6))
-    ScrollShrink(new ScrollConfig("#WeddingEvent0", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#WeddingEvent1", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#OurStory0", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#OurStory1", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#OurStory2", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#OurStory3", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#OurStory4", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#OurStory5", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#OurStory6", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#OurStory7", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#Facts0", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#Facts1", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#Facts2", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#Facts3", 1, 0.6))
-    ScrollShrink(new ScrollConfig("#Facts4", 1, 0.6))
-
     $(window).on("resize", () => window.requestAnimationFrame(animateUpdate))
     $(document).on("scroll", () => window.requestAnimationFrame(animateUpdate))
 }

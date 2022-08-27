@@ -12,7 +12,11 @@ img {
 }
 
 a {
-  cursor:pointer;
+  cursor: pointer;
+}
+
+.shrinkElement {
+  transform-origin: top;
 }
 
 .eventsContainer  img {
@@ -235,9 +239,8 @@ a {
   cursor: pointer;
 }
 
-
-.modalable { 
-   cursor: pointer;
+.modalable {
+  cursor: pointer;
 }
 
 /* 100% Image Width on Smaller Screens */
@@ -245,9 +248,11 @@ a {
   .modal-content {
     width: 100%;
   }
+
   #Carousel > div {
     width: 60%;
   }
+
 }
 
 .sticky-top {
@@ -256,5 +261,5 @@ a {
 }
 
 .nav-pills .nav-link:hover, .nav-pills .nav-link.active {
-    font-weight: bold;
+  font-weight: bold;
 }
