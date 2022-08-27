@@ -372,7 +372,7 @@ var initialize = function() {
         })
     })
     moveCarousel(currentCarouselIndex)
-    $("#Carousel img").lazyload()
+    lazyload()
 
 
     $("img.modalable").click(function() {
