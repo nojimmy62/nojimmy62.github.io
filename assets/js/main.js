@@ -299,6 +299,8 @@ var moveCarousel = function(selected, {
     }
 }
 
+var accumulated_carousel_scroll = 0
+var carousel_scroll_threshold = 100
 var initialize = function() {
     $("#mandarinButton").click(function() {
         langChange("tw");
@@ -320,11 +322,22 @@ var initialize = function() {
             moveCarousel($(this).index())
         }
     })
-    $("#Carousel div").on('mousewheel', function(e) {
-        if (e.originalEvent.wheelDelta / 120 > 0) {
+    $("#Carousel div").on('wheel', function(e) {
+        // console.log(e.originalEvent)
+        console.log("DeltaX: ", e.originalEvent.deltaX)
+        console.log("DeltaY: ", e.originalEvent.deltaY)
+
+
+        accumulated_carousel_scroll += e.originalEvent.deltaX + e.originalEvent.deltaY
+
+        console.log("accumulated_carousel_scroll: ", accumulated_carousel_scroll)
+        // if (e.DeltaX / 120 > 0) {
+        if (accumulated_carousel_scroll < -carousel_scroll_threshold) {
             moveCarousel(currentCarouselIndex - 1)
-        } else {
+            accumulated_carousel_scroll = 0
+        } else if (accumulated_carousel_scroll > carousel_scroll_threshold) {
             moveCarousel(currentCarouselIndex + 1)
+            accumulated_carousel_scroll = 0
         }
         // Don't scroll the browsing window
         return false;
