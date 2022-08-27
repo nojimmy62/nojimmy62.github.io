@@ -12,6 +12,7 @@ img {
 }
 
 .eventsContainer  img {
+  -o-object-fit: contain;
   object-fit: contain;
   max-height: 50vh;
   width: auto;
@@ -35,12 +36,14 @@ img {
 #CoverContainer {
   width: 100%;
   border: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 #JabuMarryImg {
   width: 100%;
   max-height: 90vh;
+  -o-object-fit: contain;
   object-fit: contain;
   margin: auto;
   display: block;
@@ -69,6 +72,7 @@ img {
   border: solid black;
   border-color: black;
   border-width: 3px 4px 3px 5px;
+  -webkit-box-shadow: 6px 7px 10px 0px rgb(2 2 2);
   box-shadow: 6px 7px 10px 0px rgb(2 2 2);
   border-top-left-radius: 2% 97%;
   border-top-right-radius: 4% 95%;
@@ -95,6 +99,7 @@ img {
 
 .ourStory .eventsContainer {
   border-color: rgb(100 0 100);
+  -webkit-box-shadow: 6px 7px 10px 0px rgb(100 0 100);
   box-shadow: 6px 7px 10px 0px rgb(100 0 100);
 }
 
@@ -105,6 +110,7 @@ img {
 
 .funFacts .eventsContainer {
   border-color: rgb(183 63 63);
+  -webkit-box-shadow: 6px 7px 10px 0px rgb(183 63 63);
   box-shadow: 6px 7px 10px 0px rgb(183 63 63);
 }
 
@@ -115,6 +121,7 @@ img {
 
 .photo .eventsContainer {
   border-color: rgb(62 34 213);
+  -webkit-box-shadow: 6px 7px 10px 0px rgb(62 34 213);
   box-shadow: 6px 7px 10px 0px rgb(62 34 213);
 }
 
@@ -142,7 +149,11 @@ img {
 
 #Carousel > div {
   position: absolute;
+  -webkit-transition: left 0.2s, z-index 0s, -webkit-transform 0.2s, -webkit-filter 0.2s;
+  transition: left 0.2s, z-index 0s, -webkit-transform 0.2s, -webkit-filter 0.2s;
+  -o-transition: transform 0.2s, left 0.2s, filter 0.2s, z-index 0s;
   transition: transform 0.2s, left 0.2s, filter 0.2s, z-index 0s;
+  transition: transform 0.2s, left 0.2s, filter 0.2s, z-index 0s, -webkit-transform 0.2s, -webkit-filter 0.2s;
   width: 40%;
   height: 100%;
 }
@@ -154,9 +165,11 @@ img {
   right: 0;
   margin: auto;
   position: absolute;
+  -o-object-fit: contain;
   object-fit: contain;
   max-width: 100%;
   max-height: 100%;
+  -webkit-box-shadow: 10px 8px 20px black;
   box-shadow: 10px 8px 20px black;
   -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
@@ -195,6 +208,7 @@ img {
   right: 0;
   margin: auto;
   position: absolute;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -206,6 +220,8 @@ img {
   color: #f1f1f1;
   font-size: 40px;
   font-weight: bold;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
