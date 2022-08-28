@@ -204,17 +204,19 @@ var animateUpdate = function() {
         'href': undefined,
         'n': $(document).height()
     }
-    $("#NavList > li > a").removeClass("active").each(function(idx, button) {
+    $("#NavList > a").each(function(idx, button) {
         href = $(button).attr('href')
         diff = scroll + stickyHeight + $(window).height() / 2 - $(href).offset().top
         if (diff < 0) return;
-
         if (diff < smallest.n) {
             smallest.n = diff
             smallest.href = button
         }
     })
-    $(smallest.href).addClass("active")
+    if (!$(smallest.href).hasClass("active")) {
+        $(smallest.href).addClass("active").siblings().removeClass("active")
+    }
+
 
     _updateConfig.forEach((config) => {
         config.height = config.height || 200;
@@ -301,9 +303,9 @@ var moveCarousel = function(selected, {
         })
     })
     currentCarouselIndex = selected
-    if ($("#mandarinButton > a").hasClass("active")) {
+    if ($("#mandarinButton").hasClass("active")) {
         changePhotoCaption("tw")
-    } else if ($("#englishButton > a").hasClass("active")) {
+    } else if ($("#englishButton").hasClass("active")) {
         changePhotoCaption("en")
     }
 }
@@ -313,14 +315,14 @@ var carousel_scroll_threshold = 100
 var initialize = function() {
     $("#mandarinButton").click(function() {
         langChange("tw");
-        $(this).children("a").addClass("active");
-        $(this).siblings().children("a").removeClass("active");
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
     }).click()
 
     $("#englishButton").click(function() {
         langChange("en");
-        $(this).children("a").addClass("active");
-        $(this).siblings().children("a").removeClass("active");
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
     })
 
     // Setup Carousel

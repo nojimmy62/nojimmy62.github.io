@@ -28,22 +28,21 @@
         </div>
     </div>
     <div class="sticky-top">
-        <header class="container d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <header class="container d-flex flex-wrap justify-content-between py-3 border-bottom">
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 text-dark text-decoration-none order-0 ms-2">
                 <img src="assets/img/favicon.ico">
                 <span class="fs-4  twz-nav-color" id="NavHeader">亭維 & 翔致</span>
             </a>
-            <ul id="NavList" class="nav nav-pills  justify-content-center">
-                <li class="nav-item"><a href="#WeddingEvent0" class="nav-link twz-nav-color" id="EventButton" aria-current="page">Wedding events</a></li>
-                <li class="nav-item"><a href="#OurStory0" class="nav-link twz-nav-color" id="StoryButton" aria-current="page">Our story</a></li>
-                <li class="nav-item"><a href="#Facts0" class="nav-link twz-nav-color" id="FactButton" aria-current="page">Fun facts</a></li>
-                <li class="nav-item"><a href="#Photo" class="nav-link twz-nav-color" id="PhotoButton" aria-current="page">Photo gallery</a></li>
-            </ul>
-            <a href="#" class="d-flex mb-3 mb-md-0 me-md-auto"></a>
-            <ul class="nav nav-pills justify-content-end">
-                <li class="nav-item" id="mandarinButton"><a class="nav-link active  twz-nav-color">中文</a></li>
-                <li class="nav-item" id="englishButton"><a class="nav-link twz-nav-color" aria-current="page">English</a></li>
-            </ul>
+            <div id="NavList" class="flex-grow-1 flex-md-grow-0 nav nav-pills  d-flex flex-nowrap justify-content-between mb-md-0 md-3 order-2 order-md-1">
+                <a href="#WeddingEvent0" class="nav-link twz-nav-color text-center" id="EventButton" aria-current="page">Wedding events</a>
+                <a href="#OurStory0" class="nav-link twz-nav-color text-center" id="StoryButton" aria-current="page">Our story</a>
+                <a href="#Facts0" class="nav-link twz-nav-color text-center" id="FactButton" aria-current="page">Fun facts</a>
+                <a href="#Photo" class="nav-link twz-nav-color text-center" id="PhotoButton" aria-current="page">Photo gallery</a>
+            </div>
+            <div class="nav nav-pills flex-nowrap justify-content-between mb-3 mb-md-0 order-1 order-md-2">
+                <a id="mandarinButton" class="nav-link active twz-nav-color text-center">中</a>
+                <a id="englishButton" class="nav-link twz-nav-color text-center" aria-current="page">Eng</a>
+            </div>
         </header>
     </div>
     <div id="Cover">
