@@ -63,7 +63,11 @@ langText = {
                Google 地圖<a target=\"_blank\" href=\"https://goo.gl/maps/15nu7y7u53WyiVUk7\">連結 </a>  <br>\
                近捷運台北小巨蛋站"
     },
-    "#TextEnlarge": {
+    "#TextEnlarge1": {
+        "en": "(Click to enlarge)",
+        "tw": "(點擊可放大)",
+    },
+    "#TextEnlarge2": {
         "en": "(Click to enlarge)",
         "tw": "(點擊可放大)",
     },
