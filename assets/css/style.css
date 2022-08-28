@@ -1,45 +1,4 @@
 
-
-/*
-twz color, version 1:
-
-.sticky-top:
-background: rgb(171 207 232 / 44%);
-
-.nav-link
-color: rgb(60 101 129);
-
-.nav-pills
---bs-nav-pills-link-active-bg: rgb(60 101 129);
-
-.nav
---bs-nav-link-hover-color: rgb(120 166 197);
---bs-nav-link-color: rgb(51 135 192);
-
-
-
-background: 
-
-*/
-.sticky-top {
-  background: rgb(171 207 232 / 44%);
-  backdrop-filter: blur(4px);
-}
-
-.nav-pills .nav-link:hover, .nav-pills .nav-link.active {
-  font-weight: bold;
-  /*background: yellow;*/
-}
-
-
-.twz-nav-color {
-  color: rgb(60 101 129);
-  --bs-nav-pills-link-active-bg: rgb(60 101 129);
-  --bs-nav-link-hover-color: rgb(120 166 197);
-  --bs-nav-link-color: rgb(51 135 192);
-
-}
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -108,7 +67,7 @@ a {
 
 .border-line {
   border-bottom: 2px;
-  border-color: black;
+  /*border-color: black;*/
   border-style: dotted;
   border-top: 0px;
   border-left: 0px;
@@ -130,18 +89,20 @@ a {
   border-bottom-left-radius: 2% 97%;
 }
 
+
 .eventsContainer > .row div.eventHeader {
   text-align: center;
   font-weight: bold;
   font-size: 1.5rem;
   display: block;
   border-bottom: 2px;
-  border-color: black;
+  /*border-color: black;*/
   border-style: solid;
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
 }
+
 
 #TextMarry {
   text-align: center;
@@ -152,42 +113,63 @@ a {
 }
 
 .weddingEvent .eventsContainer {
-  border-color: rgb(100 0 100);
-  -webkit-box-shadow: 6px 7px 10px 0px rgb(100 0 100);
-  box-shadow: 6px 7px 10px 0px rgb(100 0 100);
+  border-color: rgb(212 147 183);
+  -webkit-box-shadow: 6px 7px 10px 0px rgb(212 147 183);
+  box-shadow: 6px 7px 10px 0px rgb(212 147 183);
+}
+
+.weddingEvent .eventHeader {
+  color: rgb(151 79 118);
+  border-bottom-color: rgb(212 147 183) !important;
+}
+
+.weddingEvent {
+  color: rgb(151 79 118);
 }
 
 .ourStory .eventsContainer {
-  border-color: rgb(100 0 100);
-  -webkit-box-shadow: 6px 7px 10px 0px rgb(100 0 100);
-  box-shadow: 6px 7px 10px 0px rgb(100 0 100);
+  border-color: rgb(127 134 211);
+  -webkit-box-shadow: 6px 7px 10px 0px rgb(127 134 211);
+  box-shadow: 6px 7px 10px 0px rgb(127 134 211);
 }
 
 .ourStory .eventHeader {
-  color: rgb(100 0 100);
-  border-bottom-color: rgb(100 0 100);
+  color: rgb(84 89 148);
+  border-bottom-color: rgb(127 134 211) !important;
+}
+
+.ourStory {
+  color: rgb(84 89 148);
 }
 
 .funFacts .eventsContainer {
-  border-color: rgb(183 63 63);
-  -webkit-box-shadow: 6px 7px 10px 0px rgb(183 63 63);
-  box-shadow: 6px 7px 10px 0px rgb(183 63 63);
+  border-color: rgb(138 211 191);
+  -webkit-box-shadow: 6px 7px 10px 0px rgb(138 211 191);
+  box-shadow: 6px 7px 10px 0px rgb(138 211 191);
 }
 
 .funFacts .eventHeader {
-  color: rgb(183 63 63);
-  border-bottom-color: rgb(183 63 63);
+  color: rgb(88 145 129);
+  border-bottom-color: rgb(88 145 129);
+}
+
+.funFacts {
+  color: rgb(88 145 129);
 }
 
 .photo .eventsContainer {
-  border-color: rgb(62 34 213);
-  -webkit-box-shadow: 6px 7px 10px 0px rgb(62 34 213);
-  box-shadow: 6px 7px 10px 0px rgb(62 34 213);
+  border-color: rgb(165 241 172);
+  -webkit-box-shadow: 6px 7px 10px 0px rgb(165 241 172);
+  box-shadow: 6px 7px 10px 0px rgb(165 241 172);
 }
 
 .photo .eventHeader {
-  color: rgb(62 34 213);
-  border-bottom-color: rgb(62 34 213);
+  color: rgb(108 160 112);
+  border-bottom-color: rgb(108 160 112);
+}
+
+.photo {
+  color: rgb(108 160 112);
 }
 
 .invisible-block {
@@ -304,5 +286,47 @@ a {
   #Carousel > div {
     width: 60%;
   }
+
+}
+
+
+
+/*
+twz color, version 1:
+
+.sticky-top:
+background: rgb(171 207 232 / 44%);
+
+.nav-link
+color: rgb(60 101 129);
+
+.nav-pills
+--bs-nav-pills-link-active-bg: rgb(60 101 129);
+
+.nav
+--bs-nav-link-hover-color: rgb(120 166 197);
+--bs-nav-link-color: rgb(51 135 192);
+
+
+
+background: 
+
+*/
+.sticky-top {
+  background: rgb(171 207 232 / 44%);
+  backdrop-filter: blur(4px);
+}
+
+.nav-pills .nav-link:hover, .nav-pills .nav-link.active {
+  font-weight: bold;
+  /*background: yellow;*/
+}
+
+
+.twz-nav-color {
+  color: rgb(60 101 129);
+  --bs-nav-pills-link-active-bg: rgb(60 101 129);
+  --bs-nav-link-hover-color: rgb(120 166 197);
+  --bs-nav-link-color: rgb(51 135 192);
 
 }
