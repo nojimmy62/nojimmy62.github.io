@@ -1,332 +1,308 @@
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: 'KoHo', 'Mansalva', 'Noto Sans', '微軟正黑體', 'Noto Sans TC', '標楷體', '新細明體', 'consolas';
-  overflow: hidden;
-  font-size: 1rem;
+    font-family: 'KoHo', 'Mansalva', 'Noto Sans', '微軟正黑體', 'Noto Sans TC', '標楷體', '新細明體', 'consolas';
+    overflow: hidden;
+    font-size: 1rem;
 }
 
 img {
-  display: block;
+    display: block;
 }
 
 a {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .shrinkElement {
-  transform-origin: top;
+    -webkit-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
 }
 
-.eventsContainer  img {
-  -o-object-fit: contain;
-  object-fit: contain;
-  max-height: 50vh;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  margin: auto;
+.eventsContainer img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    max-height: 50vh;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
 }
 
 #Loading {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  z-index: 2000;
-  position: absolute;
-  margin: auto;
-  left: auto;
-  right: auto;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    z-index: 2000;
+    position: absolute;
+    margin: auto;
+    left: auto;
+    right: auto;
 }
 
 #CoverContainer {
-  width: 100%;
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+    width: 100%;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 #JabuMarryImg {
-  width: 100%;
-  max-height: 90vh;
-  -o-object-fit: contain;
-  object-fit: contain;
-  margin: auto;
-  display: block;
+    width: 100%;
+    max-height: 90vh;
+    -o-object-fit: contain;
+    object-fit: contain;
+    margin: auto;
+    display: block;
 }
 
 .spinner-border {
-  width: 10rem;
-  height: 10rem;
-  top: 50%;
-  margin: auto;
+    width: 10rem;
+    height: 10rem;
+    top: 50%;
+    margin: auto;
 }
 
 .border-line {
-  border-bottom: 2px;
-  /*border-color: black;*/
-  border-style: dotted;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
+    border-bottom: 2px;
+    border-style: dotted;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 .eventsContainer {
-  left: 0;
-  right: 0;
-  padding: 10px 40px 40px 40px;
-  border: solid black;
-  border-color: black;
-  border-width: 3px 4px 3px 5px;
-  -webkit-box-shadow: 6px 7px 10px 0px rgb(2 2 2);
-  box-shadow: 6px 7px 10px 0px rgb(2 2 2);
-  border-top-left-radius: 2% 97%;
-  border-top-right-radius: 4% 95%;
-  border-bottom-right-radius: 92% 6%;
-  border-bottom-left-radius: 2% 97%;
+    left: 0;
+    right: 0;
+    padding: 10px 40px 40px 40px;
+    border: solid black;
+    border-color: black;
+    border-width: 3px 4px 3px 5px;
+    -webkit-box-shadow: 6px 7px 10px 0px rgb(2 2 2);
+    box-shadow: 6px 7px 10px 0px rgb(2 2 2);
+    border-top-left-radius: 2% 97%;
+    border-top-right-radius: 4% 95%;
+    border-bottom-right-radius: 92% 6%;
+    border-bottom-left-radius: 2% 97%;
 }
 
-
-.eventsContainer > .row div.eventHeader {
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-  display: block;
-  border-bottom: 2px;
-  /*border-color: black;*/
-  border-style: solid;
-  border-top: 0px;
-  border-left: 0px;
-  border-right: 0px;
+.eventsContainer>.row div.eventHeader {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: block;
+    border-bottom: 2px;
+    border-style: solid;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
 }
-
 
 #TextMarry {
-  text-align: center;
+    text-align: center;
 }
 
-#TextEnlarge1, #TextEnlarge2 {
-  text-align: center;
+#TextEnlarge1,
+#TextEnlarge2 {
+    text-align: center;
 }
 
 .weddingEvent .eventsContainer {
-  border-color: rgb(212 147 183);
-  -webkit-box-shadow: 6px 7px 10px 0px rgb(212 147 183);
-  box-shadow: 6px 7px 10px 0px rgb(212 147 183);
+    border-color: rgb(212 147 183);
+    -webkit-box-shadow: 6px 7px 10px 0px rgb(212 147 183);
+    box-shadow: 6px 7px 10px 0px rgb(212 147 183);
 }
 
 .weddingEvent .eventHeader {
-  color: rgb(151 79 118);
-  border-bottom-color: rgb(212 147 183) !important;
+    color: rgb(151 79 118);
+    border-bottom-color: rgb(212 147 183) !important;
 }
 
 .weddingEvent {
-  color: rgb(151 79 118);
+    color: rgb(151 79 118);
 }
 
 .ourStory .eventsContainer {
-  border-color: rgb(127 134 211);
-  -webkit-box-shadow: 6px 7px 10px 0px rgb(127 134 211);
-  box-shadow: 6px 7px 10px 0px rgb(127 134 211);
+    border-color: rgb(127 134 211);
+    -webkit-box-shadow: 6px 7px 10px 0px rgb(127 134 211);
+    box-shadow: 6px 7px 10px 0px rgb(127 134 211);
 }
 
 .ourStory .eventHeader {
-  color: rgb(84 89 148);
-  border-bottom-color: rgb(127 134 211) !important;
+    color: rgb(84 89 148);
+    border-bottom-color: rgb(127 134 211) !important;
 }
 
 .ourStory {
-  color: rgb(84 89 148);
+    color: rgb(84 89 148);
 }
 
 .funFacts .eventsContainer {
-  border-color: rgb(138 211 191);
-  -webkit-box-shadow: 6px 7px 10px 0px rgb(138 211 191);
-  box-shadow: 6px 7px 10px 0px rgb(138 211 191);
+    border-color: rgb(138 211 191);
+    -webkit-box-shadow: 6px 7px 10px 0px rgb(138 211 191);
+    box-shadow: 6px 7px 10px 0px rgb(138 211 191);
 }
 
 .funFacts .eventHeader {
-  color: rgb(88 145 129);
-  border-bottom-color: rgb(88 145 129);
+    color: rgb(88 145 129);
+    border-bottom-color: rgb(88 145 129);
 }
 
 .funFacts {
-  color: rgb(88 145 129);
+    color: rgb(88 145 129);
 }
 
 .photo .eventsContainer {
-  border-color: rgb(165 241 172);
-  -webkit-box-shadow: 6px 7px 10px 0px rgb(165 241 172);
-  box-shadow: 6px 7px 10px 0px rgb(165 241 172);
+    border-color: rgb(165 241 172);
+    -webkit-box-shadow: 6px 7px 10px 0px rgb(165 241 172);
+    box-shadow: 6px 7px 10px 0px rgb(165 241 172);
 }
 
 .photo .eventHeader {
-  color: rgb(108 160 112);
-  border-bottom-color: rgb(108 160 112);
+    color: rgb(108 160 112);
+    border-bottom-color: rgb(108 160 112);
 }
 
 .photo {
-  color: rgb(108 160 112);
+    color: rgb(108 160 112);
 }
 
 .invisible-block {
-  display: block;
-  opacity: 0;
+    display: block;
+    opacity: 0;
 }
 
 .detailHeader {
-  font-weight: bold;
-  white-space: wrap;
+    font-weight: bold;
+    white-space: wrap;
 }
 
 #Carousel {
-  position: relative;
-  height: 50vh;
-  top: 50%;
-  overflow: hidden;
+    position: relative;
+    height: 50vh;
+    top: 50%;
+    overflow: hidden;
 }
 
-#Carousel > div {
-  position: absolute;
-  -webkit-transition: left 0.2s, z-index 0s, -webkit-transform 0.2s, -webkit-filter 0.2s;
-  transition: left 0.2s, z-index 0s, -webkit-transform 0.2s, -webkit-filter 0.2s;
-  -o-transition: transform 0.2s, left 0.2s, filter 0.2s, z-index 0s;
-  transition: transform 0.2s, left 0.2s, filter 0.2s, z-index 0s;
-  transition: transform 0.2s, left 0.2s, filter 0.2s, z-index 0s, -webkit-transform 0.2s, -webkit-filter 0.2s;
-  width: 40%;
-  height: 100%;
+#Carousel>div {
+    position: absolute;
+    -webkit-transition: left 0.2s, z-index 0s, -webkit-transform 0.2s, -webkit-filter 0.2s;
+    transition: left 0.2s, z-index 0s, -webkit-transform 0.2s, -webkit-filter 0.2s;
+    -o-transition: transform 0.2s, left 0.2s, filter 0.2s, z-index 0s;
+    transition: transform 0.2s, left 0.2s, filter 0.2s, z-index 0s;
+    transition: transform 0.2s, left 0.2s, filter 0.2s, z-index 0s, -webkit-transform 0.2s, -webkit-filter 0.2s;
+    width: 40%;
+    height: 100%;
 }
 
-#Carousel > div > img {
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  position: absolute;
-  -o-object-fit: cover;
-  object-fit: cover;
-  max-width: 100%;
-  max-height: 100%;
-  -webkit-box-shadow: 10px 8px 20px black;
-  box-shadow: 10px 8px 20px black;
-  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+#Carousel>div>img {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    -webkit-box-shadow: 10px 8px 20px black;
+    box-shadow: 10px 8px 20px black;
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
 }
 
 #PhotoCaption {
-  text-align: center;
+    text-align: center;
 }
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 2000; /* Sit on top */
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* Modal Content (Image) */
 .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 100vw;
-  max-height: 100vh;
-  background-color: rgba(0, 0, 0, 0);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  position: absolute;
-  -o-object-fit: contain;
-  object-fit: contain;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    -o-object-fit: contain;
+    object-fit: contain;
 }
 
 .close {
-  z-index: 2500;
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+    z-index: 2500;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
 }
 
-.close:hover, .close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .modalable {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width:700px) {
-  .modal-content {
-    width: 100%;
-  }
+    .modal-content {
+        width: 100%;
+    }
 
-  #Carousel > div {
-    width: 60%;
-  }
+    #Carousel>div {
+        width: 60%;
+    }
 
 }
 
-
-
-/*
-twz color, version 1:
-
-.sticky-top:
-background: rgb(171 207 232 / 44%);
-
-.nav-link
-color: rgb(60 101 129);
-
-.nav-pills
---bs-nav-pills-link-active-bg: rgb(60 101 129);
-
-.nav
---bs-nav-link-hover-color: rgb(120 166 197);
---bs-nav-link-color: rgb(51 135 192);
-
-
-
-background: 
-
-*/
 .sticky-top {
-  background: rgb(171 207 232 / 44%);
-  backdrop-filter: blur(4px);
+    background: rgb(171 207 232 / 44%);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 }
 
-.nav-pills .nav-link:hover, .nav-pills .nav-link.active {
-  font-weight: bold;
-  /*background: yellow;*/
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link.active {
+    font-weight: bold;
+    /*background: yellow;*/
 }
-
 
 .twz-nav-color {
-  color: rgb(60 101 129);
-  --bs-nav-pills-link-active-bg: rgb(60 101 129);
-  --bs-nav-link-hover-color: rgb(120 166 197);
-  --bs-nav-link-color: rgb(51 135 192);
-
+    color: rgb(60 101 129);
+    --bs-nav-pills-link-active-bg: rgb(60 101 129);
+    --bs-nav-link-hover-color: rgb(120 166 197);
+    --bs-nav-link-color: rgb(51 135 192);
 }

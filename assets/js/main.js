@@ -377,34 +377,22 @@ var initialize = function() {
     $(".sticky-top-blank").height($(".sticky-top").height())
     $(window).on("resize", () => window.requestAnimationFrame(animateUpdate))
     $(document).on("scroll", () => window.requestAnimationFrame(animateUpdate))
+
+    // manual gif
+    var gif_images = ['cross-leg.png', 'latte.png', 'makeup.png', 'oreo.png', 'platypus.jpg'];
+    var gif_index = 0;
+    //manual gif
+    setInterval(function() {
+        $("#js-gif").attr("src", "assets/img/" + gif_images[gif_index])
+        gif_index >= gif_images.length - 1 ? gif_index = 0 : gif_index++;
+    }, 1000);
 }
 
 $(document).ready(initialize);
 
-// manual gif
-//$("#js-gif").attr("data-src", "assets/img/gif0.gif")
-let gif_images = ['cross-leg.png', 'latte.png', 'makeup.png', 'oreo.png', 'platypus.jpg'];
-
-let gif_index = 0;
-// %const gifElement = document.querySelector('#js-gif');
-
-function changefig() {
-    
-    // gifElement.attr("data-src", "assets/img/" + gif_images[gif_index]);
-    $("#js-gif").attr("src", "assets/img/" + gif_images[gif_index])
-
-    // console.log(gif_index)
-    // console.log($("#js-gif").attr("src"))
-
-    gif_index >= gif_images.length-1 ? gif_index = 0 : gif_index++;
-}
-
 $(window).on("load", function() {
     // windows is ready. Force load everything
     lazyloadObject.loadImages()
-
-    //manual gif
-    setInterval(changefig, 1000);
 
     // Make the scrollbar appears again.
     $("body").css("overflow", "inherit")
