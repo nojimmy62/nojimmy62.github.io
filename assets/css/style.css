@@ -46,7 +46,7 @@ background:
 body {
   font-family: 'KoHo', 'Mansalva', 'Noto Sans', '微軟正黑體', 'Noto Sans TC', '標楷體', '新細明體', 'consolas';
   overflow: hidden;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 img {
@@ -149,6 +149,12 @@ a {
 
 #TextEnlarge {
   text-align: center;
+}
+
+.weddingEvent .eventsContainer {
+  border-color: rgb(100 0 100);
+  -webkit-box-shadow: 6px 7px 10px 0px rgb(100 0 100);
+  box-shadow: 6px 7px 10px 0px rgb(100 0 100);
 }
 
 .ourStory .eventsContainer {
