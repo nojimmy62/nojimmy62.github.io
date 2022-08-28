@@ -1,3 +1,45 @@
+
+
+/*
+twz color, version 1:
+
+.sticky-top:
+background: rgb(171 207 232 / 44%);
+
+.nav-link
+color: rgb(60 101 129);
+
+.nav-pills
+--bs-nav-pills-link-active-bg: rgb(60 101 129);
+
+.nav
+--bs-nav-link-hover-color: rgb(120 166 197);
+--bs-nav-link-color: rgb(51 135 192);
+
+
+
+background: 
+
+*/
+.sticky-top {
+  background: rgb(171 207 232 / 44%);
+  backdrop-filter: blur(4px);
+}
+
+.nav-pills .nav-link:hover, .nav-pills .nav-link.active {
+  font-weight: bold;
+  /*background: yellow;*/
+}
+
+
+.twz-nav-color {
+  color: rgb(60 101 129);
+  --bs-nav-pills-link-active-bg: rgb(60 101 129);
+  --bs-nav-link-hover-color: rgb(120 166 197);
+  --bs-nav-link-color: rgb(51 135 192);
+
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -257,13 +299,4 @@ a {
     width: 60%;
   }
 
-}
-
-.sticky-top {
-  background: rgb(240 250 255 / 78%);
-  backdrop-filter: blur(4px);
-}
-
-.nav-pills .nav-link:hover, .nav-pills .nav-link.active {
-  font-weight: bold;
 }
