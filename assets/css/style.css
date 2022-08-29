@@ -1,6 +1,35 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+:root {
+    --event-default-shadow-style: 6px 7px 10px 0px;
+    --event-default-theme-color: rgb(0 0 0);
+    --event-default-border-width: 3px 4px 3px 5px;
+    --event-default-border-radius: 2% 4% 92% 2% / 97% 95% 6% 97%;
+
+    --weddingevent-theme-color: rgb(212 147 183);
+    --weddingevent-text-color: rgb(151 79 118);
+
+    --ourstory-theme-color: rgb(127 134 211);
+    --ourstory-text-color: rgb(84 89 148);
+
+    --funFacts-theme-color: rgb(138 211 191);
+    --funFacts-text-color: rgb(88 145 129);
+
+    --photo-theme-color: rgb(254 193 63);
+    --photo-text-color: rgb(234 159 1);
+
+    --modal-background-color: rgb(0 0 0 / 90%);
+
+    --navbar-background-color: rgb(171 207 232 / 44%);
+    --navbar-text-color: rgb(60 101 129);
+
+    /* Override the default bootstrap nav color */
+    --bs-nav-pills-link-active-bg: rgb(60 101 129);
+    --bs-nav-link-hover-color: rgb(120 166 197);
+    --bs-nav-link-color: rgb(51 135 192);
+}
+
 body {
     font-family: 'KoHo', 'Mansalva', 'Noto Sans', '微軟正黑體', 'Noto Sans TC', '標楷體', '新細明體', 'consolas';
     overflow: hidden;
@@ -78,96 +107,85 @@ a {
     left: 0;
     right: 0;
     padding: 10px 40px 40px 40px;
-    border: solid black;
-    border-color: black;
-    border-width: 3px 4px 3px 5px;
-    -webkit-box-shadow: 6px 7px 10px 0px rgb(2 2 2);
-    box-shadow: 6px 7px 10px 0px rgb(2 2 2);
-    border-top-left-radius: 2% 97%;
-    border-top-right-radius: 4% 95%;
-    border-bottom-right-radius: 92% 6%;
-    border-bottom-left-radius: 2% 97%;
+    border: solid var(--event-default-theme-color);
+    border-width: var(--event-default-border-width);
+    -webkit-box-shadow: var(--event-default-shadow-style);
+    box-shadow: var(--event-default-shadow-style) var(--event-default-theme-color);
+    border-radius: var(--event-default-border-radius);
 }
 
-.eventsContainer>.row div.eventHeader {
+.eventHeader {
     text-align: center;
     font-weight: bold;
     font-size: 1.5rem;
     display: block;
-    border-bottom: 2px;
+    border-bottom-width: 2px;
     border-style: solid;
     border-top: 0px;
     border-left: 0px;
     border-right: 0px;
 }
 
+#TextEnlarge1,
+#TextEnlarge2,
 #TextMarry {
     text-align: center;
 }
 
-#TextEnlarge1,
-#TextEnlarge2 {
-    text-align: center;
-}
-
 .weddingEvent .eventsContainer {
-    border-color: rgb(212 147 183);
-    -webkit-box-shadow: 6px 7px 10px 0px rgb(212 147 183);
-    box-shadow: 6px 7px 10px 0px rgb(212 147 183);
+    border-color: var(--weddingevent-theme-color);
+    -webkit-box-shadow: var(--event-default-shadow-style) var(--weddingevent-theme-color);
+    box-shadow: var(--event-default-shadow-style) var(--weddingevent-theme-color);
 }
 
 .weddingEvent .eventHeader {
-    color: rgb(151 79 118);
-    border-bottom-color: rgb(212 147 183) !important;
+    border-bottom-color: var(--weddingevent-text-color);
 }
 
 .weddingEvent {
-    color: rgb(151 79 118);
+    color: var(--weddingevent-text-color);
 }
 
 .ourStory .eventsContainer {
-    border-color: rgb(127 134 211);
-    -webkit-box-shadow: 6px 7px 10px 0px rgb(127 134 211);
-    box-shadow: 6px 7px 10px 0px rgb(127 134 211);
+    border-color: var(--ourstory-theme-color);
+    -webkit-box-shadow: var(--event-default-shadow-style) var(--ourstory-theme-color);
+    box-shadow: var(--event-default-shadow-style) var(--ourstory-theme-color);
 }
 
 .ourStory .eventHeader {
-    color: rgb(84 89 148);
-    border-bottom-color: rgb(127 134 211) !important;
+    border-bottom-color: var(--ourstory-text-color);
 }
 
 .ourStory {
-    color: rgb(84 89 148);
+    color: var(--ourstory-text-color);
 }
 
 .funFacts .eventsContainer {
-    border-color: rgb(138 211 191);
-    -webkit-box-shadow: 6px 7px 10px 0px rgb(138 211 191);
-    box-shadow: 6px 7px 10px 0px rgb(138 211 191);
+    border-color: var(--funFacts-theme-color);
+    -webkit-box-shadow: var(--event-default-shadow-style) var(--funFacts-theme-color);
+    box-shadow: var(--event-default-shadow-style) var(--funFacts-theme-color);
 }
 
 .funFacts .eventHeader {
-    color: rgb(88 145 129);
-    border-bottom-color: rgb(138 211 191) !important;
+    border-bottom-color: var(--funFacts-text-color);
 }
 
 .funFacts {
-    color: rgb(88 145 129);
+    color: var(--funFacts-text-color);
 }
 
 .photo .eventsContainer {
-    border-color: rgb(254 193 63);
-    -webkit-box-shadow: 6px 7px 10px 0px rgb(254 193 63);
-    box-shadow: 6px 7px 10px 0px rgb(254 193 63);
+    border-color: var(--photo-theme-color);
+    -webkit-box-shadow: var(--event-default-shadow-style) var(--photo-theme-color);
+    box-shadow: var(--event-default-shadow-style) var(--photo-theme-color);
 }
 
 .photo .eventHeader {
-    color: rgb(234 159 1);
-    border-bottom-color: rgb(254 193 63) !important;
+    border-bottom-color: var(--photo-text-color);
 }
 
 .photo {
-    color: rgb(234 159 1);
+    color: var(--photo-text-color);
 }
 
 .invisible-block {
@@ -230,12 +248,14 @@ a {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--modal-background-color);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 }
 
 /* Modal Content (Image) */
 .modal-content {
+    border: none;
     margin: auto;
     display: block;
     width: 80%;
@@ -298,20 +318,13 @@ a {
 }
 
 .sticky-top {
-    background: rgb(171 207 232 / 44%);
+    background: var(--navbar-background-color);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
+    color: var(--navbar-text-color);
 }
 
 .nav-pills .nav-link:hover,
 .nav-pills .nav-link.active {
     font-weight: bold;
-    /*background: yellow;*/
-}
-
-.twz-nav-color {
-    color: rgb(60 101 129);
-    --bs-nav-pills-link-active-bg: rgb(60 101 129);
-    --bs-nav-link-hover-color: rgb(120 166 197);
-    --bs-nav-link-color: rgb(51 135 192);
 }
