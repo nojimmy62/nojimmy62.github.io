@@ -310,6 +310,10 @@ a {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     }
+
+    #NavList>.nav-link {
+        flex: 1 0 auto;
+    }
 }
 
 .sticky-top {
