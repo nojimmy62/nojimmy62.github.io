@@ -201,7 +201,6 @@ a {
 #Carousel {
     position: relative;
     height: 50vh;
-    top: 50%;
     overflow: hidden;
 }
 
