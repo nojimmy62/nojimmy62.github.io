@@ -148,7 +148,7 @@ langText = {
     },
     "#TextFact4": {
         "en": "How is this website being made? <br><br>This website is made by Po-Hsien (tremendous technical help), Ting-Wei (all the drawings and animations), and Hsiang-Chih (content; his drawings are mostly on papers and thus are difficult to display on the website)!",
-        "tw": "這網站是如何製作的呢？<br><br>這網站是由柏軒(極大量的技術支援)、亭維(所有作圖、動畫)、翔致(內容；翔致平常都畫在紙上，難以電子化)完成！"
+        "tw": "這網站是如何製作的呢？<br><br>這網站是由柏軒(大量的技術支援)、亭維(所有作圖、動畫)、翔致(內容；翔致平常都畫在紙上，難以電子化)完成！"
     },
     "#TextPhotoHeader": {
         "en": "Photo gallery",

@@ -148,7 +148,7 @@ a {
 
 .funFacts .eventHeader {
     color: rgb(88 145 129);
-    border-bottom-color: rgb(88 145 129);
+    border-bottom-color: rgb(138 211 191) !important;
 }
 
 .funFacts {
@@ -156,18 +156,18 @@ a {
 }
 
 .photo .eventsContainer {
-    border-color: rgb(165 241 172);
-    -webkit-box-shadow: 6px 7px 10px 0px rgb(165 241 172);
-    box-shadow: 6px 7px 10px 0px rgb(165 241 172);
+    border-color: rgb(254 193 63);
+    -webkit-box-shadow: 6px 7px 10px 0px rgb(254 193 63);
+    box-shadow: 6px 7px 10px 0px rgb(254 193 63);
 }
 
 .photo .eventHeader {
-    color: rgb(108 160 112);
-    border-bottom-color: rgb(108 160 112);
+    color: rgb(234 159 1);
+    border-bottom-color: rgb(254 193 63) !important;
 }
 
 .photo {
-    color: rgb(108 160 112);
+    color: rgb(234 159 1);
 }
 
 .invisible-block {
