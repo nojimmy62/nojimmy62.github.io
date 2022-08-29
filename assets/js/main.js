@@ -258,7 +258,9 @@ var modalShowImg = function(url) {
     $("#imginmodal").attr("src", url)
 }
 
-var lazyloadObject = lazyload()
+var lazyloadObject = new LazyLoad({
+    restore_on_error: true
+});
 var currentCarouselIndex = 0
 var touchLastLoc = undefined
 var moveCarousel = function(selected, {
@@ -394,7 +396,7 @@ $(document).ready(initialize);
 
 $(window).on("load", function() {
     // windows is ready. Force load everything
-    lazyloadObject.loadImages()
+    lazyloadObject.loadAll()
 
     // Make the scrollbar appears again.
     $("body").css("overflow", "inherit")
