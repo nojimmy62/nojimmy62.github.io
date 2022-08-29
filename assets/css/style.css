@@ -23,12 +23,8 @@
 
     --navbar-background-color: rgb(171 207 232 / 44%);
     --navbar-text-color: rgb(60 101 129);
-
-    /* Override the default bootstrap nav color */
-    --bs-nav-pills-link-active-bg: rgb(60 101 129);
-    --bs-nav-link-hover-color: rgb(120 166 197);
-    --bs-nav-link-color: rgb(51 135 192);
 }
+
 
 body {
     font-family: 'KoHo', 'Mansalva', 'Noto Sans', '微軟正黑體', 'Noto Sans TC', '標楷體', '新細明體', 'consolas';
@@ -326,4 +322,14 @@ a {
 .nav-pills .nav-link:hover,
 .nav-pills .nav-link.active {
     font-weight: bold;
+}
+
+/* Override the default bootstrap nav color */
+.nav-pills {
+    --bs-nav-pills-link-active-bg: rgb(60 101 129);
+}
+
+.nav-link {
+    --bs-nav-link-hover-color: rgb(120 166 197);
+    --bs-nav-link-color: rgb(51 135 192);
 }
