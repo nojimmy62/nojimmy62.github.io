@@ -251,6 +251,7 @@ var langChange = function(lang) {
 
 var changePhotoCaption = function(lang) {
     $('#PhotoCaption').html($($("#Carousel img")[Math.floor(currentCarouselIndex)]).attr(lang + "-data"))
+    $('#PhotoCaption').html($($("#CarouselStory img")[Math.floor(currentCarouselStoryIndex)]).attr(lang + "-data"))
 }
 
 var modalShowImg = function(url) {
@@ -262,6 +263,7 @@ var lazyloadObject = new LazyLoad({
     restore_on_error: true
 });
 var currentCarouselIndex = 0
+var currentCarouselStoryIndex = 0
 var touchLastLoc = undefined
 var moveCarousel = function(selected, {
     itemsRow = 5, // number of items per row
@@ -311,6 +313,57 @@ var moveCarousel = function(selected, {
         changePhotoCaption("en")
     }
 }
+
+var moveCarouselStory = function(selected, {
+    itemsRow = 5, // number of items per row
+    zIndex = true, // change z-index based on the position
+    grayscale = true, // change grayscale based on the position
+    scale = true, // change scale based on the position
+} = {}) {
+    var items = $("#CarouselStory").children()
+    if (selected < 0 || Math.ceil(selected) >= items.length) {
+        return
+    }
+
+    paddingStep = 100 / (itemsRow - 1)
+    halfItem = Math.floor(itemsRow / 2)
+    items.each(function(idx, item) {
+        idxDiff = idx - selected
+        if (zIndex) {
+            let zIndex = 500 - Math.floor(Math.abs(idxDiff) * 10)
+            $(item).css("z-index", zIndex)
+        }
+
+        if (grayscale) {
+            let grayscale = Math.abs(idxDiff) * 1 / (halfItem + 1)
+            $(item).css("filter", `grayscale(${grayscale < 0 ? 0 : grayscale})`)
+        }
+
+        targetScale = 1
+        if (scale) {
+            targetScale = 1 - Math.abs(idxDiff) * 0.1
+        }
+
+        cursor = "pointer"
+        if (idx == selected) {
+            cursor = "zoom-in"
+        }
+
+        $(item).css({
+            "left": `${50 + paddingStep * idxDiff}%`,
+            "transform": `translateY(0%) translateX(-50%) scale(${targetScale})`,
+            "cursor": cursor,
+        })
+    })
+    currentCarouselStoryIndex = selected
+    if ($("#mandarinButton").hasClass("active")) {
+        changePhotoCaption("tw")
+    } else if ($("#englishButton").hasClass("active")) {
+        changePhotoCaption("en")
+    }
+}
+
+
 
 var accumulated_carousel_scroll = 0
 var carousel_scroll_threshold = 100
@@ -373,6 +426,45 @@ var initialize = function() {
     $("#myModal > .close, #myModal").click(function() {
         $("#myModal").hide()
     })
+
+    // Setup Carousel in Story
+    $("#CarouselStory div").click(function(e) {
+        if (currentCarouselStoryIndex == $(this).index()) {
+            modalShowImg($(this).children("img").attr("src"))
+        } else {
+            moveCarouselStory($(this).index())
+        }
+    })
+    $("#CarouselStory div").on('wheel', function(e) {
+        accumulated_carousel_scroll += e.originalEvent.deltaX + e.originalEvent.deltaY
+        if (accumulated_carousel_scroll < -carousel_scroll_threshold) {
+            moveCarouselStory(currentCarouselStoryIndex - 1)
+            accumulated_carousel_scroll = 0
+        } else if (accumulated_carousel_scroll > carousel_scroll_threshold) {
+            moveCarouselStory(currentCarouselStoryIndex + 1)
+            accumulated_carousel_scroll = 0
+        }
+        // Don't scroll the browsing window
+        return false;
+    })
+    $("#CarouselStory div").on('touchstart', function(e) {
+        if (e.originalEvent.touches.length > 1) return
+        touchLastLoc = e.originalEvent.touches[0]
+    }).on('touchmove', function(e) {
+        if (e.originalEvent.touches.length > 1) return
+        touch = e.originalEvent.touches[0]
+        moveIdx = (touch.clientX - touchLastLoc.clientX) / ($("#CarouselStory div").width() / 2)
+        window.requestAnimationFrame(function() {
+            moveCarouselStory(currentCarouselStoryIndex - moveIdx)
+        })
+        touchLastLoc = e.originalEvent.touches[0]
+    }).on('touchend', function(e) {
+        touchLastLoc = undefined
+        window.requestAnimationFrame(function() {
+            moveCarouselStory(Math.round(currentCarouselStoryIndex))
+        })
+    })
+    moveCarousel(currentCarouselStoryIndex)
 
     if ("scrollRestoration" in history) {
         history.scrollRestoration = "manual"
