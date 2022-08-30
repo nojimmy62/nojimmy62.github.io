@@ -21,7 +21,7 @@ langText = {
     },
     "#TextMarry": {
         "en": "Ting-Wei & Hsiang-Chih are getting married!",
-        "tw": "亭維 & 翔致要結婚了！"
+        "tw": "亭維 & 翔致要結婚了！HAHAHA"
     },
     ".weddingHeader": {
         "en": "Wedding events",
@@ -475,13 +475,13 @@ var initialize = function() {
     $(document).on("scroll", () => window.requestAnimationFrame(animateUpdate))
 
     // manual gif
-    var gif_images = ['cross-leg.png', 'latte.png', 'makeup.png', 'oreo.png', 'platypus.jpg'];
-    var gif_index = 0;
-    //manual gif
-    setInterval(function() {
-        $("#js-gif").attr("src", "assets/img/" + gif_images[gif_index])
-        gif_index >= gif_images.length - 1 ? gif_index = 0 : gif_index++;
-    }, 1000);
+    // var gif_images = ['cross-leg.png', 'latte.png', 'makeup.png', 'oreo.png', 'platypus.jpg'];
+    // var gif_index = 0;
+    // //manual gif
+    // setInterval(function() {
+    //     $("#js-gif").attr("src", "assets/img/" + gif_images[gif_index])
+    //     gif_index >= gif_images.length - 1 ? gif_index = 0 : gif_index++;
+    // }, 1000);
 }
 
 $(document).ready(initialize);
