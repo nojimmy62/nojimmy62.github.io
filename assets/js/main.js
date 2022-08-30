@@ -303,17 +303,17 @@ class Carousel {
             if (carousel.currentIndex == $(this).index()) {
                 modalShowImg($(this).children("img").attr("src"))
             } else {
-                carousel.moveCarousel($(this).index())
+                carousel.adjustPosition($(this).index())
             }
         })
 
         $(this.element).on('wheel', function(e) {
             carousel.accumulatedScroll += e.originalEvent.deltaX + e.originalEvent.deltaY
             if (carousel.accumulatedScroll < -carousel.scrollThreshold) {
-                carousel.moveCarousel(carousel.currentIndex - 1)
+                carousel.adjustPosition(carousel.currentIndex - 1)
                 carousel.accumulatedScroll = 0
             } else if (carousel.accumulatedScroll > carousel.scrollThreshold) {
-                carousel.moveCarousel(carousel.currentIndex + 1)
+                carousel.adjustPosition(carousel.currentIndex + 1)
                 carousel.accumulatedScroll = 0
             }
             // Don't scroll the browsing window
@@ -327,23 +327,23 @@ class Carousel {
             if (e.originalEvent.touches.length > 1) return
             var touch = e.originalEvent.touches[0]
             var moveIdx = (touch.clientX - carousel.touchLastLoc.clientX) / ($(carousel.element).width() / 2)
-            carousel.moveCarousel(carousel.currentIndex - moveIdx)
+            carousel.adjustPosition(carousel.currentIndex - moveIdx)
             carousel.touchLastLoc = e.originalEvent.touches[0]
         }).on('touchend', function(e) {
             carousel.touchLastLoc = undefined
-            carousel.moveCarousel(Math.round(carousel.currentIndex))
+            carousel.adjustPosition(Math.round(carousel.currentIndex))
         })
-        this.moveCarousel(this.currentIndex)
+        this.adjustPosition(this.currentIndex)
     }
 
-    moveCarousel(index) {
+    adjustPosition(index) {
         var carousel = this
         window.requestAnimationFrame(function() {
-            carousel._moveCarousel(index)
+            carousel._adjustPosition(index)
         })
     }
 
-    _moveCarousel(index) {
+    _adjustPosition(index) {
         var items = $(this.element).children()
         if (index < 0 || Math.ceil(index) >= items.length) {
             return
