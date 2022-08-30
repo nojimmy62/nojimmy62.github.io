@@ -213,7 +213,9 @@ var animateUpdate = function() {
             smallest.href = button
         }
     })
-    if (!$(smallest.href).hasClass("active")) {
+    if (smallest.href === undefined) {
+        $("#NavList > a").removeClass("active")
+    } else if (!$(smallest.href).hasClass("active")) {
         $(smallest.href).addClass("active").siblings().removeClass("active")
     }
 
