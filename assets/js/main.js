@@ -245,13 +245,13 @@ var langChange = function(lang) {
     for (id in langText) {
         $(id).html(langText[id][lang])
     }
-    changePhotoCaption(lang)
+
+    myCarousel.forEach(function(item) {
+        item.changeCaption(lang)
+    })
     animateUpdate()
 }
 
-var changePhotoCaption = function(lang) {
-    $('#PhotoCaption').html($($("#Carousel img")[Math.floor(currentCarouselIndex)]).attr(lang + "-data"))
-}
 
 var modalShowImg = function(url) {
     $("#myModal").show()
@@ -261,59 +261,137 @@ var modalShowImg = function(url) {
 var lazyloadObject = new LazyLoad({
     restore_on_error: true
 });
-var currentCarouselIndex = 0
-var touchLastLoc = undefined
-var moveCarousel = function(selected, {
-    itemsRow = 5, // number of items per row
-    zIndex = true, // change z-index based on the position
-    grayscale = true, // change grayscale based on the position
-    scale = true, // change scale based on the position
-} = {}) {
-    var items = $("#Carousel").children()
-    if (selected < 0 || Math.ceil(selected) >= items.length) {
-        return
-    }
 
-    paddingStep = 100 / (itemsRow - 1)
-    halfItem = Math.floor(itemsRow / 2)
-    items.each(function(idx, item) {
-        idxDiff = idx - selected
-        if (zIndex) {
-            let zIndex = 500 - Math.floor(Math.abs(idxDiff) * 10)
-            $(item).css("z-index", zIndex)
-        }
-
-        if (grayscale) {
-            let grayscale = Math.abs(idxDiff) * 1 / (halfItem + 1)
-            $(item).css("filter", `grayscale(${grayscale < 0 ? 0 : grayscale})`)
-        }
-
-        targetScale = 1
-        if (scale) {
-            targetScale = 1 - Math.abs(idxDiff) * 0.1
-        }
-
-        cursor = "pointer"
-        if (idx == selected) {
-            cursor = "zoom-in"
-        }
-
-        $(item).css({
-            "left": `${50 + paddingStep * idxDiff}%`,
-            "transform": `translateY(0%) translateX(-50%) scale(${targetScale})`,
-            "cursor": cursor,
-        })
-    })
-    currentCarouselIndex = selected
+var getCurrentLang = function() {
     if ($("#mandarinButton").hasClass("active")) {
-        changePhotoCaption("tw")
+        return "tw"
     } else if ($("#englishButton").hasClass("active")) {
-        changePhotoCaption("en")
+        return "en"
+    } else {
+        console.error("Can't figure out the current language")
     }
 }
 
-var accumulated_carousel_scroll = 0
-var carousel_scroll_threshold = 100
+class Carousel {
+    constructor(element, {
+        currentIndex = 0, // default index to show after initialize
+        itemsRow = 5, // number of items per row
+        zIndex = true, // change z-index based on the position
+        grayscale = true, // change grayscale based on the position
+        scale = true, // change scale based on the position
+        scrollThreshold = 100, // scroll threshold to change to next photos
+    } = {}) {
+        if (element.length > 1) {
+            alert("Only one element is supported. Consider pass in the element by id")
+            return
+        }
+
+        this.element = $(element).children(".carouselPhoto")
+        this.captionElement = $(element).children(".carouselCaption")
+        this.currentIndex = currentIndex
+        this.itemsRow = itemsRow
+        this.zIndex = zIndex
+        this.grayscale = grayscale
+        this.scale = scale
+        this.scrollThreshold = scrollThreshold
+
+        this.accumulatedScroll = 0
+        this.lastTouchLoc = undefined
+
+        var carousel = this
+        $(this.element).children().click(function(e) {
+            if (carousel.currentIndex == $(this).index()) {
+                modalShowImg($(this).children("img").attr("src"))
+            } else {
+                carousel.moveCarousel($(this).index())
+            }
+        })
+
+        $(this.element).on('wheel', function(e) {
+            carousel.accumulatedScroll += e.originalEvent.deltaX + e.originalEvent.deltaY
+            if (carousel.accumulatedScroll < -carousel.scrollThreshold) {
+                carousel.moveCarousel(carousel.currentIndex - 1)
+                carousel.accumulatedScroll = 0
+            } else if (carousel.accumulatedScroll > carousel.scrollThreshold) {
+                carousel.moveCarousel(carousel.currentIndex + 1)
+                carousel.accumulatedScroll = 0
+            }
+            // Don't scroll the browsing window
+            return false;
+        })
+
+        $(this.element).on('touchstart', function(e) {
+            if (e.originalEvent.touches.length > 1) return
+            carousel.touchLastLoc = e.originalEvent.touches[0]
+        }).on('touchmove', function(e) {
+            if (e.originalEvent.touches.length > 1) return
+            var touch = e.originalEvent.touches[0]
+            var moveIdx = (touch.clientX - carousel.touchLastLoc.clientX) / ($(carousel.element).width() / 2)
+            carousel.moveCarousel(carousel.currentIndex - moveIdx)
+            carousel.touchLastLoc = e.originalEvent.touches[0]
+        }).on('touchend', function(e) {
+            carousel.touchLastLoc = undefined
+            carousel.moveCarousel(Math.round(carousel.currentIndex))
+        })
+        this.moveCarousel(this.currentIndex)
+    }
+
+    moveCarousel(index) {
+        var carousel = this
+        window.requestAnimationFrame(function() {
+            carousel._moveCarousel(index)
+        })
+    }
+
+    _moveCarousel(index) {
+        var items = $(this.element).children()
+        if (index < 0 || Math.ceil(index) >= items.length) {
+            return
+        }
+
+        var paddingStep = 100.0 / (this.itemsRow - 1)
+        var halfItem = Math.floor(this.itemsRow / 2)
+        var carousel = this
+        items.each(function(idx, item) {
+            var idxDiff = idx - index
+            if (carousel.zIndex) {
+                let zIndex = 500 - Math.floor(Math.abs(idxDiff) * 10)
+                $(item).css("z-index", zIndex)
+            }
+            if (carousel.grayscale) {
+                let grayscale = Math.abs(idxDiff) * 1 / (halfItem + 1)
+                $(item).css("filter", `grayscale(${grayscale < 0 ? 0 : grayscale})`)
+            }
+
+            var targetScale = 1
+            if (carousel.scale) {
+                targetScale = 1 - Math.abs(idxDiff) * 0.1
+            }
+
+            var cursor = "pointer"
+            if (idx == index) {
+                cursor = "zoom-in"
+            }
+
+            var left = 50 + paddingStep * idxDiff
+            $(item).css({
+                "left": `${left}%`,
+                "transform": `translateY(0%) translateX(-50%) scale(${targetScale})`,
+                "cursor": cursor,
+            })
+        })
+        this.currentIndex = index
+        this.changeCaption(getCurrentLang())
+    }
+
+    changeCaption(lang) {
+        var img = $(this.element).find("img")[Math.floor(this.currentIndex)]
+        var caption = $(img).attr(`${lang}-data`)
+        $(this.captionElement).html(caption)
+    }
+}
+
+var myCarousel = [new Carousel($("#CarouselPhoto"))]
 var initialize = function() {
     $("#mandarinButton").click(function() {
         langChange("tw");
@@ -326,45 +404,6 @@ var initialize = function() {
         $(this).addClass("active");
         $(this).siblings().removeClass("active");
     })
-
-    // Setup Carousel
-    $("#Carousel div").click(function(e) {
-        if (currentCarouselIndex == $(this).index()) {
-            modalShowImg($(this).children("img").attr("src"))
-        } else {
-            moveCarousel($(this).index())
-        }
-    })
-    $("#Carousel div").on('wheel', function(e) {
-        accumulated_carousel_scroll += e.originalEvent.deltaX + e.originalEvent.deltaY
-        if (accumulated_carousel_scroll < -carousel_scroll_threshold) {
-            moveCarousel(currentCarouselIndex - 1)
-            accumulated_carousel_scroll = 0
-        } else if (accumulated_carousel_scroll > carousel_scroll_threshold) {
-            moveCarousel(currentCarouselIndex + 1)
-            accumulated_carousel_scroll = 0
-        }
-        // Don't scroll the browsing window
-        return false;
-    })
-    $("#Carousel div").on('touchstart', function(e) {
-        if (e.originalEvent.touches.length > 1) return
-        touchLastLoc = e.originalEvent.touches[0]
-    }).on('touchmove', function(e) {
-        if (e.originalEvent.touches.length > 1) return
-        touch = e.originalEvent.touches[0]
-        moveIdx = (touch.clientX - touchLastLoc.clientX) / ($("#Carousel div").width() / 2)
-        window.requestAnimationFrame(function() {
-            moveCarousel(currentCarouselIndex - moveIdx)
-        })
-        touchLastLoc = e.originalEvent.touches[0]
-    }).on('touchend', function(e) {
-        touchLastLoc = undefined
-        window.requestAnimationFrame(function() {
-            moveCarousel(Math.round(currentCarouselIndex))
-        })
-    })
-    moveCarousel(currentCarouselIndex)
 
     $("img.modalable").click(function() {
         modalShowImg($(this).attr("src"))
@@ -393,7 +432,6 @@ var initialize = function() {
 }
 
 $(document).ready(initialize);
-
 $(window).on("load", function() {
     // windows is ready. Force load everything
     lazyloadObject.loadAll()
