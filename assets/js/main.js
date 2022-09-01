@@ -21,7 +21,7 @@ langText = {
     },
     "#TextMarry": {
         "en": "Ting-Wei & Hsiang-Chih are getting married!",
-        "tw": "亭維 & 翔致要結婚了！HAHAHA"
+        "tw": "亭維 & 翔致要結婚了！"
     },
     ".weddingHeader": {
         "en": "Wedding events",
