@@ -391,8 +391,7 @@ class Carousel {
     }
 }
 
-var myCarousel = [new Carousel($("#CarouselPhoto"))]
-var myCarouselStory = [new Carousel($("#CarouselStory"))]
+var myCarousel = [new Carousel($("#CarouselPhoto")), new Carousel($("#CarouselStory"))]
 var initialize = function() {
     $("#mandarinButton").click(function() {
         langChange("tw");
