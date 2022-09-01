@@ -391,7 +391,7 @@ class Carousel {
     }
 }
 
-var myCarousel = [new Carousel($("#CarouselPhoto"))]
+var myCarousel = [new Carousel($("#CarouselPhoto")), new Carousel($("#CarouselStory"))]
 var initialize = function() {
     $("#mandarinButton").click(function() {
         langChange("tw");
@@ -421,14 +421,7 @@ var initialize = function() {
     $(window).on("resize", () => window.requestAnimationFrame(animateUpdate))
     $(document).on("scroll", () => window.requestAnimationFrame(animateUpdate))
 
-    // manual gif
-    var gif_images = ['cross-leg.png', 'latte.png', 'makeup.png', 'oreo.png', 'platypus.jpg'];
-    var gif_index = 0;
-    //manual gif
-    setInterval(function() {
-        $("#js-gif").attr("src", "assets/img/" + gif_images[gif_index])
-        gif_index >= gif_images.length - 1 ? gif_index = 0 : gif_index++;
-    }, 1000);
+    
 }
 
 $(document).ready(initialize);
