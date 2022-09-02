@@ -40,7 +40,7 @@ langText = {
         "tw": "結婚典禮(自由參加):<br>濟南教會 <br> "
     },
     "#TextChurch": {
-        "en": "3:00 pm starts sitting, 3:30 pm event begins.<br> \
+        "en": "3:00 pm.<br> \
                No. 3, Zhongshan S Rd, Zhongzheng District, Taipei City <br> \
                Google map: <a target=\"_blank\" href=\"https://goo.gl/maps/NZJXJdLBwn2jZuGj6\">Link</a> <br>\
                Close to MRT NTU Hospital, Shandao Temple, and Taipei Main station",
@@ -54,16 +54,16 @@ langText = {
         "tw": "婚禮晚宴:<br>臺北文華東方酒店"
     },
     "#TextBanquet": {
-        "en": "6:00 pm starts sitting, 6:30 pm event begins.<br> \
+        "en": "6:00 pm.<br> \
                No. 158, DunHua N Rd, Songshan District, Taipei City <br> \
                Google map: <a target=\"_blank\" href=\"https://goo.gl/maps/15nu7y7u53WyiVUk7\">Link</a> <br>\
                Close to MRT Taipei Arena station",
-        "tw": "6:00 pm入場，6:30 pm晚宴開始<br> \
+        "tw": "6:00 pm入席，6:30 pm開席<br> \
                台北市松山區敦化北路158號<br> \
                Google 地圖<a target=\"_blank\" href=\"https://goo.gl/maps/15nu7y7u53WyiVUk7\">連結 </a>  <br>\
                近捷運台北小巨蛋站"
     },
-    "#TextEnlarge1": {
+        "#TextEnlarge1": {
         "en": "(Click to enlarge)",
         "tw": "(點擊可放大)",
     },
@@ -76,15 +76,15 @@ langText = {
         "tw": "建議交通方式"
     },
     "#TextTrans": {
-        "en": "If you attend the ceremony around the church, we recommend public transportation due to the limited partking space at the church, If you want to take MRT from the church to the hotel, we recommend taking the red line to the Da-an station, then the brown line to the Nanjing Fuxing station, then the green line to the Taipei Arena station; the estimated MRT transportation time is 40 minutes. If you only attend the banquet at the hotel, you can use the free parking at the hotel (B5/B6).",
-        "tw": "如參加教會典禮，因車位有限，建議多利用大眾交通工具。如欲從教會搭捷運至文華東方酒店，建議搭乘紅線、由台大醫院站搭至大安站，轉乘文湖線、搭至南京復興，再轉乘綠線搭至台北小巨蛋站；總捷運車程約40分鐘。如僅參加婚宴，可多利用酒店的免費停車場(於酒店B5/B6)。"
+        "en": "If you plan to attend the wedding ceremony, metered street parking is readily available in the neighborhood. After the ceremony, if you plan to take the MRT from the church to the hotel, we recommend taking the red line from NTU Hospital station (台大醫院站) to Zhongshan station (中山站) then transiting to the green line to get to Taipei Arena station (台北小巨蛋站). The estimated commute (including walking to and from the nearest stations) is 30-40 minutes. If you plan on going directly to the wedding banquet, free parking at the hotel (level B5/B6) is available for all wedding guests.",
+        "tw": "如參加教會典禮，教會不提供訪客停車，但路邊計費停車＿＿。如欲從教會搭捷運至文華東方酒店，建議搭乘紅線、由台大醫院站搭至中山站，再轉乘綠線搭至台北小巨蛋站；總通勤時間(含步行)約30-40分鐘。如僅參加婚宴，可多利用酒店的免費停車場(於酒店B5/B6)。"
     },
     "#TextParkingHeader": {
         "en": "Parking",
         "tw": "停車資訊"
     },
     "#TextParking": {
-        "en": "Parking spaces nearby the Chi-Nan Presbyterian Church: <a target=\"_blank\" href=\"http://www.chi-nanchurch.tw/contact/venue/parking-nearby\">link </a> <br>\
+        "en": "Parking lots nearby the Chi-Nan Presbyterian Church: <a target=\"_blank\" href=\"http://www.chi-nanchurch.tw/contact/venue/parking-nearby\">link </a> <br>\
         The Mandarin Oriental Taipei provides free parking at the hotel B5 and B6\
         ",
         "tw": "濟南教會附近計時停車場請參考：<a target=\"_blank\" href=\"http://www.chi-nanchurch.tw/contact/venue/parking-nearby\">連結 </a> <br>\
@@ -103,31 +103,31 @@ langText = {
         "tw": "我們的故事"
     },
     "#TextStory1": {
-        "en": "Once upon the time, Ting-Wei and Hsiang-Chih, both Taiwanese. They both grew up in Taipei, but never met each other.",
+        "en": "Once upon a time, Ting-Wei and Hsiang-Chih both grew up in Taipei, but never met each other.",
         "tw": "很久很久以前，亭維和翔致都是台北人，但他們並沒有在台灣相遇。"
     },
     "#TextStory2": {
-        "en": "Hsiang-Chih, a nature lover, loves to travel around the world, and also stargazing. One of his most proudest things is he went to Tibet in 2014, counting stars with Mt. Everest. Maybe that’s how he ended up with his astronomy career later?",
+        "en": "Hsiang-Chih, a nature lover, loves to travel around the world. He also enjoys stargazing wherever he goes. One of his proudest moments is when he traveled to Tibet in 2014, and counted the stars with Mt. Everest. Maybe that’s how he ended up with a career in astronomy?",
         "tw": "翔致熱愛自然，喜歡旅遊及觀星。大學時，他曾經去過西藏的喜馬拉雅山基地營看星星。這或許是為什麼後來翔致走上天文研究的原因？"
     },
     "#TextStory3": {
-        "en": "Ting-Wei is an enthusiastic music lover. She sings with playing piano or guitar. She writes songs on her own. Want to listen to one? Here you go: youtube link",
-        "tw": "亭維熱愛音樂。她能自彈(鋼琴和吉他)自唱，甚至還會自己寫歌。想聽聽她的作品嗎？這裡是連結！"
+        "en": "Ting-Wei is passionate about music. She sings and plays the piano and the guitar. She also writes her own songs. Here’s a song she wrote on the spot one day, when she found out that Hsiang-Chih got boba only for himself: youtube link",
+        "tw": "亭維熱愛音樂。她能自彈(鋼琴和吉他)自唱，甚至還會自己寫歌。有一次翔致只買了他自己的珍奶，亭維發現之後靈感大發寫了這首歌～這裡是連結！"
     },
     "#TextStory4": {
-        "en": "Ting-Wei and Hsiang-Chih met each other in Baltimore, 2016, when they were students in Johns Hopkins University. Well, they didn’t get close to each other right away, until they started to play badminton together! (Oh btw, Hsiang-Chih was a captain of the badminton team in his undergrad department) <br> Then, they found that they were not only good teammates on the badminton court but also in life! Therefore, they became a couple in summer, 2017! ",
+        "en": "Ting-Wei and Hsiang-Chih met in Baltimore, 2016, when they were both students at Johns Hopkins University. Even though Ting-Wei thought Hsiang-Chih was cute, they didn’t become close friends right away, until they started playing badminton together! (Oh btw, Hsiang-Chih was the captain of the department badminton team in college) <br> They later realized that they not only make good teammates on the badminton court but also great partners in life! In the summer of 2017, they became a couple! ",
         "tw": "2016年，亭維和翔致在美國巴爾的摩、約翰霍普金斯大學求學時相遇。但大概是在半年後，他們才因一起打羽球才變熟(翔致表示，還好以前在大學系上羽球隊沒白費)。 <br>日後，他們發現，他們不僅是羽球場上的好隊友，他們還可以一起玩音樂、划船、數星星。最後，在2017年的夏天，他們成了情侶!"
     },
     "#TextStory5": {
-        "en": "It has been six years since Ting-Wei and Hsiang-Chih were together. Their daily life is full of funny moments. During the Covid, they witnessed Hsiang-Chih’s super long beard, as well as the fantastic comet in 2020. Hsiang-Chih often wolfed down the snacks, but not allowing Ting-Wei to do the same thing. Hsiang-Chih would also tell Ting-Wei not to sit with crossed legs, saying that it’s not good for her knees. <br>Anyway, they seem to enjoy a lot their daily life! ",
+        "en": "It has been more than five years since Ting-Wei and Hsiang-Chih got together. Their daily life is full of funny moments like these. <br>Anyway, they seem to enjoy a lot their daily life! ",
         "tw": "不知不覺，從在一起到現在，亭維和翔致邁入了第6年。生活上也是滿滿的點滴。在covid 期間，他們一起見證了翔致超級長的鬍子，跟難得一見的彗星。或者翔致常常吃零食都很大口，但又叫亭維不能學他。或者翔致會囉唆的叫亭維不能盤腿、對膝蓋不好...<br>總之，他們似乎生活上的點點滴滴也是充滿著樂趣！"
     },
     "#TextStory6": {
-        "en": "After Hsiang-Chih finished his PhD in astronomy in 2021. Before moving to Princeton for their new jobs, they had a trip to Alaska, where their arms were completely exhausted after 5-hour kayaking. <br>They thought it is time for next chapter of their life.. Hsiang-Chih proposed to Ting-Wei on Feb. 12, 2022, promising that they will face the joy and difficulty together, and will get old together with laughter. <br>Ting-Wei said yes :) ",
-        "tw": "2021年，翔致博士班畢業後，亭維跟翔致一起去了一趟阿拉斯加，在冰川邊划船，然後晚上兩人手臂再痠到不行。<br>後來，翔致搬去普林斯頓工作，並決定是時候完成人生大事。2022年2月12日，翔致向亭維求婚，承諾兩人要在接下來人生的日子裡，一起面對歡樂與困難，然後一起笑著變老。<br><br>亭維說 yes! :)"
+        "en": "After Hsiang-Chih finished his PhD in astronomy in 2021, they took a trip to Alaska, where they completely exhausted their arm muscles on a 5-hour sea kayaking tour. <br> Hsiang-Chih moved to Princeton for his new job soon after. And then they thought it was time for the next chapter of their lives.. Hsiang-Chih proposed to Ting-Wei on Feb. 12, 2022, promising that they will \"share life’s joy and face challenges together, and that they will grow old together\". <br>Ting-Wei said yes :) ",
+        "tw": "2021年，翔致博士班畢業後，亭維跟翔致一起去了一趟阿拉斯加，在冰川邊划船，然後晚上兩人手臂再痠到不行。<br>後來，翔致搬去普林斯頓工作，並決定是時候完成人生大事。2022年2月12日，翔致向亭維求婚，承諾兩人要在接下來人生的日子裡，「一起面對歡樂與困難，然後一起笑著變老」。<br><br>亭維說 yes! :)"
     },
     "#TextStory7": {
-        "en": "Ting-Wei and Hsiang-Chih will have their wedding on Dec. 18, 2022. Please come and celebrate the big moment of their lives! Your presence means a lot to us!! ",
+        "en": "Ting-Wei and Hsiang-Chih will have their wedding on Dec. 18, 2022. Please come and celebrate this big moment of their lives! Your presence means a lot to us!! ",
         "tw": "在成為情侶後第6年，亭維和翔致決定在2022年12月18日步入禮堂。誠摯地邀請您與我們一起見證這意義重大的一刻！"
     },
     ".factHeader": {
@@ -135,20 +135,20 @@ langText = {
         "tw": "小趣事"
     },
     "#TextFact1": {
-        "en": "Do these strange animals have names? <br> <br> Yes! Their names are Jabu (left) and Duki (right)! The actual meanings of these names remain unclear. Jabu is often mistaken as an octopus (or its kind), but Jabu is definitely not an octopus. ",
+        "en": "Do these strange animals have names? <br> <br> Yes! Their names are Jabu (left) and Duki (right)! The actual meanings of these names remain unclear. Jabu is often mistaken as an octopus (or a creature of its kind), but Jabu is definitely not an octopus. ",
         "tw": "這兩個生物有名字嗎？<br><br>有！他們的名字是Jabu(左)和Duki(右)。名字的意思不明。順帶一提，Jabu並不是章魚(也不是類似章魚的生物)。"
     },
     "#TextFact2": {
-        "en": "When is the “birthday” of Jabu? <br> <br>It is currently unknown. Based on Archeology, the earliest Jabu-related product was dated back to ~2005, when Hsiang-Chih was in his middle school. Since this Jabu product is already very mature, Jabu likely has been existent a few years before 2005. <br>Btw, Hsiang-Chih also uses Jabu as his signature in his credit card payment. ",
+        "en": "When is the “birthday” of Jabu? <br> <br>It is currently unknown. Based on Archeological data, the earliest Jabu-related product can be dated back to ~2005, when Hsiang-Chih was in middle school. Since the aesthetics of this particular Jabu product already exhibits artistic maturity, Jabu likely existed a few years before 2005. <br>Btw, Hsiang-Chih also uses Jabu as his signature in his credit card payment. ",
         "tw": "Jabu 是什麼時候誕生的？<br><br>Jabu的誕生日已不可考。但根據考古資料，目前最早的Jabu相關產品(下圖)可追溯至~2005年、翔致國中的美術課作業。但這個成品已展現 Jabu 作畫的高度成熟性，因此推估Jabu應於數年前就已誕生。<br>順帶一提，翔致現在的信用卡簽名也是用Jabu。"
     },
     "#TextFact3": {
-        "en": "When is the “birthday” of Duki? <br> <br>The concept of Duki was first created in 2017, by Hsiang-Chih. But the drawing of Duki has been significantly improved (?) by Ting-Wei. In fact, Hsiang-Chih is not as good at drawing Duki due to its complexity.  ",
+        "en": "When is the “birthday” of Duki? <br> <br>The concept of Duki was first formulated in 2017 by Hsiang-Chih. But the drawing of Duki has since been significantly modified (?) by Ting-Wei. In fact, Hsiang-Chih is not as good at drawing Duki due to Duki’s complexity.  ",
         "tw": "Duki 是什麼時候誕生的？<br><br>第一個Duki是翔致於2017年時畫的(下方左圖)。但現今的Duki已經過亭維大量的改良。其實，因為Duki較複雜的結構，翔致不太擅長畫Duki。"
     },
     "#TextFact4": {
-        "en": "How is this website being made? <br><br>This website is made by Po-Hsien (tremendous technical help), Ting-Wei (all the drawings and animations), and Hsiang-Chih (content; his drawings are mostly on papers and thus are difficult to display on the website)!",
-        "tw": "這網站是如何製作的呢？<br><br>這網站是由柏軒(大量的技術支援)、亭維(所有作圖、動畫)、翔致(內容；翔致平常都畫在紙上，難以電子化)完成！"
+        "en": "How was this website made? <br><br>This website is made by Po-Hsien (tremendous technical help), Ting-Wei (all the illustrations and animations), and Hsiang-Chih (concept and content; his drawings are mostly on papers and thus are difficult to display on the website)!",
+        "tw": "這網站是如何製作的呢？<br><br>這網站是由柏軒(大量的技術支援)、亭維(所有作圖、動畫)、翔致(網站概念及內容；翔致平常都畫在紙上，難以電子化)完成！"
     },
     "#TextPhotoHeader": {
         "en": "Photo gallery",
@@ -163,6 +163,7 @@ langText = {
         "tw": "祝才子佳人、郎才女貌、花好月圓、百年好合 © 2022"
     }
 }
+
 
 var makeStruct = function(names) {
     var names = names.split(" ");
