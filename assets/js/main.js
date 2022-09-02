@@ -47,11 +47,11 @@ langText = {
         "tw": "3:00 pm入場，3:30 pm典禮開始 <br> \
                台北市中正區中山南路3號 <br> \
                Google 地圖 <a target=\"_blank\" href=\"https://goo.gl/maps/NZJXJdLBwn2jZuGj6\">連結</a><br>\
-               近捷運台大醫院站、善導寺站、台北車站"
+               近捷運台大醫院站"
     },
     "#TextBanquetHeader": {
         "en": "Banquet: <br> Mandarin Oriental Taipei",
-        "tw": "婚禮晚宴:<br>臺北文華東方酒店"
+        "tw": "婚禮晚宴:<br>台北文華東方酒店"
     },
     "#TextBanquet": {
         "en": "6:00 pm.<br> \
@@ -77,7 +77,7 @@ langText = {
     },
     "#TextTrans": {
         "en": "If you plan to attend the wedding ceremony, metered street parking is readily available in the neighborhood. After the ceremony, if you plan to take the MRT from the church to the hotel, we recommend taking the red line from NTU Hospital station (台大醫院站) to Zhongshan station (中山站) then transiting to the green line to get to Taipei Arena station (台北小巨蛋站). The estimated commute (including walking to and from the nearest stations) is 30-40 minutes. If you plan on going directly to the wedding banquet, free parking at the hotel (level B5/B6) is available for all wedding guests.",
-        "tw": "如參加教會典禮，教會不提供訪客停車，但路邊計費停車＿＿。如欲從教會搭捷運至文華東方酒店，建議搭乘紅線、由台大醫院站搭至中山站，再轉乘綠線搭至台北小巨蛋站；總通勤時間(含步行)約30-40分鐘。如僅參加婚宴，可多利用酒店的免費停車場(於酒店B5/B6)。"
+        "tw": "如參加教會典禮，教會不提供訪客停車，建議路邊計費停車或大眾交通工具。如欲從教會搭捷運至文華東方酒店，建議搭乘紅線、由台大醫院站搭至中山站，再轉乘綠線搭至台北小巨蛋站；總通勤時間(含步行)約30-40分鐘。如僅參加婚宴，可多利用酒店的免費停車場(於酒店B5/B6)。"
     },
     "#TextParkingHeader": {
         "en": "Parking",
@@ -111,20 +111,20 @@ langText = {
         "tw": "翔致熱愛自然，喜歡旅遊及觀星。大學時，他曾經去過西藏的喜馬拉雅山基地營看星星。這或許是為什麼後來翔致走上天文研究的原因？"
     },
     "#TextStory3": {
-        "en": "Ting-Wei is passionate about music. She sings and plays the piano and the guitar. She also writes her own songs. Here’s a song she wrote on the spot one day, when she found out that Hsiang-Chih got boba only for himself: youtube link",
-        "tw": "亭維熱愛音樂。她能自彈(鋼琴和吉他)自唱，甚至還會自己寫歌。有一次翔致只買了他自己的珍奶，亭維發現之後靈感大發寫了這首歌～這裡是連結！"
+        "en": "Ting-Wei is passionate about music. She sings and plays the piano and the guitar. She also writes her own songs. Here’s a song she wrote on the spot one day, when she found out that Hsiang-Chih got boba only for himself: <a target=\"_blank\" href=\"http://...\">YouTube link</a>",
+        "tw": "亭維熱愛音樂。她能自彈(鋼琴和吉他)自唱，甚至還會自己寫歌。有一次翔致只買了他自己的珍奶，亭維發現之後靈感大發寫了這首歌～這裡是<a target=\"_blank\" href=\"http://...\">連結</a>！"
     },
     "#TextStory4": {
         "en": "Ting-Wei and Hsiang-Chih met in Baltimore, 2016, when they were both students at Johns Hopkins University. Even though Ting-Wei thought Hsiang-Chih was cute, they didn’t become close friends right away, until they started playing badminton together! (Oh btw, Hsiang-Chih was the captain of the department badminton team in college) <br> They later realized that they not only make good teammates on the badminton court but also great partners in life! In the summer of 2017, they became a couple! ",
-        "tw": "2016年，亭維和翔致在美國巴爾的摩、約翰霍普金斯大學求學時相遇。但大概是在半年後，他們才因一起打羽球才變熟(翔致表示，還好以前在大學系上羽球隊沒白費)。 <br>日後，他們發現，他們不僅是羽球場上的好隊友，他們還可以一起玩音樂、划船、數星星。最後，在2017年的夏天，他們成了情侶!"
+        "tw": "2016年，亭維和翔致在美國巴爾的摩、約翰霍普金斯大學求學時相遇。但大概要到半年之後，他們才因一起打羽球才變熟(翔致表示，還好以前有去大學系上羽球隊)。 <br>日後，他們發現，他們不僅是羽球場上的好隊友，他們還可以一起玩音樂、划船、數星星。最後，在2017年的夏天，他們成了情侶！"
     },
     "#TextStory5": {
         "en": "It has been more than five years since Ting-Wei and Hsiang-Chih got together. Their daily life is full of funny moments like these. <br>Anyway, they seem to enjoy a lot their daily life! ",
-        "tw": "不知不覺，從在一起到現在，亭維和翔致邁入了第6年。生活上也是滿滿的點滴。在covid 期間，他們一起見證了翔致超級長的鬍子，跟難得一見的彗星。或者翔致常常吃零食都很大口，但又叫亭維不能學他。或者翔致會囉唆的叫亭維不能盤腿、對膝蓋不好...<br>總之，他們似乎生活上的點點滴滴也是充滿著樂趣！"
+        "tw": "不知不覺，從在一起到現在，亭維和翔致邁入了第6年。雖然這當中好幾年受到Covid的影響，他們似乎很能在日常生活裡找到樂趣，也三不五時就讓亭維有作畫的創作題材，像是："
     },
     "#TextStory6": {
-        "en": "After Hsiang-Chih finished his PhD in astronomy in 2021, they took a trip to Alaska, where they completely exhausted their arm muscles on a 5-hour sea kayaking tour. <br> Hsiang-Chih moved to Princeton for his new job soon after. And then they thought it was time for the next chapter of their lives.. Hsiang-Chih proposed to Ting-Wei on Feb. 12, 2022, promising that they will \"share life’s joy and face challenges together, and that they will grow old together\". <br>Ting-Wei said yes :) ",
-        "tw": "2021年，翔致博士班畢業後，亭維跟翔致一起去了一趟阿拉斯加，在冰川邊划船，然後晚上兩人手臂再痠到不行。<br>後來，翔致搬去普林斯頓工作，並決定是時候完成人生大事。2022年2月12日，翔致向亭維求婚，承諾兩人要在接下來人生的日子裡，「一起面對歡樂與困難，然後一起笑著變老」。<br><br>亭維說 yes! :)"
+        "en": "After Hsiang-Chih finished his PhD in astronomy in 2021, he moved to Princeton for his new job soon after. And then they thought it was time for the next chapter of their lives. Hsiang-Chih proposed to Ting-Wei on Feb. 12, 2022, promising that they will \"share life’s joy and face challenges together, and that they will grow old together\". <br>Ting-Wei said yes :) ",
+        "tw": "2021年，翔致博士班畢業後，搬去普林斯頓工作，並決定是時候完成人生大事。2022年2月12日，翔致向亭維求婚，承諾兩人要在接下來人生的日子裡，「一起面對歡樂與困難，然後一起笑著變老」。<br><br>亭維說 yes! :)"
     },
     "#TextStory7": {
         "en": "Ting-Wei and Hsiang-Chih will have their wedding on Dec. 18, 2022. Please come and celebrate this big moment of their lives! Your presence means a lot to us!! ",
