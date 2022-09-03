@@ -198,8 +198,14 @@ var langText = {
         "tw": "Jabu 是什麼時候誕生的？"
     },
     "#Facts2 .factAnswer": {
-        "en": "It is currently unknown. Based on Archeological data, the earliest Jabu-related product can be dated back to ~2005, when Hsiang-Chih was in middle school. Since the aesthetics of this particular Jabu product already exhibits artistic maturity, Jabu likely existed a few years before 2005. <br>Btw, Hsiang-Chih also uses Jabu as his signature in his credit card payment.",
-        "tw": "Jabu的誕生日已不可考。但根據考古資料，目前最早的Jabu相關產品(下圖)可追溯至~2005年、翔致國中的美術課作業。但這個成品已展現 Jabu 作畫的高度成熟性，因此推估Jabu應於數年前就已誕生。<br>順帶一提，翔致現在的信用卡簽名也是用Jabu。",
+        "en": [
+            "It is currently unknown. Based on Archeological data, the earliest Jabu-related product can be dated back to ~2005, when Hsiang-Chih was in middle school. Since the aesthetics of this particular Jabu product already exhibits artistic maturity, Jabu likely existed a few years before 2005.",
+            "Btw, Hsiang-Chih also uses Jabu as his signature in his credit card payment.",
+        ],
+        "tw": [
+            "Jabu的誕生日已不可考。但根據考古資料，目前最早的Jabu相關產品(下圖)可追溯至~2005年、翔致國中的美術課作業。但這個成品已展現 Jabu 作畫的高度成熟性，因此推估Jabu應於數年前就已誕生。",
+            "順帶一提，翔致現在的信用卡簽名也是用Jabu。",
+        ]
     },
     "#Facts3 .factQuestion": {
         "en": "When is the “birthday” of Duki?",
@@ -482,8 +488,8 @@ class Carousel {
 }
 
 var myCarousel = [
-    new Carousel($("#CarouselPhoto"), { overlapFactor: 200}),
-    new Carousel($("#CarouselStory"), { itemsRow: 3, overlapFactor: 200})
+    new Carousel($("#CarouselPhoto"), { overlapFactor: 200 }),
+    new Carousel($("#CarouselStory"), { itemsRow: 3, overlapFactor: 200 })
 ];
 var initialize = function() {
     $("#mandarinButton").click(function() {
