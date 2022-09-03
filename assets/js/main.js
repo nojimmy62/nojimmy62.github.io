@@ -2,6 +2,10 @@
 /* jshint -W097 */
 /*globals $:false */
 /*globals LazyLoad:false */
+/*globals console:false */
+/*globals window:false */
+/*globals document:false */
+/*globals history:false */
 
 var langText = {
     "#NavHeader": {
@@ -355,6 +359,7 @@ class Carousel {
     // grayscale,       // change grayscale based on the position
     // scale,           // change scale based on the position
     // scrollThreshold, // scroll threshold to change to next photos
+    // overlapFactor,   // If set to 100, items would fit the row without overlapping.
     constructor(element, config) {
         if (element.length > 1) {
             console.error("Only one element is supported. Consider pass in the element by id");
@@ -369,12 +374,13 @@ class Carousel {
         this.element = $(element).children(".carouselPhoto");
         this.captionElement = $(element).children(".carouselCaption");
 
-        this.currentIndex = config.currentIndex || 0;
+        this.currentIndex = setUndefined(config.currentIndex, 0);
         this.itemsRow = setUndefined(config.itemsRow, 5);
         this.zIndex = setUndefined(config.zIndex, true);
         this.grayscale = setUndefined(config.grayscale, true);
         this.scale = setUndefined(config.scale, true);
         this.scrollThreshold = setUndefined(config.scrollThreshold, 100);
+        this.overlapFactor = setUndefined(config.overlapFactor, 100);
 
         this.accumulatedScroll = 0;
         this.lastTouchLoc = undefined;
@@ -430,7 +436,6 @@ class Carousel {
             return;
         }
 
-        var paddingStep = 100.0 / (this.itemsRow - 1);
         var halfItem = Math.floor(this.itemsRow / 2);
         var carousel = this;
         items.each(function(idx, item) {
@@ -455,11 +460,14 @@ class Carousel {
                 cursor = "zoom-in";
             }
 
-            var left = 50 + paddingStep * idxDiff;
+            var left = 50 + 100.0 / carousel.itemsRow * idxDiff;
+            // Allows image overlap with each other.
+            var width = carousel.overlapFactor / carousel.itemsRow;
             $(item).css({
                 "left": left + "%",
                 "transform": "translateY(0%) translateX(-50%) scale(" + targetScale + ")",
                 "cursor": cursor,
+                "width": width + "%",
             });
         });
         this.currentIndex = index;
@@ -474,8 +482,8 @@ class Carousel {
 }
 
 var myCarousel = [
-    new Carousel($("#CarouselPhoto")),
-    new Carousel($("#CarouselStory"))
+    new Carousel($("#CarouselPhoto"), { overlapFactor: 200}),
+    new Carousel($("#CarouselStory"), { itemsRow: 3, overlapFactor: 200})
 ];
 var initialize = function() {
     $("#mandarinButton").click(function() {
