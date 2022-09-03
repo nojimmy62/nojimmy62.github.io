@@ -199,11 +199,15 @@ a {
 }
 
 .factAnswer {
-    text-shadow: 0 0 10px var(--funFacts-text-color);
+    text-shadow: 0 0 5px var(--funFacts-text-color);
     color: transparent;
+    -webkit-transition: color 0.3s, text-shadow 0.3s;
+    -o-transition: color 0.3s, text-shadow 0.3s;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
-.factAnswer:hover, .factAnswer:active {
+.factAnswer:hover,
+.factAnswer:active {
     color: inherit;
     text-shadow: inherit;
 }
