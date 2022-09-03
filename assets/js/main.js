@@ -217,26 +217,6 @@ var animateUpdate = function() {
     var scroll = window.scrollY
     var stickyHeight = $(".sticky-top").height()
 
-    var smallest = {
-        'href': undefined,
-        'n': $(document).height()
-    }
-    $("#NavList > a").each(function(idx, button) {
-        href = $(button).attr('href')
-        diff = scroll + stickyHeight + $(window).height() / 2 - $(href).offset().top
-        if (diff < 0) return;
-        if (diff < smallest.n) {
-            smallest.n = diff
-            smallest.href = button
-        }
-    })
-    if (smallest.href === undefined) {
-        $("#NavList > a").removeClass("active")
-    } else if (!$(smallest.href).hasClass("active")) {
-        $(smallest.href).addClass("active").siblings().removeClass("active")
-    }
-
-
     _updateConfig.forEach((config) => {
         config.height = config.height || 200;
         var containerTop = $(config.selector).offset().top
@@ -258,6 +238,25 @@ var animateUpdate = function() {
         invisible = $(config.selector).find(".invisible-block")
         invisible.css("height", `${config.height + $(element).height()}px`)
     })
+
+    var smallest = {
+        'href': undefined,
+        'n': $(document).height()
+    }
+    $("#NavList > a").each(function(idx, button) {
+        href = $(button).attr('href')
+        diff = scroll + stickyHeight + $(window).height() / 2 - $(href).offset().top
+        if (diff < 0) return;
+        if (diff < smallest.n) {
+            smallest.n = diff
+            smallest.href = button
+        }
+    })
+    if (smallest.href === undefined) {
+        $("#NavList > a").removeClass("active")
+    } else if (!$(smallest.href).hasClass("active")) {
+        $(smallest.href).addClass("active").siblings().removeClass("active")
+    }
 }
 
 var langChange = function(lang) {
