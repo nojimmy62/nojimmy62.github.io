@@ -143,8 +143,8 @@ var langText = {
         "tw": "翔致熱愛自然，喜歡旅遊及觀星。大學時，他曾經去過西藏的喜馬拉雅山基地營看星星。這或許是為什麼後來翔致走上天文研究的原因？"
     },
     "#TextStory3": {
-        "en": "Ting-Wei is passionate about music. She sings and plays the piano and the guitar. She also writes her own songs. Here’s a song she wrote on the spot one day, when she found out that Hsiang-Chih got boba only for himself: <a target=\"_blank\" href=\"http://...\">YouTube link</a>",
-        "tw": "亭維熱愛音樂。她能自彈(鋼琴和吉他)自唱，甚至還會自己寫歌。有一次翔致只買了他自己的珍奶，亭維發現之後靈感大發寫了這首歌～這裡是<a target=\"_blank\" href=\"http://...\">連結</a>！"
+        "en": "Ting-Wei is passionate about music. She sings and plays the piano and the guitar. She also writes her own songs. Here’s a song she wrote on the spot one day, when she found out that Hsiang-Chih got boba only for himself: <a target=\"_blank\" href=\"https://youtu.be/doepbq8mJ6A\">YouTube link</a>",
+        "tw": "亭維熱愛音樂。她能自彈(鋼琴和吉他)自唱，甚至還會自己寫歌。有一次翔致只買了他自己的珍奶，亭維發現之後靈感大發寫了這首歌～這裡是<a target=\"_blank\" href=\"https://youtu.be/doepbq8mJ6A\">連結</a>！"
     },
     "#TextStory4": {
         "en": [
@@ -209,7 +209,7 @@ var langText = {
     },
     "#Facts3 .factQuestion": {
         "en": "When is the “birthday” of Duki?",
-        "tw": "Duki 是什麼時候誕生的？"
+        "tw": "Duki是什麼時候誕生的？"
     },
     "#Facts3 .factAnswer": {
         "en": "The concept of Duki was first formulated in 2017 by Hsiang-Chih. But the drawing of Duki has since been significantly modified (?) by Ting-Wei. In fact, Hsiang-Chih is not as good at drawing Duki due to Duki’s complexity.  ",
@@ -232,8 +232,8 @@ var langText = {
         "tw": "看完Jabu跟Duki，是時候看看真人版的照片了！許多照片感謝友人乃群的拍攝。"
     },
     "#FooterMessage": {
-        "en": "Wishing you both love and happiness © 2022",
-        "tw": "祝才子佳人、郎才女貌、花好月圓、百年好合 © 2022"
+        "en": "Love always protects, always trusts, always hopes, always perseveres. © 2022",
+        "tw": "此心安處是吾鄉 © 2022"
     }
 };
 
