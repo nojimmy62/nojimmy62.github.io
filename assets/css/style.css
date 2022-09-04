@@ -127,6 +127,10 @@ a {
     text-align: center;
 }
 
+#EventButton.active {
+    background-color: var(--weddingevent-theme-color);
+}
+
 .weddingEvent .eventsContainer {
     border-color: var(--weddingevent-theme-color);
     -webkit-box-shadow: var(--event-default-shadow-style) var(--weddingevent-theme-color);
@@ -139,6 +143,10 @@ a {
 
 .weddingEvent {
     color: var(--weddingevent-text-color);
+}
+
+#StoryButton.active {
+    background-color: var(--ourstory-theme-color);
 }
 
 .ourStory .eventsContainer {
@@ -155,6 +163,10 @@ a {
     color: var(--ourstory-text-color);
 }
 
+#FactButton.active {
+    background-color: var(--funFacts-theme-color);
+}
+
 .funFacts .eventsContainer {
     border-color: var(--funFacts-theme-color);
     -webkit-box-shadow: var(--event-default-shadow-style) var(--funFacts-theme-color);
@@ -167,6 +179,10 @@ a {
 
 .funFacts {
     color: var(--funFacts-text-color);
+}
+
+#PhotoButton.active {
+    background-color: var(--photo-theme-color);
 }
 
 .photo .eventsContainer {
@@ -315,6 +331,12 @@ a {
 
 .modalable {
     cursor: pointer;
+}
+
+#NavList>.nav-link {
+    -webkit-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
 }
 
 /* On Smaller Screens (bootstrap md breakpoint 768px) */
