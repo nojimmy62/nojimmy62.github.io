@@ -336,6 +336,12 @@ a {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     }
+
+    #NavList>.nav-link {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
 }
 
 .sticky-top {
