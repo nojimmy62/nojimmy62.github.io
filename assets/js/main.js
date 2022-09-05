@@ -378,9 +378,13 @@ class Carousel {
 
         config = setUndefined(config, {});
         this.element = $(element).children(".carouselPhoto");
+        // Copy the first photo for css height calculation.
+        var firstPhoto = $($(this.element).children()[0]).clone();
+        this.element.prepend(firstPhoto);
+
         this.captionElement = $(element).children(".carouselCaption");
 
-        this.currentIndex = setUndefined(config.currentIndex, 0);
+        this.currentIndex = setUndefined(config.currentIndex, 1);
         this.itemsRow = setUndefined(config.itemsRow, 5);
         this.zIndex = setUndefined(config.zIndex, true);
         this.grayscale = setUndefined(config.grayscale, true);
@@ -438,7 +442,7 @@ class Carousel {
 
     _adjustPosition(index) {
         var items = $(this.element).children();
-        if (index < 0 || Math.ceil(index) >= items.length) {
+        if (index < 1 || Math.ceil(index) >= items.length) {
             return;
         }
 
