@@ -217,13 +217,21 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    height: 60vh;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .carousel>div.carouselPhoto {
     position: relative;
-    height: 90%;
     overflow: hidden;
+
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
 }
 
 .carousel>div.carouselPhoto>div {
@@ -254,7 +262,6 @@ a {
 
 .carousel>div.carouselCaption {
     text-align: center;
-    height: 10%;
 }
 
 /* The Modal (background) */
@@ -364,4 +371,8 @@ a {
 .nav-link {
     --bs-nav-link-hover-color: rgb(120 166 197);
     --bs-nav-link-color: rgb(60 101 129);
+}
+
+.vh-50 {
+    height: 50vh !important;
 }
