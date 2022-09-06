@@ -476,7 +476,7 @@ class Carousel {
             var left = 50 + 100.0 / itemsRow * idxDiff;
             // Allows image overlap with each other.
 
-            var width = carousel.overlapFactor / carousel.itemsRow;
+            var width = carousel.overlapFactor / itemsRow;
 
 
             if (carousel.id=="CarouselPhoto" && idx >= 4) {
@@ -510,9 +510,7 @@ var myCarousel = [
         overlapFactor: 200
     }),
     new Carousel($("#CarouselStory"), {
-        itemsRow: function() {
-            return $(window).width() < bootstrapMdWidthBreak ? 3 : 5;
-        },
+        itemsRow: 3,
         overlapFactor: 200
     })
 ];
