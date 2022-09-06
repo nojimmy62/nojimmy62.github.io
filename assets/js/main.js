@@ -62,9 +62,9 @@ var langText = {
             "Close to MRT NTU Hospital, Shandao Temple, and Taipei Main station"
         ],
         "tw": [
-            "3:00 pm入場，3:30 pm典禮開始",
+            "3:00 pm典禮開始",
             "台北市中正區中山南路3號",
-            "Google 地圖 <a target=\"_blank\" href=\"https://goo.gl/maps/NZJXJdLBwn2jZuGj6\">連結</a>",
+            "Google 地圖<a target=\"_blank\" href=\"https://goo.gl/maps/NZJXJdLBwn2jZuGj6\">連結</a>",
             "近捷運台大醫院站",
         ]
     },
@@ -340,6 +340,7 @@ var langChange = function(lang) {
 var modalShowImg = function(url) {
     $("#myModal").show();
     $("#imginmodal").attr("src", url);
+    $("body").addClass("modal-open");
 };
 
 var lazyloadObject = new LazyLoad({
@@ -531,10 +532,12 @@ var initialize = function() {
 
     $("img.modalable").click(function() {
         modalShowImg($(this).attr("src"));
+        
     });
 
     $("#myModal > .close, #myModal").click(function() {
         $("#myModal").hide();
+        $("body").removeClass("modal-open");
     });
 
     if ("scrollRestoration" in history) {

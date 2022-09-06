@@ -339,6 +339,10 @@ a {
     cursor: pointer;
 }
 
+body.modal-open {
+    overflow: hidden !important;
+}
+
 /* On Smaller Screens (bootstrap md breakpoint 768px) */
 @media only screen and (max-width:768px) {
     .modal-content {
