@@ -446,7 +446,8 @@ class Carousel {
             return;
         }
 
-        var halfItem = Math.floor(this.itemsRow / 2);
+        var itemsRow = typeof this.itemsRow === "function" ? this.itemsRow(this) : this.itemsRow;
+        var halfItem = Math.floor(itemsRow / 2);
         var carousel = this;
         items.each(function(idx, item) {
             var idxDiff = idx - index;
@@ -470,9 +471,9 @@ class Carousel {
                 cursor = "zoom-in";
             }
 
-            var left = 50 + 100.0 / carousel.itemsRow * idxDiff;
+            var left = 50 + 100.0 / itemsRow * idxDiff;
             // Allows image overlap with each other.
-            var width = carousel.overlapFactor / carousel.itemsRow;
+            var width = carousel.overlapFactor / itemsRow;
             $(item).css({
                 "left": left + "%",
                 "transform": "translateY(0%) translateX(-50%) scale(" + targetScale + ")",
@@ -491,9 +492,20 @@ class Carousel {
     }
 }
 
+var bootstrapMdWidthBreak = 768;
 var myCarousel = [
-    new Carousel($("#CarouselPhoto"), { overlapFactor: 200 }),
-    new Carousel($("#CarouselStory"), { itemsRow: 3, overlapFactor: 200 })
+    new Carousel($("#CarouselPhoto"), {
+        itemsRow: function() {
+            return $(window).width() < bootstrapMdWidthBreak ? 3 : 5;
+        },
+        overlapFactor: 200
+    }),
+    new Carousel($("#CarouselStory"), {
+        itemsRow: function() {
+            return $(window).width() < bootstrapMdWidthBreak ? 3 : 5;
+        },
+        overlapFactor: 200
+    })
 ];
 var initialize = function() {
     $("#mandarinButton").click(function() {
