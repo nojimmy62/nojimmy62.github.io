@@ -144,7 +144,7 @@ var langText = {
     },
     "#TextStory3": {
         "en": "Ting-Wei is passionate about music. She sings and plays the piano and the guitar. She also writes her own songs. Here’s a song she wrote on the spot one day, when she found out that Hsiang-Chih got boba only for himself: <a target=\"_blank\" href=\"https://youtu.be/doepbq8mJ6A\">YouTube link</a>",
-        "tw": "亭維熱愛音樂。她能自彈(鋼琴和吉他)自唱，甚至還會自己寫歌。有一次翔致只買了他自己的珍奶，亭維發現之後靈感大發寫了這首歌～這裡是<a target=\"_blank\" href=\"https://youtu.be/doepbq8mJ6A\">連結</a>！"
+        "tw": "亭維熱愛音樂。她能自彈(鋼琴和吉他)自唱，甚至還會自己寫歌。比方說，有一次翔致只買了他自己的珍奶，亭維發現之後靈感大發寫了這首歌～這裡是<a target=\"_blank\" href=\"https://youtu.be/doepbq8mJ6A\">連結</a>！"
     },
     "#TextStory4": {
         "en": [
