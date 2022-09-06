@@ -474,6 +474,7 @@ class Carousel {
             var left = 50 + 100.0 / itemsRow * idxDiff;
             // Allows image overlap with each other.
             var width = carousel.overlapFactor / itemsRow;
+
             $(item).css({
                 "left": left + "%",
                 "transform": "translateY(0%) translateX(-50%) scale(" + targetScale + ")",
