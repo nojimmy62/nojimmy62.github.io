@@ -377,6 +377,7 @@ class Carousel {
         };
 
         config = setUndefined(config, {});
+        this.id = $(element).attr("id");
         this.element = $(element).children(".carouselPhoto");
         // Copy the first photo for css height calculation.
         var firstPhoto = $($(this.element).children()[0]).clone();
@@ -449,6 +450,7 @@ class Carousel {
         var itemsRow = typeof this.itemsRow === "function" ? this.itemsRow(this) : this.itemsRow;
         var halfItem = Math.floor(itemsRow / 2);
         var carousel = this;
+
         items.each(function(idx, item) {
             var idxDiff = idx - index;
             if (carousel.zIndex) {
@@ -473,7 +475,14 @@ class Carousel {
 
             var left = 50 + 100.0 / itemsRow * idxDiff;
             // Allows image overlap with each other.
+
             var width = carousel.overlapFactor / itemsRow;
+
+
+            if (carousel.id=="CarouselPhoto" && idx >= 4) {
+                width = 1.4 * width;
+            }
+
             $(item).css({
                 "left": left + "%",
                 "transform": "translateY(0%) translateX(-50%) scale(" + targetScale + ")",
@@ -501,12 +510,12 @@ var myCarousel = [
         overlapFactor: 200
     }),
     new Carousel($("#CarouselStory"), {
-        itemsRow: function() {
-            return $(window).width() < bootstrapMdWidthBreak ? 3 : 5;
-        },
+        itemsRow: 3,
         overlapFactor: 200
     })
 ];
+
+
 var initialize = function() {
     $("#mandarinButton").click(function() {
         langChange("tw");
