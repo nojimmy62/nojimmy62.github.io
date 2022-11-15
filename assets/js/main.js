@@ -25,7 +25,7 @@ var langText = {
         "tw": "小趣事"
     },
     "#PhotoButton": {
-        "en": "Photo gallery",
+        "en": "Gallery",
         "tw": "相簿"
     },
     "#TextMarry": {
