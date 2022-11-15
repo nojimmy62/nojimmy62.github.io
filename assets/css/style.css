@@ -28,7 +28,7 @@
 body {
     font-family: 'KoHo', 'Mansalva', 'Noto Sans', '微軟正黑體', 'Noto Sans TC', '標楷體', '新細明體', 'consolas';
     overflow: hidden;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 
 img {
@@ -112,7 +112,7 @@ a {
 .eventHeader {
     text-align: center;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     display: block;
     border-bottom-width: 2px;
     border-style: solid;

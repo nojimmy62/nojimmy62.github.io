@@ -186,42 +186,42 @@ var langText = {
         "tw": "小趣事"
     },
     "#Facts1 .factQuestion": {
-        "en": "Do these strange animals have names?",
-        "tw": "這兩個生物有名字嗎？"
+        "en": "Q: Do these strange animals have names? (click the blurred text below to see the answer)",
+        "tw": "Q: 這兩個生物有名字嗎？ (點擊下方模糊字看答案)"
     },
     "#Facts1 .factAnswer": {
-        "en": "Yes! Their names are Jabu (left) and Duki (right)! The actual meanings of these names remain unclear. Jabu is often mistaken as an octopus (or a creature of its kind), but Jabu is definitely not an octopus.",
-        "tw": "有！他們的名字是Jabu(左)和Duki(右)。名字的意思不明。順帶一提，Jabu並不是章魚(也不是類似章魚的生物)。"
+        "en": "A: Yes! Their names are Jabu (left) and Duki (right)! The actual meanings of these names remain unclear. Jabu is often mistaken as an octopus (or a creature of its kind), but Jabu is definitely not an octopus.",
+        "tw": "A: 有！他們的名字是Jabu(左)和Duki(右)。名字的意思不明。順帶一提，Jabu並不是章魚(也不是類似章魚的生物)。"
     },
     "#Facts2 .factQuestion": {
-        "en": "When is the “birthday” of Jabu?",
-        "tw": "Jabu 是什麼時候誕生的？"
+        "en": "Q: When is the “birthday” of Jabu?",
+        "tw": "Q: Jabu 是什麼時候誕生的？"
     },
     "#Facts2 .factAnswer": {
         "en": [
-            "It is currently unknown. Based on Archeological data, the earliest Jabu-related product can be dated back to ~2005, when Hsiang-Chih was in middle school. Since the aesthetics of this particular Jabu product already exhibits artistic maturity, Jabu likely existed a few years before 2005.",
+            "A: It is currently unknown. Based on Archeological data, the earliest Jabu-related product can be dated back to ~2005, when Hsiang-Chih was in middle school. Since the aesthetics of this particular Jabu product already exhibits artistic maturity, Jabu likely existed a few years before 2005.",
             "Btw, Hsiang-Chih also uses Jabu as his signature in his credit card payment.",
         ],
         "tw": [
-            "Jabu的誕生日已不可考。但根據考古資料，目前最早的Jabu相關產品(下圖)可追溯至~2005年、翔致國中的美術課作業。但這個成品已展現 Jabu 作畫的高度成熟性，因此推估Jabu應於數年前就已誕生。",
+            "A: Jabu的誕生日已不可考。但根據考古資料，目前最早的Jabu相關產品(下圖)可追溯至~2005年、翔致國中的美術課作業。但這個成品已展現 Jabu 作畫的高度成熟性，因此推估Jabu應於數年前就已誕生。",
             "順帶一提，翔致現在的信用卡簽名也是用Jabu。",
         ]
     },
     "#Facts3 .factQuestion": {
-        "en": "When is the “birthday” of Duki?",
-        "tw": "Duki是什麼時候誕生的？"
+        "en": "Q: When is the “birthday” of Duki?",
+        "tw": "Q: Duki是什麼時候誕生的？"
     },
     "#Facts3 .factAnswer": {
-        "en": "The concept of Duki was first formulated in 2017 by Hsiang-Chih. But the drawing of Duki has since been significantly modified (?) by Ting-Wei. In fact, Hsiang-Chih is not as good at drawing Duki due to Duki’s complexity.  ",
-        "tw": "第一個Duki是翔致於2017年時畫的(下方左圖)。但現今的Duki已經過亭維大量的改良。其實，因為Duki較複雜的結構，翔致不太擅長畫Duki。"
+        "en": "A: The concept of Duki was first formulated in 2017 by Hsiang-Chih. But the drawing of Duki has since been significantly modified (?) by Ting-Wei. In fact, Hsiang-Chih is not as good at drawing Duki due to Duki’s complexity.  ",
+        "tw": "A: 第一個Duki是翔致於2017年時畫的(下方左圖)。但現今的Duki已經過亭維大量的改良。其實，因為Duki較複雜的結構，翔致不太擅長畫Duki。"
     },
     "#Facts4 .factQuestion": {
-        "en": "How was this website made?",
-        "tw": "這網站是如何製作的呢？"
+        "en": "Q: How was this website made?",
+        "tw": "Q: 這網站是如何製作的呢？"
     },
     "#Facts4 .factAnswer": {
-        "en": "This website is made by Po-Hsien (technical help), Ting-Wei (all the illustrations and animations), and Hsiang-Chih (concept and content; his drawings are mostly on papers and thus are difficult to display on the website)!",
-        "tw": "這網站是由柏軒(技術支援)、亭維(所有作圖、動畫)、翔致(網站概念及內容；翔致平常都畫在紙上，難以電子化)完成！"
+        "en": "A: This website is made by Po-Hsien (technical help), Ting-Wei (all the illustrations and animations), and Hsiang-Chih (concept and content; his drawings are mostly on papers and thus are difficult to display on the website)!",
+        "tw": "A: 這網站是由柏軒(技術支援)、亭維(所有作圖、動畫)、翔致(網站概念及內容；翔致平常都畫在紙上，難以電子化)完成！"
     },
     "#TextPhotoHeader": {
         "en": "Photo gallery",
