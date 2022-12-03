@@ -50,7 +50,8 @@ var langText = {
             "Chi-Nan Presbyterian Church",
         ],
         "tw": [
-            "結婚典禮(自由參加):",
+            "結婚典禮:",
+            "(自由參加)",
             "濟南教會"
         ]
     },
@@ -72,10 +73,12 @@ var langText = {
         "en": [
             "Banquet:",
             "Mandarin Oriental Taipei",
+            "The Grand Ballroom, B2"
         ],
         "tw": [
             "婚禮晚宴:",
-            "台北文華東方酒店"
+            "台北文華東方酒店",
+            "B2大宴會廳"
         ],
     },
     "#TextBanquet": {
