@@ -130,8 +130,8 @@ var langText = {
         "tw": "Zoom 連結"
     },
     "#TextZoom": {
-        "en": "Links will be available in near future!",
-        "tw": "線上Zoom連結會於日後更新！"
+        "en": "Here is the broadcast link for the church ceremony: <a target=\"_blank\" href=\"https://cmu.zoom.us/j/99212028688?pwd=ZFJzeWQvNUZUdmVDb0crcW1oa3lTUT09\">Zoom link</a>. The broadcast will start at around 2:45 pm (Taipei time).",
+        "tw": "教會婚禮的線上直播連結在這裡：<a target=\"_blank\" href=\"https://cmu.zoom.us/j/99212028688?pwd=ZFJzeWQvNUZUdmVDb0crcW1oa3lTUT09\">Zoom 連結</a>。直播約2:45 pm(台北時間)開始！"
     },
     ".storyHeader": {
         "en": "Our story",
