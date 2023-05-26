@@ -32,9 +32,21 @@ var langText = {
         "en": "Ting-Wei & Hsiang-Chih are getting married!",
         "tw": "亭維 & 翔致要結婚了！"
     },
+    "#TextAlreadyMarried": {
+        "en": "Update: Ting-Wei & Hsiang-Chih are married already!",
+        "tw": "更新：亭維 & 翔致結婚了！"
+    },
+    ".weddingPhotoHeader": {
+        "en": "Wedding media",
+        "tw": "婚禮影音"
+    },
     ".weddingHeader": {
         "en": "Wedding events",
         "tw": "婚禮資訊"
+    },
+    "#TextPhotolink": {
+        "en": "Thank you all for the support! Here are the <a target=\"_blank\" href=\"https://drive.google.com/drive/folders/1oSan0dF6UIrK6OcU9Hy05BV0SOzuPV25?usp=sharing\"> link for wedding photos</a> and <a target=\"_blank\" href=\"https://drive.google.com/drive/folders/1HezOUi5O7d5CGXEll-Mo-9OtBy0Nl3G_?usp=sharing\">the link for wedding videos</a>. Feel free to contact us for more wedding photos and recordings!",
+        "tw": "謝謝大家，亭維&翔致的婚禮大功告成！婚禮<a target=\"_blank\" href=\"https://drive.google.com/drive/folders/1oSan0dF6UIrK6OcU9Hy05BV0SOzuPV25?usp=sharing\">照片連結在這裡</a>，以及<a target=\"_blank\" href=\"https://drive.google.com/drive/folders/1HezOUi5O7d5CGXEll-Mo-9OtBy0Nl3G_?usp=sharing\">影片連結在這裡</a>，有興趣看完整照片或影片可以聯絡我們唷！"
     },
     "#TextDateHeader": {
         "en": "Date",
@@ -131,7 +143,7 @@ var langText = {
     },
     "#TextZoom": {
         "en": "Here is the broadcast link for the church ceremony: <a target=\"_blank\" href=\"https://cmu.zoom.us/j/99212028688?pwd=ZFJzeWQvNUZUdmVDb0crcW1oa3lTUT09\">Zoom link</a>. The broadcast will start at around 2:45 pm (Taipei time).",
-        "tw": "教會婚禮的線上直播連結在這裡：<a target=\"_blank\" href=\"https://cmu.zoom.us/j/99212028688?pwd=ZFJzeWQvNUZUdmVDb0crcW1oa3lTUT09\">Zoom 連結</a>。直播約2:45 pm(台北時間)開始！"
+        "tw": "教會婚禮的線上直播連結在這裡：Zoom 連結。直播約2:45 pm(台北時間)開始！"
     },
     ".storyHeader": {
         "en": "Our story",
@@ -256,6 +268,8 @@ var makeStruct = function(names) {
 var ScrollConfig = makeStruct("selector initialScale finalScale height");
 var _updateConfig = [
     new ScrollConfig("#Cover", 1, 0.6),
+    new ScrollConfig("#Cover1", 1, 0.6),
+    new ScrollConfig("#WeddingPhoto", 1, 0.6),
     new ScrollConfig("#WeddingEvent0", 1, 0.6),
     new ScrollConfig("#WeddingEvent1", 1, 0.6),
     new ScrollConfig("#OurStory0", 1, 0.6),
